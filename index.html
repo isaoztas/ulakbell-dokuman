@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<base href="/">
+<meta name="description" content="ulakBELL kullanım rehberi: telefon paneli, çağrı merkezi ve görev yönetimi adım adım, sesli videolarla.">
+<meta property="og:title" content="Yardım Merkezi">
+<meta property="og:description" content="ulakBELL kullanım rehberi: telefon paneli, çağrı merkezi ve görev yönetimi adım adım, sesli videolarla.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>ulakBELL Yardım Merkezi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sticky index of the two screens on the left; one reading column of sections; screenshots carry numbered pins tied to the rows under them. */
+:root {
+  --bg: #F3F6FB;
+  --surface: #FFFFFF;
+  --sunken: #EAF0F8;
+  --ink: #14203A;
+  --muted: #5A6782;
+  --line: #D9E1EC;
+  --accent: #2C6BE0;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E3ECFC;
+  --pin: #E2550B;
+  --pin-ink: #FFFFFF;
+  --new: #0E7C55;
+  --new-soft: #DDF3EA;
+  --warn: #9A5B00;
+  --warn-soft: #FFF1D6;
+  --danger: #B42318;
+  --bad-soft: #FDECEC;
+  --shadow: 0 1px 2px rgba(20, 32, 58, .06), 0 6px 20px rgba(20, 32, 58, .06);
+  --f-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Onest", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --r: 10px;
+  --logo-filter: none;
+  --logo-blend: multiply;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1420; --surface: #161F31; --sunken: #1C273D; --ink: #E5EBF6; --muted: #9AA7BF; --line: #28344D;
+    --accent: #6E9EFF; --accent-ink: #0E1420; --accent-soft: #1E2D4D; --pin: #FF7A33; --pin-ink: #1A0E05;
+    --new: #4CCB98; --new-soft: #133328; --warn: #F2B85B; --warn-soft: #3A2A10; --danger: #FF8A80; --bad-soft: #3A1716;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    --logo-filter: invert(1) hue-rotate(180deg); --logo-blend: screen;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1420; --surface: #161F31; --sunken: #1C273D; --ink: #E5EBF6; --muted: #9AA7BF; --line: #28344D;
+  --accent: #6E9EFF; --accent-ink: #0E1420; --accent-soft: #1E2D4D; --pin: #FF7A33; --pin-ink: #1A0E05;
+  --new: #4CCB98; --new-soft: #133328; --warn: #F2B85B; --warn-soft: #3A2A10; --danger: #FF8A80; --bad-soft: #3A1716;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  --logo-filter: invert(1) hue-rotate(180deg); --logo-blend: screen;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+body { background: var(--bg); color: var(--ink); font: 400 15px/1.6 var(--f-body); }
+a { color: var(--accent); }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; }
+
+/* header */
+.top { background: var(--surface); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; padding-block: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; flex: none; min-width: 0; }
+.brand a { display: block; }
+.logo { display: block; height: 22px; width: auto; filter: var(--logo-filter); mix-blend-mode: var(--logo-blend); }
+.brand-t { margin: 0; padding-left: 10px; border-left: 1px solid var(--line); font: 700 18px/1.2 var(--f-display); white-space: nowrap; }
+.brand-t a { color: var(--ink); text-decoration: none; }
+.eyebrow { font: 600 11px/1.2 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.search { position: relative; flex: 0 1 320px; margin-left: auto; }
+.search input { width: 100%; height: 38px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); padding: 0 16px 0 40px; }
+.search svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--muted); }
+.mono { font-family: var(--f-mono); font-size: .92em; font-variant-numeric: tabular-nums; }
+
+.btn { display: inline-flex; align-items: center; gap: 6px; height: 36px; padding: 0 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-weight: 600; font-size: 13px; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.ghost { background: transparent; }
+.btn.danger { color: var(--danger); }
+.btn.sm { height: 28px; padding: 0 9px; font-size: 12px; border-radius: 6px; }
+.btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+
+/* whats new strip */
+.news { background: var(--accent-soft); border-bottom: 1px solid var(--line); }
+.news .wrap { display: flex; gap: 10px 18px; align-items: baseline; flex-wrap: wrap; padding-block: 10px; font-size: 13.5px; }
+.news strong { font-weight: 600; }
+.news a { text-decoration: none; }
+.news a:hover { text-decoration: underline; }
+.news .date { color: var(--muted); margin-right: 6px; }
+
+/* layout */
+.layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 36px; padding-block: 28px 80px; }
+@media (max-width: 860px) { .layout { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
+nav.toc { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); align-self: start; max-height: calc(100vh - 32px); overflow: auto; font-size: 14px; }
+/* each group is a heading that opens and closes its sections */
+.toc-g { display: flex; align-items: center; gap: 6px; width: 100%; margin-top: 4px; padding: 7px 10px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); font: 600 11.5px/1.3 var(--f-body); letter-spacing: .06em; text-transform: uppercase; text-align: left; cursor: pointer; }
+.toc-g:first-child { margin-top: 0; }
+.toc-g:hover { background: var(--sunken); color: var(--ink); }
+.toc-g.has-active { color: var(--accent); }
+.toc-g .chev { flex: none; transition: transform .15s; }
+.toc-g[aria-expanded="true"] .chev { transform: rotate(90deg); }
+.toc-g .cnt { margin-left: auto; font: 500 11px/1 var(--f-mono); letter-spacing: 0; color: var(--muted); }
+.toc-items { margin: 2px 0 8px 8px; padding-left: 8px; border-left: 1px solid var(--line); }
+.toc a { display: flex; justify-content: space-between; gap: 8px; padding: 5px 10px; border-radius: 6px; color: var(--ink); text-decoration: none; }
+.toc a:hover { background: var(--sunken); }
+.toc a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+@media (max-width: 860px) {
+  nav.toc { position: static; max-height: none; display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; }
+  .toc-items { display: none !important; }
+  .toc-g { width: auto; margin: 0; white-space: nowrap; border: 1px solid var(--line); background: var(--surface); color: var(--ink); text-transform: none; letter-spacing: 0; font-size: 13px; }
+  .toc-g .chev, .toc-g .cnt { display: none; }
+}
+
+main { min-width: 0; display: flex; flex-direction: column; gap: 22px; }
+.group-head { margin: 18px 0 -6px; display: flex; align-items: baseline; gap: 12px; }
+.group-head:first-child { margin-top: 0; }
+.group-head h2 { margin: 0; font: 700 22px/1.2 var(--f-display); }
+.group-head span { color: var(--muted); font-size: 13px; }
+
+section.sec { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 22px 24px; scroll-margin-top: 16px; box-shadow: var(--shadow); min-width: 0; }
+@media (max-width: 520px) { section.sec { padding: 18px 16px; } }
+.sec h3 { margin: 0 0 6px; font: 700 19px/1.25 var(--f-display); text-wrap: balance; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.sec .intro { margin: 0 0 16px; color: var(--muted); max-width: 68ch; }
+
+.chip { display: inline-flex; align-items: center; height: 20px; padding: 0 7px; border-radius: 999px; font: 600 11px/1 var(--f-body); letter-spacing: .02em; }
+.chip.new { background: var(--new-soft); color: var(--new); }
+.chip.count { background: var(--sunken); color: var(--muted); }
+.dot-new { width: 7px; height: 7px; border-radius: 50%; background: var(--new); align-self: center; flex: none; }
+
+/* role cards */
+.roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.role { display: flex; flex-direction: column; gap: 6px; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); text-decoration: none; color: var(--ink); min-width: 0; }
+.role:hover { border-color: var(--accent); }
+.role strong { font: 600 15px/1.35 var(--f-display); text-wrap: balance; }
+.role .role-go { margin-top: auto; font-size: 13px; color: var(--accent); font-weight: 600; }
+
+/* steps */
+ol.steps { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 10px; }
+ol.steps li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 12px; align-items: start; }
+.step-n { width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font: 600 13px/28px var(--f-mono); text-align: center; }
+.step-b { display: flex; flex-direction: column; gap: 2px; padding-top: 3px; min-width: 0; }
+.step-h { font-weight: 600; }
+.step-t { color: var(--muted); }
+
+/* example callout */
+aside.example { margin-top: 16px; padding: 14px 16px 16px; border: 1px dashed var(--line); border-radius: 8px; background: var(--bg); min-width: 0; }
+.ex-label { font: 600 11px/1 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--new); margin-bottom: 6px; }
+.ex-title { font-weight: 600; margin-bottom: 6px; }
+.ex-text { margin: 0 0 8px; color: var(--muted); max-width: 70ch; }
+.ex-table { overflow-x: auto; }
+.ex-table table { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+.ex-table th { text-align: left; font-weight: 600; font-size: 12.5px; color: var(--muted); padding: 6px 10px 6px 0; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.ex-table td { padding: 7px 10px 7px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+.ex-table tr:last-child td { border-bottom: 0; }
+
+/* figure with pins */
+figure.shot { margin: 0 0 18px; }
+.shot-frame { position: relative; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--sunken); line-height: 0; }
+.shot-frame img { width: 100%; height: auto; display: block; }
+.pin { position: absolute; width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 50%; background: var(--pin); color: var(--pin-ink); border: 2px solid #fff; font: 600 11.5px/20px var(--f-mono); text-align: center; cursor: pointer; padding: 0; box-shadow: 0 2px 6px rgba(0,0,0,.25); transition: transform .15s; }
+.pin:hover, .pin.hot { transform: scale(1.25); }
+@media (max-width: 520px) { .pin { width: 20px; height: 20px; margin: -10px 0 0 -10px; font-size: 10px; line-height: 16px; } }
+figcaption { margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+.shot-frame.placing { cursor: crosshair; outline: 2px dashed var(--pin); outline-offset: 2px; }
+
+/* item rows */
+ol.legend, ul.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+ul.items.two { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
+@media (max-width: 760px) { ul.items.two { grid-template-columns: minmax(0, 1fr); } }
+.row { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 4px 10px; padding: 10px 0; border-top: 1px solid var(--line); }
+ul.items .row { grid-template-columns: minmax(0, 1fr); }
+.row.hot { background: linear-gradient(90deg, var(--accent-soft), transparent 80%); }
+.num { width: 22px; height: 22px; border-radius: 50%; background: var(--pin); color: var(--pin-ink); font: 600 11px/22px var(--f-mono); text-align: center; margin-top: 1px; }
+.row .name { font-weight: 600; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.row .desc { color: var(--muted); grid-column: 2; }
+ul.items .row .desc { grid-column: 1; }
+mark { background: var(--warn-soft); color: inherit; border-radius: 2px; padding: 0 1px; }
+
+/* changelog */
+ol.log { list-style: none; margin: 0; padding: 0; }
+ol.log li { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 4px 16px; padding: 12px 0; border-top: 1px solid var(--line); }
+@media (max-width: 520px) { ol.log li { grid-template-columns: minmax(0, 1fr); } }
+ol.log .date { color: var(--muted); }
+ol.log .t { font-weight: 600; }
+ol.log .x { color: var(--muted); }
+ol.log a { font-size: 13px; }
+
+.empty { padding: 28px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: var(--r); }
+.note { font-size: 12.5px; color: var(--muted); }
+footer.note { padding-top: 8px; }
+
+/* editing */
+[contenteditable="true"] { outline: 1px dashed var(--line); outline-offset: 2px; border-radius: 3px; cursor: text; min-width: 2ch; display: inline-block; }
+[contenteditable="true"]:focus { outline: 2px solid var(--accent); background: var(--surface); }
+.desc[contenteditable="true"], .intro[contenteditable="true"] { display: block; }
+.tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; grid-column: 1 / -1; }
+.sec-tools { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; padding: 10px; background: var(--sunken); border-radius: 8px; }
+.sec-tools label.btn { position: relative; overflow: hidden; }
+.sec-tools input[type=file] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.form { display: grid; gap: 8px; grid-template-columns: 150px minmax(0, 1fr); padding: 12px; background: var(--sunken); border-radius: 8px; margin-bottom: 12px; }
+.form input, .form select, .form textarea { width: 100%; border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; background: var(--surface); }
+.form .full { grid-column: 1 / -1; }
+@media (max-width: 520px) { .form { grid-template-columns: minmax(0, 1fr); } }
+.savebar { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(0,0,0,.08); display: flex; gap: 10px; align-items: center; justify-content: flex-end; flex-wrap: wrap; z-index: 20; }
+.savebar .msg { margin-right: auto; font-size: 13px; color: var(--muted); }
+.savebar .msg.err { color: var(--danger); }
+.savebar .msg.ok { color: var(--new); }
+.totop { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 15; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--accent); box-shadow: var(--shadow); display: grid; place-items: center; cursor: pointer; }
+.totop:hover { border-color: var(--accent); }
+.savebar:not([hidden]) ~ .totop { bottom: calc(84px + env(safe-area-inset-bottom, 0px)); }
+.banner { background: var(--warn-soft); color: var(--warn); padding: 10px 14px; border-radius: 8px; font-size: 13.5px; }
+
+/* view switch: step-by-step wizard vs. full guide */
+.modes { display: flex; gap: 2px; overflow-x: auto; }
+.modes a { padding: 7px 12px; border-radius: 8px; font-weight: 600; font-size: 14px; color: var(--muted); text-decoration: none; white-space: nowrap; }
+.modes a:hover { color: var(--ink); background: var(--sunken); }
+.modes a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); }
+@media (max-width: 760px) {
+  .search { flex: 1 1 100%; order: 3; margin-left: 0; }
+  .modes { flex: 1 1 100%; order: 2; }
+}
+a.btn { color: var(--ink); text-decoration: none; }
+a.btn.primary { color: var(--accent-ink); }
+.btn.lg { height: 46px; padding: 0 20px; font-size: 15px; border-radius: 10px; justify-content: center; }
+
+/* wizard */
+#wizard { padding-block: 28px 80px; }
+.wz-h { margin: 0 0 8px; font: 700 clamp(24px, 3.4vw, 34px)/1.15 var(--f-display); letter-spacing: -.01em; text-wrap: balance; }
+.wz-h:focus, .wz-title:focus { outline: none; }
+.wz-lead { margin: 0 0 22px; font-size: 17px; color: var(--muted); max-width: 52ch; }
+.wz-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.wz-cardlink { display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); color: var(--ink); text-decoration: none; }
+.wz-cardlink:hover { border-color: var(--accent); }
+.wz-num { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font: 700 18px/1 var(--f-display); display: grid; place-items: center; margin-bottom: 6px; }
+.wz-num.ok { background: var(--new); color: #fff; }
+.wz-ct { font: 700 19px/1.25 var(--f-display); }
+.wz-cd { color: var(--muted); }
+.wz-cm { margin-top: auto; padding-top: 8px; font-weight: 600; font-size: 14px; color: var(--accent); }
+.wz-foot { margin: 22px 0 0; color: var(--muted); }
+
+.wz-steps { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 0 0 16px; padding: 0; font-size: 13.5px; }
+.wz-steps a { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); text-decoration: none; font-weight: 600; }
+.wz-steps a:hover { border-color: var(--accent); }
+.wz-steps .n { width: 24px; height: 24px; border-radius: 50%; background: var(--sunken); font: 600 12px/1 var(--f-mono); display: grid; place-items: center; }
+.wz-steps a[aria-current="step"] { border-color: var(--accent); color: var(--accent); }
+.wz-steps a[aria-current="step"] .n { background: var(--accent); color: var(--accent-ink); }
+.wz-steps a.ok .n { background: var(--new); color: #fff; }
+.wz-steps a.home { padding-left: 12px; }
+
+.wz-card { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(280px, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); overflow: hidden; }
+.wz-media { background: var(--sunken); display: grid; place-items: center; padding: 24px; min-height: 340px; min-width: 0; }
+.wz-frame { position: relative; display: inline-block; max-width: 100%; line-height: 0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 12px rgba(20, 32, 58, .14); }
+.wz-frame img { display: block; max-width: 100%; max-height: min(60vh, 540px); width: auto; height: auto; }
+.wz-spot { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.wz-ring { stroke: #E02424; stroke-width: 3; animation: wzpulse 1.6s ease-in-out infinite; }
+@keyframes wzpulse { 50% { stroke-width: 6; } }
+@media (prefers-reduced-motion: reduce) { .wz-ring { animation: none; } }
+.wz-body { padding: 28px; display: flex; flex-direction: column; min-width: 0; }
+.wz-count { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.wz-bar { height: 6px; border-radius: 99px; background: var(--sunken); margin: 8px 0 22px; overflow: hidden; }
+.wz-bar span { display: block; height: 100%; background: var(--accent); border-radius: inherit; transition: width .3s; }
+.wz-title { margin: 0 0 10px; font: 700 clamp(22px, 2.6vw, 28px)/1.2 var(--f-display); text-wrap: balance; }
+.wz-text { margin: 0 0 14px; font-size: 18px; line-height: 1.55; max-width: 40ch; }
+.wz-more { font-size: 14px; font-weight: 600; }
+.wz-nav { margin-top: auto; padding-top: 24px; display: flex; gap: 10px; }
+.wz-nav .btn { flex: 1; }
+.wz-intro { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: clamp(22px, 4vw, 40px); }
+.wz-meta { color: var(--muted); font-size: 14px; margin: -10px 0 22px; }
+.wz-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.wz-video { margin-top: 20px; }
+.wz-video video { display: block; width: 100%; max-width: 880px; border-radius: 10px; background: #000; }
+.wz-badge { width: 56px; height: 56px; border-radius: 50%; background: var(--new-soft); color: var(--new); display: grid; place-items: center; margin-bottom: 14px; }
+@media (max-width: 760px) {
+  #wizard { padding-block: 18px 60px; }
+  .wz-card { grid-template-columns: minmax(0, 1fr); }
+  .wz-media { padding: 14px; min-height: 0; }
+  .wz-frame img { max-height: 44vh; }
+  .wz-body { padding: 20px 16px; }
+  .wz-text { font-size: 17px; }
+  .wz-actions .btn { flex: 1 1 100%; }
+}
+/* training portal */
+.tr-plan { list-style: none; margin: 0 0 24px; padding: 0; display: grid; gap: 14px; max-width: 560px; }
+.tr-plan li { display: flex; gap: 14px; align-items: flex-start; }
+.tr-plan .n { width: 32px; height: 32px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font: 600 14px/1 var(--f-mono); display: grid; place-items: center; flex: none; }
+.tr-plan div { display: flex; flex-direction: column; padding-top: 4px; }
+.tr-plan div span { color: var(--muted); }
+.wz-cardlink.off { opacity: .65; box-shadow: none; }
+.wz-cardlink.off .wz-num { background: var(--sunken); color: var(--muted); }
+.wz-cardlink.off .wz-cm { color: var(--muted); }
+.wz-off { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px; border: 1px dashed var(--line); color: var(--muted); font-weight: 600; }
+.wz-card.solo { grid-template-columns: minmax(0, 1fr); max-width: 760px; }
+.tr-opts { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 10px; }
+.tr-opt { width: 100%; min-height: 52px; display: flex; gap: 12px; align-items: center; padding: 12px 16px; text-align: left; font-size: 16px; line-height: 1.4; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); cursor: pointer; }
+.tr-opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+.tr-opt:disabled { cursor: default; }
+.tr-opt .k { width: 28px; height: 28px; border-radius: 50%; background: var(--sunken); font: 600 13px/1 var(--f-mono); display: grid; place-items: center; flex: none; }
+.tr-opt.ok { border-color: var(--new); background: var(--new-soft); }
+.tr-opt.ok .k { background: var(--new); color: #fff; }
+.tr-opt.bad { border-color: var(--danger); background: var(--bad-soft); }
+.tr-opt.bad .k { background: var(--danger); color: #fff; }
+.tr-fb { padding: 12px 14px; border-radius: 10px; font-size: 15px; }
+.tr-fb.ok { background: var(--new-soft); }
+.tr-fb.ok strong { color: var(--new); }
+.tr-fb.bad { background: var(--bad-soft); }
+.tr-fb.bad strong { color: var(--danger); }
+.tr-fb p { margin: 4px 0 0; }
+/* tap questions: question on top, screenshot full width below so small buttons stay big enough to hit */
+.wz-card.tap { grid-template-columns: minmax(0, 1fr); }
+.wz-card.tap .wz-body { order: -1; padding-bottom: 4px; }
+.wz-card.tap .wz-title { max-width: 62ch; }
+.wz-card.tap .wz-nav { margin-top: 14px; padding-top: 0; max-width: 360px; }
+.wz-card.tap .wz-media { min-height: 0; padding-top: 14px; }
+.tr-tap { cursor: crosshair; }
+.tr-tap:hover { outline: 3px solid var(--accent); outline-offset: 2px; }
+.tr-dot { position: absolute; width: 22px; height: 22px; margin: -11px 0 0 -11px; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 1px 5px rgba(0, 0, 0, .45); }
+.tr-dot.ok { background: var(--new); }
+.tr-dot.bad { background: #E02424; }
+.tr-score { --c: var(--new); width: 140px; height: 140px; border-radius: 50%; background: conic-gradient(var(--c) calc(var(--p) * 1%), var(--sunken) 0); display: grid; place-items: center; margin-bottom: 18px; }
+.tr-score.bad { --c: var(--warn); }
+.tr-score > span { width: 112px; height: 112px; border-radius: 50%; background: var(--surface); display: grid; place-items: center; align-content: center; gap: 2px; }
+.tr-score b { font: 700 40px/1 var(--f-display); font-variant-numeric: tabular-nums; }
+.tr-score small { color: var(--muted); font-size: 13px; }
+.tr-sub { margin: 4px 0 10px; font: 700 18px/1.3 var(--f-display); }
+.tr-review { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 10px; max-width: 760px; }
+.tr-review li { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); }
+.tr-review span { color: var(--muted); }
+.tr-review a { font-weight: 600; font-size: 14px; }
+@media (max-width: 760px) { .wz-card.quiz .wz-body { order: -1; padding-bottom: 6px; } }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <a href="https://ulakbell.com/" title="ulakbell.com"><img class="logo" id="logo" src="img/ulakbell-logo.svg" alt="ulakBELL" width="134" height="22"></a>
+      <h1 class="brand-t"><a href="#adim" id="site-title">Yardım Merkezi</a></h1>
+    </div>
+    <nav class="modes" id="modebar" aria-label="Görünüm" hidden>
+      <a href="#adim" data-mode="wizard">Adım adım</a>
+      <a href="#egitim" data-mode="training">Eğitim</a>
+      <a href="#rehber" data-mode="guide">Tüm rehber</a>
+    </nav>
+    <div class="search">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg>
+      <input id="q" type="search" placeholder="Yardımda ara (ör. mola, aktar)" aria-label="Yardımda ara" autocomplete="off">
+    </div>
+    <button class="btn" id="edit-btn" hidden aria-pressed="false">Düzenle</button>
+  </div>
+</header>
+
+<div class="wrap" id="wizard" hidden></div>
+
+<div id="guide">
+
+<div class="wrap layout">
+  <nav class="toc" id="toc" aria-label="Bölümler"></nav>
+  <main id="main">
+    <div class="empty" id="loading">Yardım içeriği yükleniyor…</div>
+  </main>
+</div>
+</div>
+
+<div class="savebar" id="savebar" hidden>
+  <span class="msg" id="save-msg">Düzenleme modundasınız. Değişiklikler kaydedilene kadar yalnızca sizde görünür.</span>
+  <button class="btn ghost" id="cancel-btn">Vazgeç</button>
+  <button class="btn primary" id="save-btn">Kaydet ve yayınla</button>
+</div>
+<button class="totop" id="totop" type="button" title="Sayfanın başına git" aria-label="Sayfanın başına git" hidden><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></svg></button>
+
+<script>
+(() => {
+  const NEW_DAYS = 45;
+  const DRAFT_KEY = "gorevlerim-help-draft";
+  let original = null;      // content as loaded
+  let data = null;          // working copy
+  let editing = false;
+  let dirty = false;
+  let artifact = null;
+  let placing = null;       // {sec, idx}
+  const pendingFiles = {};  // path -> Blob (new screenshots)
+  const localUrls = {};     // path -> object URL for this view
+
+  const $ = (s, el = document) => el.querySelector(s);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const today = () => { const d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
+  const fmt = iso => { if (!iso) return ""; const [y, m, d] = iso.split("-"); return `${d}.${m}.${y}`; };
+  const isNew = iso => { if (!iso) return false; const t = Date.parse(iso + "T00:00:00"); return !isNaN(t) && (Date.now() - t) / 864e5 <= NEW_DAYS; };
+  const norm = s => String(s || "").toLocaleLowerCase("tr");
+  const slug = s => norm(s).replace(/[çğıöşü]/g, c => ({ ç: "c", ğ: "g", ı: "i", ö: "o", ş: "s", ü: "u" }[c])).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "bolum";
+  const imgSrc = p => localUrls[p] || p;
+  const store = { get(k) { try { return sessionStorage.getItem(k); } catch { return null; } }, set(k, v) { try { sessionStorage.setItem(k, v); } catch {} }, del(k) { try { sessionStorage.removeItem(k); } catch {} } };
+
+  function hl(text, q) {
+    const t = esc(text);
+    if (!q) return t;
+    const i = norm(text).indexOf(q);
+    if (i < 0) return t;
+    return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
+  }
+  const secHasNew = s => isNew(s.updated) || (s.items || []).some(it => isNew(it.updated));
+
+  /* ---------- render ---------- */
+  function render() {
+    const q = editing ? "" : norm($("#q").value.trim());
+    $("#site-title").textContent = data.meta.title || "Yardım Merkezi";
+    $("#logo").alt = data.meta.product || "ulakBELL";
+
+    const main = $("#main");
+    const toc = $("#toc");
+    let html = "", tocHtml = "", shown = 0;
+    if (!q && !editing) html += renderRoles();
+
+    for (const g of data.groups) {
+      const secs = data.sections.filter(s => s.group === g.id);
+      const vis = secs.map(s => ({ s, m: q ? matchSection(s, q) : { any: true, items: null } })).filter(x => x.m.any);
+      if (!vis.length && !editing) continue;
+      tocHtml += tocGroup(g.id, g.title, vis.map(({ s }) => `<a href="#${esc(s.id)}" data-id="${esc(s.id)}"><span>${esc(s.title)}</span>${secHasNew(s) ? '<span class="dot-new" title="Yeni"></span>' : ""}</a>`), !!q || editing);
+      html += `<div class="group-head" id="grup-${esc(g.id)}"><h2>${esc(g.title)}</h2>${g.audience ? `<span class="chip count">${esc(g.audience)}</span>` : ""}<span>${vis.length} bölüm</span></div>`;
+      for (const { s, m } of vis) { html += renderSection(s, q, m); shown++; }
+      if (editing) html += `<div><button class="btn" data-act="add-sec" data-group="${esc(g.id)}">+ ${esc(g.title)} için bölüm ekle</button></div>`;
+    }
+
+    const logVis = (data.changelog || []).filter(e => !q || norm(e.title + " " + e.text).includes(q));
+    if (logVis.length || editing) {
+      tocHtml += tocGroup("guncel", "Güncel", [`<a href="#yenilikler" data-id="yenilikler"><span>Yenilikler</span></a>`], !!q || editing);
+      html += `<div class="group-head"><h2>Yenilikler</h2><span>Yeni geliştirmeler, en yenisi üstte</span></div>` + renderLog(logVis, q);
+      shown++;
+    }
+    if (!shown) html = `<div class="empty">“${esc($("#q").value)}” için sonuç yok. Farklı bir kelime deneyin; örneğin <b>aktar</b>, <b>mola</b> veya <b>kullanıcı</b>.</div>`;
+    html += `<footer class="note">Son güncelleme <span class="mono">${esc(fmt(data.meta.updated))}</span>${data.meta.note || editing ? ` · <span ${editing ? 'contenteditable="true" data-path="meta.note"' : ""}>${esc(data.meta.note || "")}</span>` : ""}</footer>`;
+
+    main.innerHTML = html;
+    toc.innerHTML = tocHtml;
+    observeActive();
+  }
+
+  function matchSection(s, q) {
+    const extra = (s.steps || []).map(x => x.title + " " + (x.text || "")).join(" ") + " " + exampleText(s.example);
+    const head = norm(s.title + " " + s.intro + " " + extra).includes(q);
+    const items = (s.items || []).map(it => norm(it.name + " " + it.desc).includes(q));
+    return { any: head || items.some(Boolean), items: head ? null : items };
+  }
+
+  function exampleText(ex) {
+    if (!ex) return "";
+    return [ex.title, ex.text, ...(ex.head || []), ...[].concat(...(ex.rows || []))].filter(Boolean).join(" ");
+  }
+
+  function renderRoles() {
+    const cards = data.groups.filter(g => g.card);
+    if (!cards.length) return "";
+    return `<nav class="roles" aria-label="Rolünüze göre başlayın">` + cards.map(g =>
+      `<a class="role" href="#${esc(g.target || "grup-" + g.id)}"><span class="eyebrow">${esc(g.audience || g.title)}</span><strong>${esc(g.card)}</strong><span class="role-go">${esc(g.title)} →</span></a>`
+    ).join("") + `</nav>`;
+  }
+
+  function renderExample(ex, si, q, ce) {
+    const base = `sections.${si}.example`;
+    let h = `<aside class="example" aria-label="Örnek"><div class="ex-label">Örnek</div>`;
+    if (ex.title || editing) h += `<div class="ex-title">${ce(base + ".title", "", ex.title || "")}</div>`;
+    if (ex.text || (editing && !ex.rows)) h += ce(base + ".text", "ex-text", ex.text || "", "p");
+    if (ex.rows && ex.rows.length) {
+      h += `<div class="ex-table"><table>`;
+      if (ex.head) h += `<thead><tr>${ex.head.map((c, ci) => `<th>${ce(`${base}.head.${ci}`, "", c)}</th>`).join("")}</tr></thead>`;
+      h += `<tbody>${ex.rows.map((r, ri) => `<tr>${r.map((c, ci) => `<td>${ce(`${base}.rows.${ri}.${ci}`, "", c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+    }
+    return h + `</aside>`;
+  }
+
+  function renderSection(s, q, m) {
+    const si = data.sections.indexOf(s);
+    const ce = (path, cls, text, tag = "span") => editing
+      ? `<${tag} class="${cls}" contenteditable="true" data-path="${path}">${esc(text)}</${tag}>`
+      : `<${tag} class="${cls}">${hl(text, q)}</${tag}>`;
+    const items = s.items || [];
+    const pinned = s.image ? items.map((it, i) => ({ it, i })).filter(x => typeof x.it.x === "number") : [];
+    const pinNo = new Map(pinned.map((x, n) => [x.i, n + 1]));
+
+    let h = `<section class="sec" id="${esc(s.id)}" data-sec="${si}">`;
+    h += `<h3>${ce(`sections.${si}.title`, "", s.title)}${!editing && secHasNew(s) ? '<span class="chip new">Yeni</span>' : ""}</h3>`;
+    h += ce(`sections.${si}.intro`, "intro", s.intro || "", "p");
+
+    if (editing) {
+      h += `<div class="sec-tools">
+        <label class="btn sm">${s.image ? "Görseli değiştir" : "Görsel ekle"}<input type="file" accept="image/png,image/jpeg,image/webp" data-act="img" data-sec="${si}" aria-label="Ekran görüntüsü seç"></label>
+        ${s.image ? `<button class="btn sm" data-act="rm-img" data-sec="${si}">Görseli kaldır</button>` : ""}
+        <button class="btn sm" data-act="add-item" data-sec="${si}">+ Madde ekle</button>
+        <button class="btn sm" data-act="add-step" data-sec="${si}">+ Adım ekle</button>
+        <button class="btn sm" data-act="sec-up" data-sec="${si}">Yukarı taşı</button>
+        <button class="btn sm" data-act="sec-down" data-sec="${si}">Aşağı taşı</button>
+        <button class="btn sm danger" data-act="rm-sec" data-sec="${si}">${s._confirm ? "Silmek için tekrar basın" : "Bölümü sil"}</button>
+      </div>`;
+    }
+
+    if (s.steps && s.steps.length) {
+      h += `<ol class="steps">` + s.steps.map((st, k) => `<li><span class="step-n" aria-hidden="true">${k + 1}</span><div class="step-b">${ce(`sections.${si}.steps.${k}.title`, "step-h", st.title)}${st.text || editing ? ce(`sections.${si}.steps.${k}.text`, "step-t", st.text || "", "span") : ""}${editing ? `<div class="tools"><button class="btn sm danger" data-act="step-rm" data-sec="${si}" data-i="${k}">Adımı sil</button></div>` : ""}</div></li>`).join("") + `</ol>`;
+    }
+
+    if (s.image) {
+      h += `<figure class="shot"${s.imageMax ? ` style="max-width:${+s.imageMax}px"` : ""}><div class="shot-frame${placing && placing.sec === si ? " placing" : ""}" data-frame="${si}">
+        <img src="${esc(imgSrc(s.image))}" alt="${esc(s.imageAlt || s.title)}" loading="lazy"${s.imageSize ? ` width="${+s.imageSize[0]}" height="${+s.imageSize[1]}"` : ""}>
+        ${s.bakedPins ? "" : pinned.map(({ it, i }) => `<button class="pin" style="left:${it.x}%;top:${it.y}%" data-pin="${si}-${i}" aria-label="${pinNo.get(i)}. ${esc(it.name)}">${pinNo.get(i)}</button>`).join("")}
+      </div>${placing && placing.sec === si ? `<figcaption>Görselde “${esc(items[placing.idx].name)}” için işaretin duracağı yere tıklayın.</figcaption>` : `<figcaption>${s.imageNote ? esc(s.imageNote) + " " : ""}${pinned.length ? (s.bakedPins ? "Görseldeki numaralar aşağıdaki açıklamalara karşılık gelir." : "Numaralara tıklayarak açıklamaya gidin.") : ""}</figcaption>`}</figure>`;
+    }
+
+    const rows = items.map((it, i) => ({ it, i })).filter(x => !m.items || m.items[x.i]);
+    if (!rows.length && !editing) return h + (s.example ? renderExample(s.example, si, q, ce) : "") + `</section>`;
+    const useLegend = pinned.length > 0;
+    const listTag = useLegend ? "ol" : "ul";
+    const cls = useLegend ? "legend" : ("items" + (rows.length > 6 && !editing ? " two" : ""));
+    h += `<${listTag} class="${cls}">`;
+    for (const { it, i } of rows) {
+      const n = pinNo.get(i);
+      h += `<li class="row" data-row="${si}-${i}" id="${esc(s.id)}-${i}">`;
+      if (useLegend) h += n ? `<span class="num" aria-hidden="true">${n}</span>` : `<span></span>`;
+      h += `<span class="name">${ce(`sections.${si}.items.${i}.name`, "", it.name)}${!editing && isNew(it.updated) ? '<span class="chip new">Yeni</span>' : ""}</span>`;
+      h += ce(`sections.${si}.items.${i}.desc`, "desc", it.desc || "", "span");
+      if (editing) {
+        h += `<div class="tools">
+          <button class="btn sm" data-act="it-up" data-sec="${si}" data-i="${i}">Yukarı</button>
+          <button class="btn sm" data-act="it-down" data-sec="${si}" data-i="${i}">Aşağı</button>
+          <button class="btn sm" aria-pressed="${isNew(it.updated)}" data-act="it-new" data-sec="${si}" data-i="${i}">${isNew(it.updated) ? "Yeni olarak işaretli" : "Yeni olarak işaretle"}</button>
+          ${s.image ? `<button class="btn sm" data-act="it-place" data-sec="${si}" data-i="${i}">${typeof it.x === "number" ? "İşaretin yerini değiştir" : "Görselde işaretle"}</button>` : ""}
+          ${s.image && typeof it.x === "number" ? `<button class="btn sm" data-act="it-unplace" data-sec="${si}" data-i="${i}">İşareti kaldır</button>` : ""}
+          <button class="btn sm danger" data-act="it-rm" data-sec="${si}" data-i="${i}">Sil</button>
+        </div>`;
+      }
+      h += `</li>`;
+    }
+    h += `</${listTag}>`;
+    if (!rows.length && editing) h += `<p class="note">Bu bölümde henüz madde yok. “+ Madde ekle” ile başlayın.</p>`;
+    if (s.example) h += renderExample(s.example, si, q, ce);
+    return h + `</section>`;
+  }
+
+  function renderLog(entries, q) {
+    const secName = id => (data.sections.find(s => s.id === id) || {}).title;
+    let h = `<section class="sec" id="yenilikler">`;
+    if (editing) {
+      h += `<form class="form" id="log-form">
+        <label for="log-date">Tarih</label><input id="log-date" type="date" value="${today()}" required>
+        <label for="log-title">Başlık</label><input id="log-title" type="text" placeholder="Örn. Görevlerim tablosuna yeni sütun" required>
+        <label for="log-text">Açıklama</label><input id="log-text" type="text" placeholder="Kullanıcının göreceği kısa açıklama">
+        <label for="log-sec">İlgili bölüm</label><select id="log-sec"><option value="">Seçilmedi</option>${data.sections.map(s => `<option value="${esc(s.id)}">${esc(s.title)}</option>`).join("")}</select>
+        <div class="full"><button class="btn primary sm" type="submit">Yenilik ekle</button> <span class="note">İlgili bölüm seçilirse o bölüm “Yeni” olarak işaretlenir.</span></div>
+      </form>`;
+    }
+    const sorted = [...entries].sort((a, b) => String(b.date).localeCompare(String(a.date)));
+    if (!sorted.length) h += `<p class="note">Henüz yenilik eklenmedi.</p>`;
+    h += `<ol class="log">` + sorted.map(e => {
+      const idx = data.changelog.indexOf(e);
+      return `<li><span class="date mono">${esc(fmt(e.date))}</span><div>
+        <div class="t">${hl(e.title, q)}${!editing && isNew(e.date) ? ' <span class="chip new">Yeni</span>' : ""}</div>
+        ${e.text ? `<div class="x">${hl(e.text, q)}</div>` : ""}
+        ${e.section && secName(e.section) ? `<a href="#${esc(e.section)}">${esc(secName(e.section))} bölümüne git</a>` : ""}
+        ${editing ? `<div class="tools"><button class="btn sm danger" data-act="log-rm" data-i="${idx}">Kaldır</button></div>` : ""}
+      </div></li>`;
+    }).join("") + `</ol></section>`;
+    return h;
+  }
+
+
+  /* ---------- toc: group headings stay visible, sections open on demand ---------- */
+  const tocOpen = new Set();   // groups the reader opened (or that held the section being read)
+  const CHEV = '<svg class="chev" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 2.5 3.5 3.5-3.5 3.5"/></svg>';
+  function tocGroup(id, title, links, forceOpen) {
+    const open = forceOpen || tocOpen.has(id);
+    return `<button type="button" class="toc-g" data-toc-g="${esc(id)}" aria-expanded="${open}" aria-controls="toc-${esc(id)}">${CHEV}<span>${esc(title)}</span><span class="cnt">${links.length}</span></button>`
+      + `<div class="toc-items" id="toc-${esc(id)}"${open ? "" : " hidden"}>${links.join("")}</div>`;
+  }
+  function setTocOpen(id, open) {
+    const b = document.querySelector(`.toc-g[data-toc-g="${CSS.escape(id)}"]`);
+    if (!b) return;
+    b.setAttribute("aria-expanded", String(open));
+    const list = document.getElementById("toc-" + id);
+    if (list) list.hidden = !open;
+    if (open) tocOpen.add(id); else tocOpen.delete(id);
+  }
+  const groupOfSection = id => id === "yenilikler" ? "guncel" : ((data.sections.find(s => s.id === id) || {}).group || "");
+  function markActive(id) {
+    document.querySelectorAll(".toc a").forEach(a => a.classList.toggle("active", a.dataset.id === id));
+    const g = groupOfSection(id);
+    document.querySelectorAll(".toc-g").forEach(b => b.classList.toggle("has-active", b.dataset.tocG === g));
+    if (g && !tocOpen.has(g)) setTocOpen(g, true);
+    const toc = $("#toc"), a = toc.querySelector(`a[data-id="${CSS.escape(id)}"]`);
+    if (a && getComputedStyle(toc).position === "sticky") {
+      const t = a.offsetTop - toc.offsetTop, h = toc.clientHeight;
+      if (t < toc.scrollTop || t > toc.scrollTop + h - 40) toc.scrollTop = Math.max(0, t - h / 3);
+    }
+  }
+  document.addEventListener("click", e => {
+    const b = e.target.closest(".toc-g");
+    if (!b) return;
+    if (matchMedia("(max-width: 860px)").matches) {   // on phones the headings are chips that jump to the group
+      const head = document.getElementById(b.dataset.tocG === "guncel" ? "yenilikler" : "grup-" + b.dataset.tocG);
+      if (head) head.scrollIntoView({ behavior: "instant" });
+      return;
+    }
+    setTocOpen(b.dataset.tocG, b.getAttribute("aria-expanded") !== "true");
+  });
+
+  /* ---------- active section in toc ---------- */
+  let io = null;
+  function observeActive() {
+    if (io) io.disconnect();
+    if (!("IntersectionObserver" in window)) return;
+    io = new IntersectionObserver(entries => {
+      for (const e of entries) if (e.isIntersecting) markActive(e.target.id);
+    }, { rootMargin: "-20% 0px -70% 0px" });
+    document.querySelectorAll("section.sec").forEach(s => io.observe(s));
+  }
+
+  /* ---------- back to top ---------- */
+  let topTick = false;
+  window.addEventListener("scroll", () => {
+    if (topTick) return;
+    topTick = true;
+    requestAnimationFrame(() => { $("#totop").hidden = window.scrollY < 600; topTick = false; });
+  }, { passive: true });
+  $("#totop").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+    if (view === "guide" && location.hash && location.hash !== "#rehber") history.replaceState(null, "", "#rehber");
+  });
+
+  /* ---------- pin <-> row highlight ---------- */
+  function setHot(key, on) {
+    document.querySelectorAll(`[data-pin="${key}"], [data-row="${key}"]`).forEach(el => el.classList.toggle("hot", on));
+  }
+  document.addEventListener("mouseover", e => { const el = e.target.closest("[data-pin],[data-row]"); if (el) setHot(el.dataset.pin || el.dataset.row, true); });
+  document.addEventListener("mouseout", e => { const el = e.target.closest("[data-pin],[data-row]"); if (el) setHot(el.dataset.pin || el.dataset.row, false); });
+
+  /* ---------- editing helpers ---------- */
+  function setPath(path, value) {
+    const parts = path.split(".");
+    let o = data;
+    for (let i = 0; i < parts.length - 1; i++) o = o[parts[i]];
+    o[parts[parts.length - 1]] = value;
+  }
+  function markDirty() {
+    dirty = true;
+    store.set(DRAFT_KEY, JSON.stringify(data));
+    msg("Kaydedilmemiş değişiklikler var.", "");
+  }
+  function msg(text, kind) { const m = $("#save-msg"); m.textContent = text; m.className = "msg" + (kind ? " " + kind : ""); }
+  const move = (arr, i, d) => { const j = i + d; if (j < 0 || j >= arr.length) return; [arr[i], arr[j]] = [arr[j], arr[i]]; };
+
+  document.addEventListener("input", e => {
+    const el = e.target.closest("[data-path]");
+    if (!el || !editing) return;
+    setPath(el.dataset.path, el.textContent.replace(/\s+/g, " ").trim());
+    markDirty();
+  });
+  document.addEventListener("paste", e => {
+    const el = e.target.closest("[contenteditable=true]");
+    if (!el) return;
+    e.preventDefault();
+    const text = (e.clipboardData || window.clipboardData).getData("text/plain");
+    document.execCommand("insertText", false, text);
+  });
+  document.addEventListener("keydown", e => {
+    if (e.key === "Enter" && e.target.closest("[contenteditable=true]")) { e.preventDefault(); e.target.blur(); }
+    if (e.key === "Escape" && placing) { placing = null; render(); }
+  });
+
+  document.addEventListener("click", e => {
+    const pin = e.target.closest(".pin");
+    if (pin && !placing) {
+      const row = document.querySelector(`[data-row="${pin.dataset.pin}"]`);
+      if (row) { row.scrollIntoView({ block: "center" }); setHot(pin.dataset.pin, true); setTimeout(() => setHot(pin.dataset.pin, false), 1400); }
+      return;
+    }
+    const frame = e.target.closest("[data-frame]");
+    if (frame && placing && +frame.dataset.frame === placing.sec) {
+      const r = frame.getBoundingClientRect();
+      const it = data.sections[placing.sec].items[placing.idx];
+      it.x = Math.round(((e.clientX - r.left) / r.width) * 1000) / 10;
+      it.y = Math.round(((e.clientY - r.top) / r.height) * 1000) / 10;
+      placing = null; markDirty(); render();
+      return;
+    }
+    const b = e.target.closest("[data-act]");
+    if (!b || !editing || b.tagName === "INPUT") return;
+    const act = b.dataset.act, si = +b.dataset.sec, i = +b.dataset.i;
+    const sec = data.sections[si];
+    switch (act) {
+      case "add-item": (sec.items = sec.items || []).push({ name: "Yeni madde", desc: "Açıklama yazın.", updated: today() }); break;
+      case "add-step": (sec.steps = sec.steps || []).push({ title: "Yeni adım", text: "Açıklama yazın." }); break;
+      case "step-rm": sec.steps.splice(i, 1); break;
+      case "it-up": move(sec.items, i, -1); break;
+      case "it-down": move(sec.items, i, 1); break;
+      case "it-rm": sec.items.splice(i, 1); break;
+      case "it-new": if (isNew(sec.items[i].updated)) delete sec.items[i].updated; else sec.items[i].updated = today(); break;
+      case "it-place": placing = { sec: si, idx: i }; render(); document.querySelector(`[data-frame="${si}"]`)?.scrollIntoView({ block: "center" }); return;
+      case "it-unplace": delete sec.items[i].x; delete sec.items[i].y; break;
+      case "rm-img": delete sec.image; delete sec.imageSize; break;
+      case "sec-up": case "sec-down": {
+        const same = data.sections.map((s, k) => ({ s, k })).filter(x => x.s.group === sec.group);
+        const pos = same.findIndex(x => x.k === si); const other = same[pos + (act === "sec-up" ? -1 : 1)];
+        if (other) [data.sections[si], data.sections[other.k]] = [data.sections[other.k], data.sections[si]];
+        break;
+      }
+      case "rm-sec":
+        if (!sec._confirm) { sec._confirm = true; render(); setTimeout(() => { if (sec._confirm) { delete sec._confirm; render(); } }, 4000); return; }
+        data.sections.splice(si, 1); break;
+      case "add-sec": {
+        let id = slug("yeni bolum"), n = 2; while (data.sections.some(s => s.id === id)) id = "yeni-bolum-" + n++;
+        data.sections.push({ id, group: b.dataset.group, title: "Yeni bölüm", intro: "Bu bölümün ne anlattığını bir iki cümleyle yazın.", items: [], updated: today() });
+        break;
+      }
+      case "log-rm": data.changelog.splice(+b.dataset.i, 1); break;
+      default: return;
+    }
+    markDirty(); render();
+  });
+
+  document.addEventListener("change", e => {
+    const inp = e.target.closest('input[data-act="img"]');
+    if (!inp || !inp.files || !inp.files[0]) return;
+    const f = inp.files[0];
+    if (f.size > 8 * 1024 * 1024) { msg("Görsel 8 MB'tan küçük olmalı.", "err"); return; }
+    const si = +inp.dataset.sec;
+    const ext = (f.type.split("/")[1] || "jpg").replace("jpeg", "jpg");
+    const path = `img/${data.sections[si].id}-${Date.now()}.${ext}`;
+    pendingFiles[path] = f;
+    localUrls[path] = URL.createObjectURL(f);
+    data.sections[si].image = path;
+    delete data.sections[si].imageSize;
+    markDirty(); render();
+  });
+
+  document.addEventListener("submit", e => {
+    if (e.target.id !== "log-form") return;
+    e.preventDefault();
+    const title = $("#log-title").value.trim();
+    if (!title) { $("#log-title").focus(); return; }
+    const entry = { date: $("#log-date").value || today(), title, text: $("#log-text").value.trim(), section: $("#log-sec").value };
+    (data.changelog = data.changelog || []).push(entry);
+    const s = data.sections.find(x => x.id === entry.section);
+    if (s) s.updated = entry.date;
+    markDirty(); render();
+  });
+
+  /* ---------- edit mode / save ---------- */
+  function enterEdit() {
+    editing = true; $("#q").value = ""; $("#q").disabled = true;
+    if (view !== "guide") { history.replaceState(null, "", "#rehber"); route(); }
+    $("#edit-btn").setAttribute("aria-pressed", "true"); $("#edit-btn").textContent = "Düzenlemeyi kapat";
+    $("#savebar").hidden = false; document.body.style.paddingBottom = "76px";
+    msg(dirty ? "Kaydedilmemiş değişiklikler var." : "Düzenleme modundasınız. Değişiklikler kaydedilene kadar yalnızca sizde görünür.", "");
+    render();
+  }
+  function exitEdit() {
+    editing = false; placing = null; $("#q").disabled = false;
+    $("#edit-btn").setAttribute("aria-pressed", "false"); $("#edit-btn").textContent = "Düzenle";
+    $("#savebar").hidden = !dirty; if (!dirty) document.body.style.paddingBottom = "";
+    data.sections.forEach(s => delete s._confirm);
+    render();
+  }
+  $("#edit-btn").addEventListener("click", () => editing ? exitEdit() : enterEdit());
+  $("#cancel-btn").addEventListener("click", () => {
+    data = JSON.parse(JSON.stringify(original)); dirty = false; store.del(DRAFT_KEY);
+    for (const k of Object.keys(pendingFiles)) delete pendingFiles[k];
+    exitEdit(); $("#savebar").hidden = true; document.body.style.paddingBottom = "";
+  });
+  $("#save-btn").addEventListener("click", async () => {
+    if (!artifact) { msg("Bu görünümde kaydetme kullanılamıyor.", "err"); return; }
+    const btn = $("#save-btn"); btn.disabled = true; msg("Kaydediliyor…", "");
+    data.sections.forEach(s => delete s._confirm);
+    data.meta.updated = today();
+    const files = { "content.json": { content: JSON.stringify(data, null, 2), contentType: "application/json" } };
+    const used = new Set(data.sections.map(s => s.image).filter(Boolean));
+    for (const [p, blob] of Object.entries(pendingFiles)) if (used.has(p)) files[p] = blob;
+    store.set(DRAFT_KEY, JSON.stringify(data));
+    try {
+      await artifact.publish(files);
+      original = JSON.parse(JSON.stringify(data)); dirty = false; store.del(DRAFT_KEY);
+      for (const k of Object.keys(pendingFiles)) delete pendingFiles[k];
+      msg("Kaydedildi. Siteyi açan herkes yeni içeriği görecek.", "ok");
+      render();
+    } catch (err) {
+      const code = err && err.code;
+      if (code === "conflict") msg("Başka biri sizden önce kaydetti. Sayfa en son sürüme yenileniyor; taslağınız bu sekmede saklandı.", "err");
+      else if (code === "not_writer" || code === "not_granted" || code === "consent_required") { msg("Bu sayfayı düzenleme yetkiniz yok.", "err"); $("#edit-btn").hidden = true; }
+      else if (code === "capability_disabled" || code === "capability_removed" || code === "not_declared") msg("Bu görünümde kaydetme kullanılamıyor (örneğin herkese açık link). Siteyi claude.ai içinden açıp tekrar deneyin.", "err");
+      else if (code === "too_large") msg("İçerik çok büyük. Daha küçük bir görsel deneyin.", "err");
+      else if (code === "rate_limited") msg("Çok sık kaydedildi. Biraz bekleyip tekrar deneyin.", "err");
+      else msg("Kaydedilemedi. Bağlantınızı kontrol edip tekrar deneyin.", "err");
+    } finally { btn.disabled = false; }
+  });
+  window.addEventListener("beforeunload", e => { if (dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+  let qTimer = null;
+  $("#q").addEventListener("input", () => {
+    // Search always works on the full guide.
+    if (view !== "guide" && $("#q").value.trim()) { history.replaceState(null, "", "#rehber"); route(); }
+    clearTimeout(qTimer); qTimer = setTimeout(render, 120);
+  });
+
+  /* ---------- wizard (step by step) ---------- */
+  // Routes: #adim (home) · #adim/<chapter> (intro) · #adim/<chapter>/<n> (step n) · #adim/<chapter>/son (end).
+  // Any other hash, or #rehber, shows the full guide.
+  const WZ_KEY = "ulakbell-adim-adim";
+  const CHECK = '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8"/></svg>';
+  let view = "init";   // nothing shown yet; the first route() decides
+  const wzSeen = () => { try { return JSON.parse(localStorage.getItem(WZ_KEY) || "{}") || {}; } catch { return {}; } };
+  const wzMark = (id, n) => { try { const d = wzSeen(); if ((d[id] || 0) < n) { d[id] = n; localStorage.setItem(WZ_KEY, JSON.stringify(d)); } } catch {} };
+
+  function parseRoute() {
+    let h = location.hash.slice(1);
+    try { h = decodeURIComponent(h); } catch {}
+    if (!h) return { v: "wizard" };
+    const [head, a, b, c] = h.split("/");
+    if (head === "adim") return { v: "wizard", ch: a, n: b };
+    if (head === "egitim") return { v: "training", mod: a, part: b, n: c };
+    return { v: "guide", target: h };
+  }
+  const isAppHash = h => /^#(adim|egitim)(\/|$)/.test(h);
+
+  // The wizard and the training portal share the #wizard container; the guide is #guide.
+  function setView(v) {
+    view = v;
+    $("#wizard").hidden = v === "guide";
+    $("#guide").hidden = v !== "guide";
+    $("#modebar").hidden = !data.wizard && !data.training;
+    document.querySelectorAll(".modes a").forEach(a => {
+      a.hidden = (a.dataset.mode === "wizard" && !data.wizard) || (a.dataset.mode === "training" && !data.training);
+      if (a.dataset.mode === v) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+  }
+
+  function route() {
+    if (!data) return;
+    const r = parseRoute();
+    const was = view;
+    let v = r.v;
+    if (editing || (v === "wizard" && !data.wizard) || (v === "training" && !data.training)) v = "guide";
+    setView(v);
+    if (v === "wizard") return renderWizard(r);
+    if (v === "training") return renderTraining(r);
+    // Always jump straight to the section: with a smooth scroll the images loading on the way push the target down.
+    if (r.target && r.target !== "rehber") {
+      const t = document.getElementById(r.target);
+      if (t) { requestAnimationFrame(() => t.scrollIntoView({ behavior: "instant" })); if (t.matches("section.sec")) markActive(t.id); }
+    }
+    else if (was !== "guide" || r.target === "rehber") window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function spot(focus) {
+    if (!focus || !focus.length) return "";
+    const id = "wzm" + Math.random().toString(36).slice(2, 8);
+    const at = b => `x="${+b[0]}" y="${+b[1]}" width="${+b[2] - +b[0]}" height="${+b[3] - +b[1]}"`;
+    return `<svg class="wz-spot" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <defs><mask id="${id}"><rect width="100" height="100" fill="#fff"/>${focus.map(b => `<rect ${at(b)} fill="#000"/>`).join("")}</mask></defs>
+      <rect width="100" height="100" fill="rgba(14,20,32,.45)" mask="url(#${id})"/>
+      ${focus.map(b => `<rect class="wz-ring" ${at(b)} fill="none" vector-effect="non-scaling-stroke"/>`).join("")}
+    </svg>`;
+  }
+
+  function wzChapters(chs, ci, seen) {
+    return `<ol class="wz-steps" aria-label="Bölümler"><li><a class="home" href="#adim">Başlangıç</a></li>` + chs.map((c, i) =>
+      `<li><a href="#adim/${esc(c.id)}"${i === ci ? ' aria-current="step"' : ""}${(seen[c.id] || 0) >= c.steps.length ? ' class="ok"' : ""}><span class="n">${(seen[c.id] || 0) >= c.steps.length ? "✓" : i + 1}</span>${esc(c.title)}</a></li>`
+    ).join("") + `</ol>`;
+  }
+
+  function wzHome(W, seen) {
+    return `<h2 class="wz-h" tabindex="-1">${esc(W.title)}</h2><p class="wz-lead">${esc(W.intro)}</p>
+      <ol class="wz-cards">${W.chapters.map((c, i) => {
+        const t = c.steps.length, d = Math.min(seen[c.id] || 0, t), ok = d >= t;
+        const href = ok || !d ? `#adim/${esc(c.id)}` : `#adim/${esc(c.id)}/${d + 1}`;
+        return `<li><a class="wz-cardlink" href="${href}"><span class="wz-num${ok ? " ok" : ""}">${ok ? CHECK : i + 1}</span><span class="wz-ct">${esc(c.title)}</span><span class="wz-cd">${esc(c.desc)}</span><span class="wz-cm">${t} adım · ${ok ? "Tamamlandı, tekrar izle" : d ? `Kaldığınız yerden devam (${d + 1}. adım)` : "Başla"} →</span></a></li>`;
+      }).join("")}</ol>
+      <p class="wz-foot">Hepsini biliyor musunuz? <a href="#rehber">Tüm rehberi açın</a> ya da yukarıdaki arama kutusunu kullanın.</p>`;
+  }
+
+  function wzIntro(ch, ci, total) {
+    const t = ch.steps.length;
+    return `<div class="wz-intro"><div class="eyebrow">Bölüm ${ci + 1} / ${total}</div>
+      <h2 class="wz-h" tabindex="-1">${esc(ch.title)}</h2><p class="wz-lead">${esc(ch.desc)}</p>
+      <p class="wz-meta">${t} adım · yaklaşık ${Math.max(1, Math.round(t * 12 / 60))} dakika</p>
+      <div class="wz-actions"><a class="btn primary lg" href="#adim/${esc(ch.id)}/1" data-wz-next>Başla</a>
+      ${ch.video ? `<button class="btn lg" type="button" data-wz-video="${esc(ch.video)}">▶ Sesli videoyu izle</button>` : ""}</div>
+      <div class="wz-video" id="wz-video"></div></div>`;
+  }
+
+  // One lesson step; used by the wizard and by the training lessons with their own prev/next links.
+  function wzStep(ch, n, prev, next, nextLabel) {
+    const st = ch.steps[n - 1], t = ch.steps.length;
+    return `<div class="wz-card">
+      <div class="wz-media">${st.image ? `<div class="wz-frame"><img src="${esc(imgSrc(st.image))}" alt="${esc(st.title)}">${spot(st.focus)}</div>` : ""}</div>
+      <div class="wz-body">
+        <div class="wz-count"><span>${esc(ch.title)}</span><span class="mono">${n} / ${t}</span></div>
+        <div class="wz-bar" role="progressbar" aria-label="İlerleme" aria-valuemin="0" aria-valuemax="${t}" aria-valuenow="${n}"><span style="width:${(n / t) * 100}%"></span></div>
+        <h2 class="wz-title" tabindex="-1">${esc(st.title)}</h2>
+        <p class="wz-text">${esc(st.text)}</p>
+        ${st.more ? `<a class="wz-more" href="#${esc(st.more)}">Ayrıntılı anlatım</a>` : ""}
+        <div class="wz-nav"><a class="btn lg" href="${prev}" data-wz-prev>Geri</a><a class="btn primary lg" href="${next}" data-wz-next>${esc(nextLabel)}</a></div>
+      </div></div>`;
+  }
+
+  function wzEnd(ch, next) {
+    return `<div class="wz-intro"><div class="wz-badge">${CHECK}</div>
+      <h2 class="wz-h" tabindex="-1">${esc(ch.title)} tamam</h2>
+      <p class="wz-lead">${next ? `Sıradaki bölüm: ${esc(next.title)}.` : "Üç bölümü de bitirdiniz. Takıldığınız bir yer olursa yukarıdaki arama kutusunu kullanın."}</p>
+      <div class="wz-actions">${next ? `<a class="btn primary lg" href="#adim/${esc(next.id)}" data-wz-next>${esc(next.title)} →</a>` : `<a class="btn primary lg" href="#rehber">Tüm rehberi açın</a>`}
+      <a class="btn lg" href="#adim/${esc(ch.id)}/1" data-wz-prev>Bu bölümü tekrar et</a></div></div>`;
+  }
+
+  function showApp(html) {
+    const box = $("#wizard");
+    box.innerHTML = html;
+    if (box.getBoundingClientRect().top < 0) box.scrollIntoView({ behavior: "instant" });
+    const h = box.querySelector(".wz-title, .wz-h");
+    if (h) h.focus({ preventScroll: true });
+  }
+
+  function renderWizard(r) {
+    const W = data.wizard, chs = W.chapters;
+    const ci = chs.findIndex(c => c.id === r.ch);
+    let html;
+    if (ci < 0) html = wzHome(W, wzSeen());
+    else {
+      const ch = chs[ci], t = ch.steps.length;
+      if (r.n === "son") { wzMark(ch.id, t); html = wzEnd(ch, chs[ci + 1]); }
+      else {
+        const n = Math.min(Math.max(parseInt(r.n, 10) || 0, 0), t);
+        if (n > 1) wzMark(ch.id, n - 1);
+        const id = esc(ch.id);
+        html = n ? wzStep(ch, n, n > 1 ? `#adim/${id}/${n - 1}` : `#adim/${id}`, n < t ? `#adim/${id}/${n + 1}` : `#adim/${id}/son`, n < t ? "İleri" : "Bitir")
+          : wzIntro(ch, ci, chs.length);
+      }
+      html = wzChapters(chs, ci, wzSeen()) + html;
+    }
+    showApp(html);
+  }
+
+  /* ---------- training: lesson -> quiz -> score ---------- */
+  // Routes: #egitim · #egitim/<module> · #egitim/<module>/ders/<n> · #egitim/<module>/sinav · #egitim/<module>/sonuc
+  // The lesson is a wizard chapter. Scores stay in this browser only.
+  const TR_KEY = "ulakbell-egitim";
+  const trScores = () => { try { return JSON.parse(localStorage.getItem(TR_KEY) || "{}") || {}; } catch { return {}; } };
+  function trSave(id, score) {
+    try {
+      const d = trScores(), p = d[id] || {};
+      d[id] = { best: Math.max(p.best || 0, score), last: score, date: today() };
+      localStorage.setItem(TR_KEY, JSON.stringify(d));
+    } catch {}
+  }
+  let quiz = null;   // { id, i, order, picks, done, result }
+  const shuffle = a => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
+  const trReady = m => !!(m && m.questions && m.questions.length);
+  const lessonOf = m => (data.wizard && data.wizard.chapters.find(c => c.id === m.lesson)) || null;
+  const passMark = () => +data.training.pass || 70;
+  const trModule = id => data.training.modules.find(m => m.id === id);
+
+  function trStages(m, part) {
+    const base = `#egitim/${esc(m.id)}`, has = !!trScores()[m.id];
+    const li = (key, n, label, href) => `<li><a href="${href}"${part === key ? ' aria-current="step"' : ""}><span class="n">${n}</span>${label}</a></li>`;
+    return `<ol class="wz-steps" aria-label="Eğitim aşamaları"><li><a class="home" href="#egitim">Eğitimler</a></li>`
+      + li("ders", 1, "Ders", `${base}/ders/1`) + li("sinav", 2, "Sınav", `${base}/sinav`)
+      + (has || part === "sonuc" ? li("sonuc", 3, "Puan", `${base}/sonuc`) : `<li><span class="wz-off"><span class="n">3</span>Puan</span></li>`) + `</ol>`;
+  }
+
+  function trHome(T) {
+    const sc = trScores();
+    return `<h2 class="wz-h" tabindex="-1">${esc(T.title)}</h2><p class="wz-lead">${esc(T.intro)}</p>
+      <ol class="wz-cards">${T.modules.map((m, i) => {
+        const s = sc[m.id], ok = !!s && s.best >= passMark();
+        const inner = `<span class="wz-num${ok ? " ok" : ""}">${ok ? CHECK : i + 1}</span><span class="wz-ct">${esc(m.title)}</span><span class="wz-cd">${esc(m.desc)}</span>`;
+        if (!trReady(m)) return `<li><div class="wz-cardlink off" aria-disabled="true">${inner}<span class="wz-cm">Yakında</span></div></li>`;
+        return `<li><a class="wz-cardlink" href="#egitim/${esc(m.id)}">${inner}<span class="wz-cm">${s ? `En iyi puan: ${s.best} · ${ok ? "Başarılı" : "Tekrar deneyin"}` : `Ders ve ${m.questions.length} soru · Başla`} →</span></a></li>`;
+      }).join("")}</ol>
+      <p class="wz-foot">Puanlarınız yalnızca bu tarayıcıda saklanır.</p>`;
+  }
+
+  function trIntro(m) {
+    const ch = lessonOf(m), s = trScores()[m.id], base = `#egitim/${esc(m.id)}`;
+    return `<div class="wz-intro"><div class="eyebrow">Eğitim</div>
+      <h2 class="wz-h" tabindex="-1">${esc(m.title)}</h2><p class="wz-lead">${esc(m.desc)}</p>
+      <ol class="tr-plan">
+        <li><span class="n">1</span><div><strong>Ders</strong><span>${ch ? ch.steps.length : 0} kısa adım${ch && ch.video ? " ya da sesli video" : ""}.</span></div></li>
+        <li><span class="n">2</span><div><strong>Sınav</strong><span>${m.questions.length} soru. Bazılarında görselde doğru yere tıklarsınız.</span></div></li>
+        <li><span class="n">3</span><div><strong>Puan</strong><span>${passMark()} ve üstü başarılıdır.${s ? ` En iyi puanınız: ${s.best}.` : ""}</span></div></li>
+      </ol>
+      <div class="wz-actions"><a class="btn primary lg" href="${base}/ders/1" data-wz-next>Derse başla</a>
+        ${ch && ch.video ? `<button class="btn lg" type="button" data-wz-video="${esc(ch.video)}">▶ Dersi video olarak izle</button>` : ""}
+        <a class="btn lg" href="${base}/sinav">Sınava geç</a></div>
+      <div class="wz-video" id="wz-video"></div></div>`;
+  }
+
+  function trLesson(m, n) {
+    const ch = lessonOf(m);
+    if (!ch) return trIntro(m);
+    const t = ch.steps.length, base = `#egitim/${esc(m.id)}`;
+    n = Math.min(Math.max(parseInt(n, 10) || 1, 1), t);
+    return wzStep(ch, n, n > 1 ? `${base}/ders/${n - 1}` : base, n < t ? `${base}/ders/${n + 1}` : `${base}/sinav`, n < t ? "İleri" : "Sınava geç");
+  }
+
+  function trQuiz(m) {
+    if (!quiz || quiz.id !== m.id || quiz.done) {
+      quiz = { id: m.id, i: 0, picks: [], order: m.questions.map(q => q.type === "choice" ? shuffle(q.options.map((_, k) => k)) : null) };
+    }
+    const qs = m.questions, i = quiz.i, q = qs[i], t = qs.length, pick = quiz.picks[i], answered = !!pick;
+    const img = `<img src="${esc(imgSrc(q.image || ""))}" alt="Soru görseli">`;
+    let media = "", body = "";
+    if (q.type === "tap") {
+      media = `<div class="wz-media"><div class="wz-frame${answered ? "" : " tr-tap"}"${answered ? "" : " data-tr-tap"}>${img}${answered
+        ? spot([q.answer]) + `<span class="tr-dot ${pick.ok ? "ok" : "bad"}" style="left:${+pick.x}%;top:${+pick.y}%" aria-hidden="true"></span>` : ""}</div></div>`;
+    } else {
+      if (q.image) media = `<div class="wz-media"><div class="wz-frame">${img}</div></div>`;
+      body = `<ol class="tr-opts">${quiz.order[i].map((k, j) => {
+        const cls = !answered ? "" : k === q.answer ? " ok" : k === pick.k ? " bad" : "";
+        return `<li><button type="button" class="tr-opt${cls}" data-tr-opt="${k}"${answered ? " disabled" : ""}><span class="k">${"ABCDEF"[j]}</span><span>${esc(q.options[k])}</span></button></li>`;
+      }).join("")}</ol>`;
+    }
+    if (answered) body += `<div class="tr-fb ${pick.ok ? "ok" : "bad"}" role="status"><strong>${pick.ok ? "Doğru!" : "Yanlış."}</strong><p>${esc(q.explain || "")}</p></div>`;
+    const nav = answered ? `<div class="wz-nav"><button class="btn primary lg" type="button" data-tr-next>${i < t - 1 ? "Sonraki soru" : "Puanımı gör"}</button></div>` : "";
+    const done = i + (answered ? 1 : 0);
+    return `<div class="wz-card quiz${q.type === "tap" ? " tap" : ""}${media ? "" : " solo"}">${media}<div class="wz-body">
+      <div class="wz-count"><span>Sınav · ${esc(m.title)}</span><span class="mono">Soru ${i + 1} / ${t}</span></div>
+      <div class="wz-bar" role="progressbar" aria-label="Sınav ilerlemesi" aria-valuemin="0" aria-valuemax="${t}" aria-valuenow="${done}"><span style="width:${(done / t) * 100}%"></span></div>
+      <h2 class="wz-title" tabindex="-1">${esc(q.q)}</h2>${body}${nav}</div></div>`;
+  }
+
+  function trResult(m) {
+    const s = trScores()[m.id], res = quiz && quiz.id === m.id && quiz.done ? quiz : null;
+    if (!res && !s) return trIntro(m);
+    const score = res ? res.result.score : s.last, pass = score >= passMark(), base = `#egitim/${esc(m.id)}`;
+    const wrong = res ? m.questions.filter((q, i) => !(res.picks[i] && res.picks[i].ok)) : [];
+    const mods = data.training.modules, next = mods.slice(mods.indexOf(m) + 1).find(trReady);
+    return `<div class="wz-intro">
+      <div class="tr-score ${pass ? "ok" : "bad"}" style="--p:${score}"><span><b>${score}</b><small>puan</small></span></div>
+      <h2 class="wz-h" tabindex="-1">${pass ? "Tebrikler, başarılı!" : "Biraz daha çalışalım"}</h2>
+      <p class="wz-lead">${res ? `${res.result.total} sorudan ${res.result.correct} doğru. ` : ""}Geçme puanı ${passMark()}.${s && s.best > score ? ` En iyi puanınız: ${s.best}.` : ""}</p>
+      ${wrong.length ? `<h3 class="tr-sub">Yanlış cevapladıklarınız</h3><ul class="tr-review">${wrong.map(q => `<li><strong>${esc(q.q)}</strong>
+        <span>${q.type === "choice" ? `Doğru cevap: ${esc(q.options[q.answer])}. ` : ""}${esc(q.explain || "")}</span>
+        ${q.step ? `<a href="${base}/ders/${+q.step}">Dersteki adımı izle</a>` : ""}</li>`).join("")}</ul>` : ""}
+      <div class="wz-actions">
+        ${pass && next ? `<a class="btn primary lg" href="#egitim/${esc(next.id)}" data-wz-next>Sıradaki eğitim: ${esc(next.title)}</a>` : ""}
+        <a class="btn lg${pass && next ? "" : " primary"}" href="${base}/sinav">Sınavı tekrar çöz</a>
+        <a class="btn lg" href="${base}/ders/1">Dersi tekrar izle</a>
+        <a class="btn lg" href="#egitim">Eğitimlere dön</a></div></div>`;
+  }
+
+  function renderTraining(r) {
+    const T = data.training, m = trModule(r.mod);
+    if (!trReady(m)) return showApp(trHome(T));
+    const part = ["ders", "sinav", "sonuc"].includes(r.part) ? r.part : "";
+    const html = part === "ders" ? trLesson(m, r.n) : part === "sinav" ? trQuiz(m) : part === "sonuc" ? trResult(m) : trIntro(m);
+    showApp(trStages(m, part) + html);
+  }
+
+  function trAnswer(pick) {
+    quiz.picks[quiz.i] = pick;
+    route();
+    const n = $("#wizard [data-tr-next]");
+    if (n) n.focus({ preventScroll: true });
+  }
+  document.addEventListener("click", e => {
+    if (view !== "training" || !quiz || quiz.done) return;
+    const m = trModule(quiz.id), q = m && m.questions[quiz.i];
+    if (!q) return;
+    const o = e.target.closest("[data-tr-opt]");
+    if (o && !o.disabled) { const k = +o.dataset.trOpt; return trAnswer({ k, ok: k === q.answer }); }
+    const f = e.target.closest("[data-tr-tap]");
+    if (f) {
+      const r = f.querySelector("img").getBoundingClientRect(), a = q.answer, pad = 1;   // small slack, buttons can sit close together
+      const x = Math.round(((e.clientX - r.left) / r.width) * 1000) / 10, y = Math.round(((e.clientY - r.top) / r.height) * 1000) / 10;
+      return trAnswer({ x, y, ok: x >= a[0] - pad && x <= a[2] + pad && y >= a[1] - pad && y <= a[3] + pad });
+    }
+    if (e.target.closest("[data-tr-next]")) {
+      if (quiz.i < m.questions.length - 1) { quiz.i++; route(); return; }
+      const correct = quiz.picks.filter(p => p && p.ok).length, total = m.questions.length;
+      quiz.done = true;
+      quiz.result = { correct, total, score: Math.round((correct / total) * 100) };
+      trSave(m.id, quiz.result.score);
+      location.hash = `#egitim/${m.id}/sonuc`;
+    }
+  });
+
+  document.addEventListener("click", e => {
+    const b = e.target.closest("[data-wz-video]");
+    if (!b) return;
+    const slot = $("#wz-video");
+    const src = b.dataset.wzVideo;
+    slot.innerHTML = `<video controls autoplay playsinline preload="metadata" poster="${esc(src.replace(/\.mp4$/, ".jpg"))}" src="${esc(src)}"></video>`;
+    slot.querySelector("video").addEventListener("error", () => { slot.innerHTML = `<p class="note">Video şu anda açılamadı. Adımları yukarıdaki Başla ile izleyebilirsiniz.</p>`; });
+  });
+  document.addEventListener("keydown", e => {
+    if (view === "guide" || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.target.closest("input, textarea, select, video, [contenteditable=true]")) return;
+    const a = e.key === "ArrowRight" ? $("#wizard [data-wz-next]") : e.key === "ArrowLeft" ? $("#wizard [data-wz-prev]") : null;
+    if (a) { e.preventDefault(); location.hash = a.getAttribute("href"); }
+  });
+  // Links from the wizard into the guide: route ourselves, otherwise the browser's own fragment scroll
+  // (computed while the guide was still hidden) can leave the page at the top.
+  document.addEventListener("click", e => {
+    const a = e.target.closest('#wizard a[href^="#"]');
+    if (!a || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const h = a.getAttribute("href");
+    if (isAppHash(h)) return;
+    e.preventDefault();
+    history.pushState(null, "", h);
+    route();
+  });
+  window.addEventListener("hashchange", route);
+  window.addEventListener("popstate", route);   // Back from an entry added with pushState fires no hashchange.
+
+  /* ---------- boot ---------- */
+  async function boot() {
+    try {
+      const res = await fetch("content.json", { cache: "no-store" });
+      if (!res.ok) throw new Error(res.status);
+      original = await res.json();
+    } catch {
+      $("#loading").textContent = "Yardım içeriği yüklenemedi. Sayfayı yenileyin.";
+      return;
+    }
+    data = JSON.parse(JSON.stringify(original));
+    render();
+    route();
+
+    try {
+      if (!window.claude || !window.claude.use) return;
+      const [art, user] = await Promise.all([window.claude.use("artifact"), window.claude.use("user")]);
+      if (!art || !user) return;
+      const can = await user.canEdit();
+      if (!can) return;
+      artifact = art;
+      $("#edit-btn").hidden = false;
+      const draft = store.get(DRAFT_KEY);
+      if (draft) {
+        try { data = JSON.parse(draft); dirty = true; } catch { store.del(DRAFT_KEY); }
+        if (dirty) { render(); $("#savebar").hidden = false; document.body.style.paddingBottom = "76px"; msg("Kaydedilmemiş bir taslağınız var. Kaydedin veya Vazgeç ile silin.", ""); }
+      }
+    } catch { /* read-only view */ }
+  }
+  boot();
+})();
+</script>
+
+</body>
+</html>
