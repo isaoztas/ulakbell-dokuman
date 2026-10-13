@@ -2,7 +2,7 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-10-12",
+    "updated": "2026-10-13",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
   },
   "groups": [
@@ -68,6 +68,12 @@
       "audience": "Mobil kullanıcı",
       "card": "ulakBELL'i telefondan nasıl kullanırım?",
       "target": "mob-genel"
+    },
+    {
+      "id": "hastane",
+      "title": "Hastane Süreçleri",
+      "audience": "Hastane kullanıcısı",
+      "target": "hst-genel"
     }
   ],
   "sections": [
@@ -5228,6 +5234,484 @@
       ],
       "imageMax": 720,
       "bakedPins": true
+    },
+    {
+      "id": "hst-genel",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Randevu hatırlatma: nasıl işler?",
+      "intro": "HBYS'deki (hastane bilgi yönetim sistemi) randevular için sistem hastaları otomatik arar ve randevuyu hatırlatır. Hasta randevuya gelip gelmeyeceğini telefonun tuşlarıyla bildirir. Sonuçları Çağrı Merkezi › HBYS Aramaları ekranından izlersiniz.",
+      "steps": [
+        {
+          "title": "Otomatik aramayı açın",
+          "text": "HBYS Aramaları ekranında sağ üstteki dişliye tıklayın. Randevu sekmesinde Otomatik Arama'yı açın, aramaların başlayacağı saati seçip Kaydet'e basın."
+        },
+        {
+          "title": "Sistem hastaları arar",
+          "text": "Belirlenen saatte o günün aranacak randevuları için aramalar başlar. Açılmayan numaralar Kurallar sekmesindeki ayara göre yeniden aranır."
+        },
+        {
+          "title": "Hasta tuşlar",
+          "text": "Hasta randevuya geleceğini ya da randevuyu iptal ettiğini tuşlayarak bildirir. Hiç tuşlamayan hasta Tuşlamayan olarak görünür."
+        },
+        {
+          "title": "Sonuçları izleyin",
+          "text": "HBYS Aramaları ekranında tarihi seçin. Özette kaç hastaya ulaşıldığını, Arama Detayları'nda her hastanın sonucunu görürsünüz. Gerekirse satıra not ekleyin."
+        }
+      ],
+      "example": "Örnek ekranda 14 Ekim randevuları için aramalar 13 Ekim saat 12:00'de başlamış. 143 hastanın 109'una ulaşılmış; 87 hasta geleceğini, 5 hasta iptal ettiğini tuşlamış, 17 hasta tuşlamamış."
+    },
+    {
+      "id": "hst-ozet",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "HBYS Aramaları: randevu arama özeti",
+      "intro": "Menüden Çağrı Merkezi'ni açıp HBYS Aramaları sekmesine geçin. Randevu Aramaları seçiliyken ekran, seçtiğiniz tarih aralığındaki randevu hatırlatma aramalarının özetini gösterir.",
+      "items": [
+        {
+          "name": "Tarih aralığı",
+          "desc": "Hangi günlerin randevularının gösterileceğini seçer. Tarih randevu tarihidir, arama tarihi değil.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Sekmeler",
+          "desc": "Randevu Aramaları (hatırlatma), Değerlendirme Aramaları (memnuniyet) ve Değerlendirme Raporu (doktor puanları) arasında geçiş yapar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Yenile",
+          "desc": "Ekrandaki sayıları ve listeyi günceller.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Ayarlar",
+          "desc": "Otomatik Arama Ayarları'nı açar. Yalnızca yetkili kullanıcılar değiştirebilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Ulaşılan / Ulaşılamayan",
+          "desc": "Telefonu açan ve açmayan hasta sayıları, yüzdeleriyle birlikte.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Durum dağılımı",
+          "desc": "Ulaşılan hastaların tuşladığı sonuç: Gelecek, İptal veya Tuşlamayan.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Canlı durum",
+          "desc": "Şu anda aranan ve sırada aranmayı bekleyen hasta sayısı.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_ozet.jpg",
+      "imageAlt": "HBYS Aramaları, Hasta Arama Özeti",
+      "bakedPins": true,
+      "imageSize": [
+        1434,
+        687
+      ]
+    },
+    {
+      "id": "hst-detay",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Arama detayları",
+      "intro": "Özetin altındaki Arama Detayları'na tıklayınca her randevu için yapılan arama satır satır listelenir.",
+      "items": [
+        {
+          "name": "Filtre, Excel ve sütunlar",
+          "desc": "Listeyi daraltır, listeyi Excel olarak indirir ve gösterilecek sütunları seçer.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Randevu bilgileri",
+          "desc": "Randevu tarihi ve saati, hastanın telefonu ve adı, merkez, bölüm ve doktor.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Arama Sonucu ve Durum",
+          "desc": "Durum hastaya ulaşılıp ulaşılamadığını, Arama Sonucu hastanın tuşladığı cevabı (Gelecek, İptal, Tuşlamadı) gösterir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Arama Sayısı, Not, Arama Zamanı",
+          "desc": "Numaranın kaç kez arandığı, satıra eklenen not ve son aramanın zamanı. Ulaşılamayan hastalarda arama sayısı, en fazla deneme sayısına kadar artar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Not Ekle",
+          "desc": "Satıra not yazar; örneğin hastayı ayrıca aradığınızda konuştuklarınızı.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Sayfalar",
+          "desc": "Kayıtlar arasında gezinir; sağdaki kutudan bir sayfada kaç satır görüneceğini seçersiniz.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_arama_detaylari.jpg",
+      "imageAlt": "Arama Detayları tablosu",
+      "bakedPins": true,
+      "imageSize": [
+        1335,
+        405
+      ]
+    },
+    {
+      "id": "hst-not",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Aramaya not ekleme",
+      "intro": "Ulaşılamayan ya da tuşlamayan hastayı ayrıca aradığınızda sonucu satıra not olarak yazabilirsiniz. Not, Arama Detayları'ndaki Not sütununda görünür.",
+      "steps": [
+        {
+          "title": "Satırı bulun",
+          "text": "Arama Detayları'nda hastanın satırını bulun; gerekirse filtreyi kullanın."
+        },
+        {
+          "title": "Not Ekle'ye tıklayın",
+          "text": "Satırın sonundaki Not Ekle düğmesine tıklayın, notu yazıp Kaydet'e basın."
+        }
+      ],
+      "items": [
+        {
+          "name": "Not",
+          "desc": "Kısa ve açık yazın: kiminle konuştuğunuzu ve hastanın ne dediğini.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Kaydet",
+          "desc": "Notu satıra kaydeder.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_not_ekle.jpg",
+      "imageAlt": "Not Ekle penceresi",
+      "bakedPins": true,
+      "imageSize": [
+        1160,
+        440
+      ]
+    },
+    {
+      "id": "hst-degerlendirme",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Değerlendirme aramaları ve doktor raporu",
+      "intro": "Değerlendirme aramalarında sistem muayene olmuş hastaları arar ve hizmeti 1 ile 5 arasında puanlamasını ister. Hasta puanı tuşlayarak verir. Değerlendirme Raporu sekmesi doktorları, seçilen tarih aralığındaki ortalama puanlarına göre sıralar.",
+      "items": [
+        {
+          "name": "Ulaşılan / Ulaşılamayan",
+          "desc": "Değerlendirme aramasında telefonu açan ve açmayan hasta sayıları.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Durum dağılımı",
+          "desc": "Kaç hastanın 1, 2, 3, 4 veya 5 tuşladığı ve kaç hastanın tuşlamadığı.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Soru dağılımı",
+          "desc": "Bir aramada birden fazla soru soruluyorsa her sorunun puan dağılımı.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Canlı durum",
+          "desc": "Şu anda aranan, sırada bekleyen ve toplam hasta sayısı.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_degerlendirme_ozet.jpg",
+      "imageAlt": "Değerlendirme Arama Özeti",
+      "bakedPins": true,
+      "imageSize": [
+        920,
+        510
+      ]
+    },
+    {
+      "id": "hst-ayar-randevu",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Ayarlar: randevu araması",
+      "intro": "HBYS Aramaları ekranındaki dişliye tıklayınca Otomatik Arama Ayarları açılır. Randevu sekmesi hatırlatma aramalarının ne zaman başlayacağını belirler. Bu ayarlar yalnızca yetkili kullanıcılar içindir.",
+      "items": [
+        {
+          "name": "Ayar sekmeleri",
+          "desc": "Randevu, Değerlendirme, Kurallar, CRM, Kısıtlama ve Aranacaklar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Otomatik Arama",
+          "desc": "Açıkken randevu hatırlatma aramaları her gün kendiliğinden başlar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Başlama saati",
+          "desc": "Aramaların başlayacağı saat. Bitiş saati Kurallar sekmesindedir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Kaydet",
+          "desc": "Sekmedeki değişiklikleri kaydeder. Her sekmenin kendi Kaydet düğmesi vardır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Aramaları Durdur",
+          "desc": "Devam eden otomatik aramaları hemen durdurur. Yanlışlıkla basmayın.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_ayar_randevu.jpg",
+      "imageAlt": "Otomatik Arama Ayarları, Randevu sekmesi",
+      "bakedPins": true,
+      "imageSize": [
+        822,
+        405
+      ]
+    },
+    {
+      "id": "hst-ayar-degerlendirme",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Ayarlar: değerlendirme araması",
+      "intro": "Değerlendirme sekmesi memnuniyet aramalarının zamanını, yüksek puanda gönderilecek SMS'i ve hastaya okunacak anonsu belirler.",
+      "items": [
+        {
+          "name": "Otomatik arama ve saat",
+          "desc": "Değerlendirme aramalarını açar ve başlayacağı saati belirler.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "4-5 tuşlanırsa SMS gönder",
+          "desc": "Hasta yüksek puan verdiğinde ona bilgilendirme SMS'i gönderilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Değerlendirme anonsu",
+          "desc": "Aramada hastaya okunacak kayıtlı anons. Seçilen anons tüm doktorlar için geçerlidir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Birden fazla soru",
+          "desc": "Açıkken bir aramada birden fazla değerlendirme sorusu sorulur.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_ayar_degerlendirme.jpg",
+      "imageAlt": "Otomatik Arama Ayarları, Değerlendirme sekmesi",
+      "bakedPins": true,
+      "imageSize": [
+        772,
+        466
+      ]
+    },
+    {
+      "id": "hst-ayar-kurallar",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Ayarlar: arama kuralları",
+      "intro": "Kurallar sekmesi hem randevu hem değerlendirme aramaları için geçerli ortak kuralları içerir.",
+      "items": [
+        {
+          "name": "Bitiş saati",
+          "desc": "Bu saatten sonra yeni arama başlatılmaz.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Tekrar arama",
+          "desc": "Açılmayan numaranın kaç dakika sonra yeniden aranacağı ve en fazla kaç kez deneneceği.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Eş zamanlı arama",
+          "desc": "Aynı anda en fazla kaç hastanın aranacağı. Hat sayınıza göre belirleyin.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Alan kodu kontrolü",
+          "desc": "Yalnızca yazdığınız alan kodlarındaki numaralar aranır (örneğin Ankara için 312).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Mükerrer numara kontrolü",
+          "desc": "Aynı gün birden fazla randevusu olan hasta bir kez aranır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Randevu iptal edilince sil",
+          "desc": "HBYS'de iptal edilen randevu arama listesinden kendiliğinden çıkarılır.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_ayar_kurallar.jpg",
+      "imageAlt": "Otomatik Arama Ayarları, Kurallar sekmesi",
+      "bakedPins": true,
+      "imageSize": [
+        772,
+        685
+      ]
+    },
+    {
+      "id": "hst-ayar-crm",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Ayarlar: CRM'e aktarma",
+      "intro": "CRM sekmesi, arama sonucuna göre hastayı CRM'e otomatik olarak lead (fırsat) olarak aktarır. Böylece randevusunu iptal eden ya da düşük puan veren hasta bir temsilcinin listesine düşer ve geri aranır.",
+      "items": [
+        {
+          "name": "Merkez",
+          "desc": "Kuralın hangi merkez için geçerli olduğu. Hepsi satırı tüm merkezlere uygulanır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Randevu İptal",
+          "desc": "Randevusunu iptal eden hasta, seçtiğiniz lead otomasyonuna aktarılır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Tuşlamadı",
+          "desc": "Telefonu açıp hiçbir tuşa basmayan hasta aktarılır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "1,2 Puan",
+          "desc": "Değerlendirmede düşük puan veren hasta aktarılır; şikâyetini dinlemek için.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "4,5 Puan",
+          "desc": "Yüksek puan veren hasta aktarılır; örneğin yorum ya da tavsiye istemek için.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Kaydet",
+          "desc": "Seçimleri kaydeder.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_ayar_crm.jpg",
+      "imageAlt": "Otomatik Arama Ayarları, CRM sekmesi",
+      "bakedPins": true,
+      "imageSize": [
+        772,
+        295
+      ]
+    },
+    {
+      "id": "hst-ayar-kisitlama",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Ayarlar: aranmayacak numaralar",
+      "intro": "Kısıtlama sekmesine eklenen numaralar otomatik olarak aranmaz. Aranmak istemediğini bildiren hastalar için kullanın.",
+      "items": [
+        {
+          "name": "Numara ve ad",
+          "desc": "Aranmayacak telefon numarası; ad soyad isteğe bağlıdır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Hariç tutma",
+          "desc": "Numaranın randevu aramalarından, değerlendirme aramalarından ya da ikisinden de çıkarılacağını seçer.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Kısıtlama Ekle",
+          "desc": "Numarayı listeye ekler.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Kısıtlı numaralar",
+          "desc": "Eklenen numaralar ve hangi aramalardan hariç tutuldukları.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_ayar_kisitlama.jpg",
+      "imageAlt": "Otomatik Arama Ayarları, Kısıtlama sekmesi",
+      "bakedPins": true,
+      "imageSize": [
+        772,
+        466
+      ]
+    },
+    {
+      "id": "hst-ayar-aranacaklar",
+      "group": "hastane",
+      "updated": "2026-10-13",
+      "title": "Ayarlar: aranacak doktorlar",
+      "intro": "Aranacaklar sekmesi, hangi doktorların hastalarının aranacağını belirler. Bir doktorun anahtarını kapatırsanız o doktorun hastaları aranmaz.",
+      "items": [
+        {
+          "name": "Doktor",
+          "desc": "HBYS'den gelen doktor listesi.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Randevu Aramaları",
+          "desc": "Açıkken doktorun randevulu hastalarına hatırlatma araması yapılır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Değerlendirme Aramaları",
+          "desc": "Açıkken doktorun muayene ettiği hastalara değerlendirme araması yapılır.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/hst_ayar_aranacaklar.jpg",
+      "imageAlt": "Otomatik Arama Ayarları, Aranacaklar sekmesi",
+      "bakedPins": true,
+      "imageSize": [
+        722,
+        500
+      ]
     }
   ],
   "changelog": [
