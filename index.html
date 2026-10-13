@@ -280,6 +280,8 @@ a.btn.primary { color: var(--accent-ink); }
 .wz-meta { color: var(--muted); font-size: 14px; margin: -10px 0 22px; }
 .wz-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .wz-video { margin-top: 20px; }
+.sec-video { margin: 16px 0; }
+.sec-video video { display: block; width: 100%; max-width: 880px; border-radius: 10px; background: #000; }
 .wz-video video { display: block; width: 100%; max-width: 880px; border-radius: 10px; background: #000; }
 .wz-badge { width: 56px; height: 56px; border-radius: 50%; background: var(--new-soft); color: var(--new); display: grid; place-items: center; margin-bottom: 14px; }
 @media (max-width: 760px) {
@@ -506,6 +508,10 @@ a.btn.primary { color: var(--accent-ink); }
 
     if (s.steps && s.steps.length) {
       h += `<ol class="steps">` + s.steps.map((st, k) => `<li><span class="step-n" aria-hidden="true">${k + 1}</span><div class="step-b">${ce(`sections.${si}.steps.${k}.title`, "step-h", st.title)}${st.text || editing ? ce(`sections.${si}.steps.${k}.text`, "step-t", st.text || "", "span") : ""}${editing ? `<div class="tools"><button class="btn sm danger" data-act="step-rm" data-sec="${si}" data-i="${k}">Adımı sil</button></div>` : ""}</div></li>`).join("") + `</ol>`;
+    }
+
+    if (s.video) {
+      h += `<figure class="sec-video"><video controls playsinline preload="none" poster="${esc(s.video.replace(/\.mp4$/, ".jpg"))}" src="${esc(s.video)}">${s.videoVtt ? `<track kind="subtitles" srclang="tr" label="Türkçe" src="${esc(s.videoVtt)}">` : ""}</video>${s.videoNote ? `<figcaption>${esc(s.videoNote)}</figcaption>` : ""}</figure>`;
     }
 
     if (s.image) {

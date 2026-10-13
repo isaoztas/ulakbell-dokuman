@@ -1,0 +1,86 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:11.160
+Excel'deki kişileri toplu olarak fırsata çevirmek için Akış Otomasyonları ekranında Lead Otomasyonları sekmesini açın ve sağ üstteki Ekle düğmesine basın.
+
+00:00:11.360 --> 00:00:19.690
+Otomasyonun kaynağı olarak Dosya'yı, yani Excel dosyasından aktarımı seçin ve Devam Et'e basın.
+
+00:00:19.890 --> 00:00:25.700
+Dosya adımında, Dosya seç ve eşleştir alanına tıklayın.
+
+00:00:25.900 --> 00:00:31.610
+Açılan pencereye Excel ya da CSV dosyanızı sürükleyip bırakın.
+
+00:00:31.810 --> 00:00:37.190
+Dosya seçildi. İleri'ye basın.
+
+00:00:37.390 --> 00:00:48.310
+Excel'deki kolonları ulakBELL alanlarıyla eşleştirmeniz gerekir. Yapay zekâ düğmesi bu eşleştirmeyi sizin yerinize yapar.
+
+00:00:48.510 --> 00:01:00.100
+Ad soyad, cep telefonu, e-posta ve kurum kolonları eşleşti. Eşleşmeleri kontrol edin; gerekirse alanları elle ekleyebilirsiniz.
+
+00:01:00.300 --> 00:01:11.200
+Onay adımında dosyada kaç satır bulunduğunu ve ilk satırdan oluşacak örnek kaydı görürsünüz. Bu dosyada dokuz lead var.
+
+00:01:11.400 --> 00:01:17.400
+Eşleştirme tamamlandı. Pencereyi kapatın.
+
+00:01:17.600 --> 00:01:31.620
+Otomasyona akılda kalan bir ad verin ve Devam Et'e basın. Kişi bilgilerini güncelle seçiliyse, zaten kayıtlı olan kişilerin bilgileri Excel'deki bilgilerle güncellenir.
+
+00:01:31.820 --> 00:01:43.030
+Gelen müşterilerle kim ilgilensin adımında, leadlerin dağıtılacağı satış temsilcilerini seçin. Leadler bu kişilere sırayla dağıtılır.
+
+00:01:43.230 --> 00:01:52.160
+Lead geldiğinde ne yapılsın adımında, Satış fırsatı oluştur ve Arama veya etkinlik planla seçeneklerini işaretleyin.
+
+00:01:52.360 --> 00:02:00.470
+Fırsatın adını yazın ve fırsatın hangi satış sürecinde, yani hangi pipeline'da açılacağını seçin.
+
+00:02:00.670 --> 00:02:11.420
+Ardından temsilci için bir arama planlayın. Buradaki bir, aramanın lead geldikten bir saat sonrasına planlanacağını gösterir.
+
+00:02:11.620 --> 00:02:16.920
+Son adımda özeti kontrol edin ve Kaydet'e basın.
+
+00:02:17.120 --> 00:02:23.860
+Otomasyon kaydedildi. Dosyadaki kayıtlar arka planda işlenir.
+
+00:02:24.060 --> 00:02:31.140
+Yeni otomasyon, dosya kaynağı ve atanan üç temsilciyle birlikte listede görünür.
+
+00:02:31.340 --> 00:02:39.910
+Fırsat ekranına geçtiğinizde, Excel'deki dokuz kişinin Satış sürecinde birer fırsat olarak açıldığını görürsünüz.
+
+00:02:40.110 --> 00:02:48.920
+Atanan Kullanıcı sütunu dağıtımı gösterir: fırsatlar üç temsilciye sırayla, her birine üçer tane düştü.
+
+00:02:49.120 --> 00:03:03.420
+Temsilci kendisine düşen fırsatı açar. Otomasyonun planladığı arama, Yapılacaklar bölümünde bekler. Müşteriyle görüştükten sonra etkinliğin yanındaki daireye tıklar.
+
+00:03:03.620 --> 00:03:07.650
+Görüşmenin sonucunu seçer,
+
+00:03:07.850 --> 00:03:12.190
+kısa bir not yazar ve kaydeder.
+
+00:03:12.390 --> 00:03:18.130
+Görüşme, notuyla birlikte fırsatın zaman akışına eklenir.
+
+00:03:18.330 --> 00:03:22.100
+Temsilci fırsatın tutarını girer.
+
+00:03:22.300 --> 00:03:28.760
+Görüşme ilerledikçe fırsatı aşama çubuğundan bir sonraki aşamaya taşır.
+
+00:03:28.960 --> 00:03:37.820
+Aşama değişikliği de zaman akışına yazılır. Satış gerçekleştiğinde Kazanılan düğmesine basar.
+
+00:03:38.020 --> 00:03:40.950
+Fırsat kazanıldı!
+
+00:03:41.150 --> 00:03:51.810
+Böylece Excel'den yüklenen lead, temsilciye dağıtıldı, arandı ve satışa dönüştü. Tüm adımlar fırsatın zaman akışında kayıtlı kalır.
+

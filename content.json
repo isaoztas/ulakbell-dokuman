@@ -2,7 +2,7 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-10-13",
+    "updated": "2026-10-14",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
   },
   "groups": [
@@ -1582,6 +1582,43 @@
           ]
         ]
       }
+    },
+    {
+      "id": "crm-lead-excel",
+      "group": "crm",
+      "updated": "2026-10-14",
+      "title": "Excel'den lead yükleme ve dağıtım",
+      "intro": "Elinizdeki bir Excel listesini (örneğin fuarda toplanan kartvizitler) tek seferde fırsata çevirebilir, fırsatları satış temsilcilerine sırayla dağıtabilirsiniz. Her fırsat için temsilciye bir arama da planlanır. Akış Otomasyonları › Lead Otomasyonları ekranından yapılır.",
+      "video": "video/lead-otomasyonu.mp4",
+      "videoVtt": "video/lead-otomasyonu.vtt",
+      "videoNote": "Sesli anlatım: Excel'in yüklenmesi, temsilcilere dağıtım ve bir fırsatın satışa dönüştürülmesi (yaklaşık 4 dakika).",
+      "steps": [
+        {
+          "title": "Yeni otomasyon açın",
+          "text": "Akış Otomasyonları › Lead Otomasyonları'nda sağ üstteki Ekle'ye basın ve kaynak olarak Dosya'yı (Excel dosyasından aktarım) seçin."
+        },
+        {
+          "title": "Excel'i yükleyin ve kolonları eşleştirin",
+          "text": "Dosya seç ve eşleştir'e tıklayıp xlsx ya da csv dosyanızı bırakın. Excel'in ilk satırı başlık satırı olmalı. AI düğmesi kolonları (ad soyad, telefon, e-posta, kurum) sizin yerinize eşleştirir; sonucu mutlaka kontrol edin. Onay adımında kaç satır bulunduğunu görürsünüz."
+        },
+        {
+          "title": "Kimin ilgileneceğini seçin",
+          "text": "Leadlerin dağıtılacağı temsilcileri seçin. Leadler bu kişilere sırayla dağıtılır. İsterseniz kayıtlı kişiyi mevcut sorumlusuna atayabilir ya da yalnızca sistemde aktif olanlara dağıtabilirsiniz."
+        },
+        {
+          "title": "Fırsat ve arama ayarlarını yapın",
+          "text": "Satış fırsatı oluştur ve Arama veya etkinlik planla'yı işaretleyin. Fırsatın adını ve pipeline'ını seçin; aramanın lead geldikten kaç saat sonraya planlanacağını yazın."
+        },
+        {
+          "title": "Kaydedin",
+          "text": "Özeti kontrol edip Kaydet'e basın. Dosyadaki kayıtlar arka planda işlenir; fırsatlar Fırsat ekranında, seçtiğiniz pipeline'ın ilk aşamasında açılır."
+        },
+        {
+          "title": "Temsilci fırsatı işler",
+          "text": "Temsilci fırsatı açar, planlanan aramayı yapar ve etkinliği sonucu ve notuyla sonuçlandırır. Tutarı girer, fırsatı aşama çubuğundan ilerletir; satış olunca Kazanılan'a basar. Tüm adımlar fırsatın zaman akışında kalır."
+        }
+      ],
+      "example": "Örnek videoda 9 kişilik bir fuar listesi yüklendi; fırsatlar üç temsilciye üçer tane düştü. Temsilci Deniz Arslan'ı aradı, 45.000 TL'lik fırsatı Görüşme Sağlandı aşamasına aldı ve Kazanılan olarak kapattı."
     },
     {
       "id": "crm-kisiler",
