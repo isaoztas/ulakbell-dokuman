@@ -1,0 +1,1023 @@
+{
+  "meta": {
+    "title": "Santral Yönetici Rehberi",
+    "product": "ulakBELL",
+    "updated": "2026-10-15",
+    "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir.",
+    "slug": "santral-yonetici-0a890802c1"
+  },
+  "groups": [
+    {
+      "id": "santral",
+      "title": "Santral (FreePBX)",
+      "audience": "Santral yöneticisi",
+      "target": "pbx-genel"
+    }
+  ],
+  "sections": [
+    {
+      "id": "pbx-genel",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Santral yönetimine giriş",
+      "intro": "Santral (FreePBX) web arayüzünden dahilileri, kuyrukları, sesli menüleri (IVR), mesai saatlerini ve hatları yönetirsiniz. Bu bölüm yalnızca santral yöneticileri içindir; yaptığınız her değişiklik tüm kurumun telefonlarını etkiler.",
+      "steps": [
+        {
+          "title": "Panele girin",
+          "text": "Tarayıcıda santral adresinizi (…/admin) açın ve yönetici kullanıcı adınızla giriş yapın."
+        },
+        {
+          "title": "Menüleri tanıyın",
+          "text": "Admin: sistem ayarları ve yedekleme. Applications: dahili, kuyruk, IVR, zaman koşulları. Connectivity: gelen/giden rotalar ve trunklar. Reports: çağrı kayıtları (CDR). Settings: gelişmiş ayarlar."
+        },
+        {
+          "title": "Kaydedin (Submit)",
+          "text": "Her formda sağ alttaki Submit değişikliği kaydeder ama henüz santrale uygulamaz."
+        },
+        {
+          "title": "Uygulayın (Apply Config)",
+          "text": "Kaydettikten sonra üst çubukta kırmızı Apply Config düğmesi çıkar. Bu düğmeye basmadan değişiklik telefonlara yansımaz. Birden fazla değişikliği kaydedip en sonda bir kez uygulayabilirsiniz."
+        }
+      ],
+      "items": [
+        {
+          "name": "Önce yedek",
+          "desc": "Rota, trunk ve IVR gibi çağrı akışını değiştiren işlemlerden önce yedek alın (bkz. Yedekleme).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Mesai içinde dikkat",
+          "desc": "Apply Config sırasında santral yapılandırmayı yeniden yükler; devam eden görüşmeler kesilmez ama yanlış bir rota gelen çağrıları anında etkiler. Büyük değişiklikleri yoğun olmayan saatlerde yapın.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Silmeden önce",
+          "desc": "Bir öğe başka bir yerde hedef olarak kullanılıyorsa (ör. bir kuyruk IVR'da seçiliyse) formun üstünde “Used as Destination by …” uyarısı görünür. Önce o bağlantıyı değiştirin, sonra silin.",
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "pbx-dahililer",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Dahililer (Extensions)",
+      "intro": "Applications › Extensions ekranı santraldeki tüm dahilileri listeler. Her personelin masa telefonu, softphone'u ya da ulakBELL Teleweb paneli bir dahiliye bağlanır.",
+      "items": [
+        {
+          "name": "Dahili türleri",
+          "desc": "Tüm dahililer ya da yalnızca PJSIP, Chan_SIP, sanal (Virtual) dahililer gibi türlere göre süzer. Yeni cihazlarda PJSIP tercih edilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Dahili ekle",
+          "desc": "Açılan menüden dahili türünü seçerek yeni dahili formunu açar. Quick Create yalnızca numara ve adla hızlı dahili oluşturur.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Numara ve ad",
+          "desc": "Dahili numarası ve ekranda görünen ad. Arama kutusuyla numara ya da isme göre bulabilirsiniz.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Durum sütunları",
+          "desc": "CW: çağrı bekletme, DND: rahatsız etme, FM/FM: beni takip et, CF/CFB/CFU: koşulsuz, meşgulde ve cevapsızda yönlendirme. İşaretliyse o özellik açıktır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Düzenle / sil",
+          "desc": "Kalem simgesi dahiliyi düzenler, çöp kutusu siler. Silinen dahili geri alınamaz.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_dahililer.jpg",
+      "imageAlt": "Dahili listesi",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        590
+      ]
+    },
+    {
+      "id": "pbx-dahili-ekle",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Yeni dahili oluşturma",
+      "intro": "Yeni personel için dahili açarken numara, ad ve şifre yeterlidir. Diğer ayarlar varsayılan olarak bırakılabilir.",
+      "steps": [
+        {
+          "title": "Formu açın",
+          "text": "Extensions › Add Extension › Add New PJSIP Extension."
+        },
+        {
+          "title": "Bilgileri girin",
+          "text": "User Extension, Display Name doldurun; Secret alanındaki şifreyi not edin."
+        },
+        {
+          "title": "Kaydedip uygulayın",
+          "text": "Submit, ardından Apply Config."
+        },
+        {
+          "title": "Cihazı bağlayın",
+          "text": "Telefonda ya da ulakBELL Teleweb ayarlarında dahili numarası, şifre ve santral adresini girin."
+        }
+      ],
+      "items": [
+        {
+          "name": "Sekmeler",
+          "desc": "General temel bilgileri, Voicemail sesli mesajı, Find Me/Follow Me çağrının cep telefonuna da çalmasını, Advanced kodek ve NAT gibi teknik ayarları içerir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "User Extension",
+          "desc": "Dahili numarası (ör. 150). Kurumdaki numara planına uyun; kuyruk ve IVR numaralarıyla çakışmamalıdır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Display Name",
+          "desc": "Arayan ve aranan ekranında görünen ad (ör. Muhasebe - Ayşe Yılmaz).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Outbound CID",
+          "desc": "Bu dahiliden dışarı aranınca karşı tarafta görünecek numara. Boş bırakılırsa giden rotadaki ya da trunktaki numara kullanılır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Secret",
+          "desc": "Cihazın santrale bağlanma şifresi; otomatik ve güçlü üretilir. Değiştirmeyin; telefona ya da Teleweb'e bu değer girilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Submit",
+          "desc": "Dahiliyi kaydeder. Ardından Apply Config'e basmayı unutmayın.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_dahili_ekle.jpg",
+      "imageAlt": "Yeni PJSIP dahili formu",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        681
+      ]
+    },
+    {
+      "id": "pbx-kuyruklar",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Kuyruklar (Queues)",
+      "intro": "Kuyruk, bir numaraya gelen çağrıları birden çok temsilciye sırayla ya da aynı anda dağıtır ve herkes meşgulken arayanı bekletir. Çağrı merkezi ve departman hatları kuyrukla kurulur.",
+      "items": [
+        {
+          "name": "Add Queue",
+          "desc": "Yeni kuyruk formunu açar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Kuyruk numarası ve adı",
+          "desc": "Kuyruğun numarası (ör. 7000) ve açıklaması. IVR ve gelen rotalarda hedef olarak bu adla görünür.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Düzenle / sil",
+          "desc": "Kuyruğun temsilcilerini ve ayarlarını değiştirir ya da siler.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_kuyruklar.jpg",
+      "imageAlt": "Kuyruk listesi",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        580
+      ]
+    },
+    {
+      "id": "pbx-kuyruk-ekle",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Kuyruk oluşturma ve temsilciler",
+      "intro": "Kuyruk formunda en önemli üç şey: kuyruk numarası, temsilciler (Queue Agents) ve dağıtım stratejisi (Ring Strategy).",
+      "steps": [
+        {
+          "title": "Temsilcileri ekleyin",
+          "text": "Queue Agents sekmesinde Static Agents'a dahili numaralarını alt alta yazın (ör. 101,0). Dinamik temsilciler telefondan *45 ile kuyruğa girip çıkabilir."
+        },
+        {
+          "title": "Süreleri ayarlayın",
+          "text": "Timing & Agent Options'da Agent Timeout (bir temsilcinin kaç saniye çalacağı) ve Max Wait Time (en uzun bekleme) belirleyin."
+        },
+        {
+          "title": "Bekleme müziği ve anons",
+          "text": "Caller Announcements'ta sıradaki yerini ya da tahmini bekleme süresini okutabilirsiniz."
+        },
+        {
+          "title": "Kaydedip uygulayın",
+          "text": "Submit, ardından Apply Config."
+        }
+      ],
+      "example": {
+        "text": "Satış hattı için 7001 numaralı kuyruk: temsilciler 103 ve 104, strateji leastrecent, her temsilci 20 saniye çalar, 3 dakika cevap verilmezse çağrı mesai dışı anonsuna düşer."
+      },
+      "items": [
+        {
+          "name": "Sekmeler",
+          "desc": "Queue Agents temsilcileri, Timing & Agent Options çalma ve bekleme sürelerini, Capacity Options en fazla bekleyen sayısını, Caller Announcements bekleyene okunan anonsları içerir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Queue Number",
+          "desc": "Kuyruğun dahili numarası. Gelen rotada ya da IVR'da bu kuyruk seçilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Queue Name",
+          "desc": "Kuyruğun açıklayıcı adı (ör. Satış Kuyruğu).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Ring Strategy",
+          "desc": "ringall: tüm temsilciler aynı anda çalar. leastrecent: en uzun süredir çağrı almayan önce çalar. fewestcalls: en az çağrı alan önce çalar. rrmemory: sırayla dağıtır. Çağrı merkezinde genelde leastrecent ya da rrmemory kullanılır.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_kuyruk_ekle.jpg",
+      "imageAlt": "Yeni kuyruk formu",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        681
+      ]
+    },
+    {
+      "id": "pbx-ivr",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Sesli menü (IVR)",
+      "intro": "IVR, arayana bir anons okuyup tuşlamasına göre çağrıyı ilgili birime yönlendirir: “Satış için 1, destek için 2'yi tuşlayın.”",
+      "items": [
+        {
+          "name": "Add IVR",
+          "desc": "Yeni sesli menü oluşturur.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "IVR adları",
+          "desc": "Tanımlı menüler. Mesai içi ve mesai dışı için ayrı menü kurmak yaygındır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Düzenle / sil",
+          "desc": "Menünün anonsunu ve tuşlarını değiştirir.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_ivr_liste.jpg",
+      "imageAlt": "IVR listesi",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        580
+      ]
+    },
+    {
+      "id": "pbx-ivr-ayar",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "IVR ayarları",
+      "intro": "IVR'ın genel ayarlarında hangi anonsun okunacağını ve arayanın ne kadar bekleneceğini belirlersiniz.",
+      "items": [
+        {
+          "name": "IVR Name",
+          "desc": "Menünün adı; zaman koşulu ve gelen rotalarda bu adla seçilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Announcement",
+          "desc": "Arayana okunacak ses kaydı. Önce System Recordings'e yüklenmiş olmalıdır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Enable Direct Dial",
+          "desc": "Açıksa arayan menü sırasında doğrudan dahili numarası tuşlayarak kişiye ulaşabilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Timeout",
+          "desc": "Anons bittikten sonra tuşlama için beklenecek saniye.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Invalid Retries",
+          "desc": "Geçersiz tuşlamada anonsun kaç kez tekrarlanacağı. Ardından Invalid Destination'a gidilir.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_ivr_ayar.jpg",
+      "imageAlt": "IVR genel ayarları",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        681
+      ]
+    },
+    {
+      "id": "pbx-ivr-tuslar",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "IVR tuşları (IVR Entries)",
+      "intro": "Formun altındaki IVR Entries tablosu, hangi tuşun hangi hedefe gideceğini belirler.",
+      "example": {
+        "text": "1 → Kuyruk 7001 Satış, 2 → Kuyruk 7002 Teknik Destek, 9 → Kuyruk 7004 Operatör. Timeout ve Invalid hedefi de Operatör kuyruğu olursa tuşlamayan arayan da operatöre düşer."
+      },
+      "items": [
+        {
+          "name": "Digits",
+          "desc": "Arayanın tuşlayacağı rakam (1, 2 …). Birden fazla haneli de olabilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Destination",
+          "desc": "Önce hedef türünü (Queues, Extensions, IVR, Announcements, Voicemail, Terminate Call …), sonra hedefi seçin.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Add Another Entry",
+          "desc": "Yeni tuş satırı ekler. Satırı silmek için sağdaki çöp kutusunu kullanın.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_ivr_tuslar.jpg",
+      "imageAlt": "IVR tuş eşleştirmeleri",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        640
+      ]
+    },
+    {
+      "id": "pbx-zaman-grubu",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Mesai saatleri (Time Groups)",
+      "intro": "Zaman grubu, mesai saatlerini tanımlar. Zaman koşulları ve giden rotalar bu grubu kullanır. Applications › Time Groups.",
+      "items": [
+        {
+          "name": "Kullanım uyarısı",
+          "desc": "Grup bir zaman koşulunda kullanılıyorsa silinemez ve hangi koşulda kullanıldığı burada yazar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Description",
+          "desc": "Grubun adı (ör. Mesai Saatleri).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Hafta içi aralığı",
+          "desc": "Başlangıç ve bitiş saati, ardından haftanın günleri. Örnekte Pazartesi–Cuma 10:00–18:30.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Ek aralık",
+          "desc": "Aynı gruba birden fazla aralık eklenebilir. Örnekte Cumartesi 09:00–15:00. Resmî tatiller için ay ve gün alanlarıyla ayrı bir grup kurulabilir.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_zaman_grubu.jpg",
+      "imageAlt": "Zaman grubu",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        681
+      ]
+    },
+    {
+      "id": "pbx-zaman-kosulu",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Mesai içi / dışı yönlendirme (Time Conditions)",
+      "intro": "Zaman koşulu, çağrının o anki saate göre iki farklı hedefe gitmesini sağlar: mesai içinde karşılama menüsüne, mesai dışında bilgilendirme anonsuna.",
+      "example": {
+        "text": "Gelen rota → Zaman koşulu “Mesai Kontrolü” → mesai içi: IVR Karşılama Menüsü, mesai dışı: Mesai Dışı Anonsu."
+      },
+      "items": [
+        {
+          "name": "Time Condition name",
+          "desc": "Koşulun adı. Yanındaki *271 gibi kod, bu koşulu telefondan elle açıp kapatmaya yarar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Change Override",
+          "desc": "Geçici olarak koşulu ezmek için: “Temporary matched” bir sonraki zaman değişimine kadar mesai içi gibi davranır. Bayram ve acil kapanışlarda kullanılır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Time Group",
+          "desc": "Kontrol edilecek mesai saatleri grubu.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Destination matches",
+          "desc": "Saat gruba uyuyorsa (mesai içi) gidilecek hedef.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Destination non-matches",
+          "desc": "Saat gruba uymuyorsa (mesai dışı) gidilecek hedef.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_zaman_kosulu.jpg",
+      "imageAlt": "Zaman koşulu",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        650
+      ]
+    },
+    {
+      "id": "pbx-gelen-rotalar",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Gelen rotalar (Inbound Routes)",
+      "intro": "Gelen rota, dışarıdan aranan numaraya (DID) göre çağrının santralde ilk nereye gideceğini belirler. Connectivity › Inbound Routes.",
+      "items": [
+        {
+          "name": "Add Inbound Route",
+          "desc": "Yeni gelen rota oluşturur.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "DID",
+          "desc": "Aranan numara. “Any” tüm numaraları kapsar; özel bir rotası olmayan çağrılar buraya düşer.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "CID",
+          "desc": "Arayan numara. Boş ya da Any ise herkes için geçerlidir. Belirli bir arayanı farklı yönlendirmek (ör. engellemek) için kullanılır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Destination",
+          "desc": "Çağrının gideceği yer: zaman koşulu, IVR, kuyruk, dahili, faks …",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_gelen_rotalar.jpg",
+      "imageAlt": "Gelen rota listesi",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        580
+      ]
+    },
+    {
+      "id": "pbx-gelen-rota-ekle",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Gelen rota oluşturma",
+      "intro": "Yeni bir hat aldığınızda ya da bir numaranın çaldığı yeri değiştirmek istediğinizde gelen rotayı düzenlersiniz.",
+      "items": [
+        {
+          "name": "Description",
+          "desc": "Rotanın açıklaması (ör. Ana Hat).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "DID Number",
+          "desc": "Operatörün size verdiği numara, operatörün gönderdiği biçimde (ör. 08501112233). Biçimden emin değilseniz CDR raporunda gelen çağrının DID alanına bakın.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "CallerID Number",
+          "desc": "Yalnızca belirli bir arayan için rota kurmak istiyorsanız doldurun; aksi halde boş bırakın.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Set Destination",
+          "desc": "Çağrının gideceği hedef. Mesai kontrolü olan kurumlarda genelde zaman koşulu seçilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Submit",
+          "desc": "Kaydeder; ardından Apply Config.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_gelen_rota_ekle.jpg",
+      "imageAlt": "Gelen rota formu",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        580
+      ]
+    },
+    {
+      "id": "pbx-giden-rotalar",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Giden rotalar (Outbound Routes)",
+      "intro": "Giden rota, dahililerin dışarıyı ararken hangi hattan (trunk) çıkacağını belirler. Rotalar yukarıdan aşağı sırayla denenir; numaraya ilk uyan rota kullanılır. Connectivity › Outbound Routes.",
+      "items": [
+        {
+          "name": "Add Outbound Route",
+          "desc": "Yeni giden rota oluşturur.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Sıra",
+          "desc": "Soldaki taşıma simgesiyle rotaları sürükleyerek önceliği değiştirin. Özel rotalar (acil numaralar, belirli şehir) üstte, genel rotalar altta olmalıdır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Outbound CID",
+          "desc": "Bu rotadan aranınca karşı tarafta görünecek numara. Boşsa dahilinin ya da trunkın numarası gönderilir.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_giden_rotalar.jpg",
+      "imageAlt": "Giden rota listesi",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        681
+      ]
+    },
+    {
+      "id": "pbx-giden-rota-ekle",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Giden rota oluşturma",
+      "intro": "Giden rota formunda rotanın adı, gösterilecek numara ve kullanılacak hatlar ayarlanır.",
+      "items": [
+        {
+          "name": "Sekmeler",
+          "desc": "Route Settings genel ayarları, Dial Patterns hangi numaraların bu rotayı kullanacağını belirler.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Route Name",
+          "desc": "Rotanın adı (boşluksuz, ör. Mobil_Cikis).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Route CID",
+          "desc": "Bu rotadan çıkan aramalarda gösterilecek numara.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Time Match Time Group",
+          "desc": "Rotanın yalnızca belirli saatlerde çalışmasını istiyorsanız zaman grubunu seçin; aksi halde Permanent Route kalır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Trunk Sequence",
+          "desc": "Kullanılacak hatlar sırasıyla. İlk hat meşgul ya da arızalıysa çağrı ikinci hattan denenir.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_giden_rota_ekle.jpg",
+      "imageAlt": "Giden rota ayarları",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        681
+      ]
+    },
+    {
+      "id": "pbx-arama-kaliplari",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Arama kalıpları (Dial Patterns)",
+      "intro": "Dial Patterns sekmesi, hangi numaraların bu rotayı kullanacağını belirler. X: 0-9 arası bir rakam, Z: 1-9, N: 2-9, [1-5]: aralık, . (nokta): bir veya daha fazla rakam demektir.",
+      "example": {
+        "text": "Dış hat için 9 kullanılan bir kurumda: prefix 9, match pattern 05XXXXXXXXX. Kullanıcı 9 05321112233 tuşlar, hatta 05321112233 gönderilir."
+      },
+      "items": [
+        {
+          "name": "Pattern Help",
+          "desc": "Kalıp sözdiziminin açıklamasını açar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Dial patterns wizards",
+          "desc": "Hazır kalıplar (yerel, şehirlerarası, cep, uluslararası) ekler.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "prepend",
+          "desc": "Numaranın başına eklenecek rakamlar (ör. operatör 90 istiyorsa 90).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "prefix",
+          "desc": "Kullanıcının tuşladığı ama hatta gönderilmeyecek ön ek (ör. dış hat için 9 tuşlanıyorsa 9).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "match pattern",
+          "desc": "Eşleşecek numara kalıbı. Örnek: 05XXXXXXXXX cep telefonlarını yakalar.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "CallerID",
+          "desc": "Yalnızca belirli dahililer bu rotayı kullansın istiyorsanız dahili numarası ya da kalıbı (ör. 10X).",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_arama_kaliplari.jpg",
+      "imageAlt": "Arama kalıpları",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        420
+      ]
+    },
+    {
+      "id": "pbx-trunklar",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Hatlar (Trunks)",
+      "intro": "Trunk, santralin dış dünyaya (operatöre) bağlandığı hattır. SIP hesabı bilgileri operatörden alınır. Connectivity › Trunks.",
+      "items": [
+        {
+          "name": "Add Trunk",
+          "desc": "Türünü (SIP, PJSIP, IAX2, DAHDI) seçerek yeni hat ekler. Operatörün verdiği kullanıcı adı, şifre ve sunucu adresi girilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Name",
+          "desc": "Hattın adı. Giden rotaların trunk sırasında bu adla seçilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "CallerID",
+          "desc": "Bu hattan çıkışta varsayılan gösterilecek numara.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Status",
+          "desc": "Enabled: aktif. Disabled hat giden rotalarda atlanır. Hattın kayıtlı (registered) olup olmadığını Reports › Asterisk Info › Registries'ten kontrol edin.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_trunklar.jpg",
+      "imageAlt": "Trunk listesi",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        660
+      ]
+    },
+    {
+      "id": "pbx-ses-kayitlari",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Ses kayıtları ve anonslar (System Recordings)",
+      "intro": "IVR, zaman koşulu ve kuyruk anonsları için ses dosyaları burada tutulur. Admin › System Recordings.",
+      "example": {
+        "text": "Dosya biçimi olarak 8 kHz mono WAV ya da MP3 yükleyin. Duyuru metnini kısa tutun; menü anonsunda en fazla 4–5 seçenek okutun."
+      },
+      "items": [
+        {
+          "name": "Add Recording",
+          "desc": "Yeni kayıt ekler: bilgisayardan dosya yükleyin ya da bir dahiliden telefonla kaydedin.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Display Name",
+          "desc": "Kaydın adı; IVR ve anons hedeflerinde bu adla seçilir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Dil",
+          "desc": "Kaydın dili.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Düzenle / sil",
+          "desc": "Kaydı dinler, değiştirir ya da siler. Kullanımda olan kaydı silmeyin.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_ses_kayitlari.jpg",
+      "imageAlt": "Ses kayıtları",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        550
+      ]
+    },
+    {
+      "id": "pbx-kara-liste",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Kara liste (Blacklist)",
+      "intro": "Kara listedeki numaralardan gelen çağrılar santrale girmeden reddedilir. Admin › Blacklist.",
+      "example": {
+        "text": "Telefondan da engelleyebilirsiniz: son arayanı engellemek için *32, bir numarayı engellemek için *30, engeli kaldırmak için *31."
+      },
+      "items": [
+        {
+          "name": "Sekmeler",
+          "desc": "Import/Export ile listeyi CSV olarak toplu yükleyip indirebilir, Settings'te engellenen arayana ne olacağını seçebilirsiniz.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Blacklist Number",
+          "desc": "Yeni numara ekler; açıklama alanına engelleme nedenini yazın.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Kayıt",
+          "desc": "Engellenen numara ve açıklaması.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "İşlemler",
+          "desc": "Düzenle, sil ve bu numaradan gelen çağrı geçmişi.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_kara_liste.jpg",
+      "imageAlt": "Kara liste",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        290
+      ]
+    },
+    {
+      "id": "pbx-ozellik-kodlari",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Özellik kodları (Feature Codes)",
+      "intro": "Kullanıcıların telefondan tuşlayarak kullandığı kısa kodlar Admin › Feature Codes'ta tanımlıdır. Customize ile kodu değiştirebilir, Enabled düğmesiyle kapatabilirsiniz. Santralinizde tanımlı başlıca kodlar:",
+      "items": [
+        {
+          "name": "*72 / *73",
+          "desc": "Tüm çağrıları yönlendirmeyi aç / kapat.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*90 / *91",
+          "desc": "Meşgulken yönlendirmeyi aç / kapat.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*52 / *53",
+          "desc": "Cevapsız ya da ulaşılamazken yönlendirmeyi aç / kapat.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*78 / *79 / *76",
+          "desc": "Rahatsız etmeyi (DND) aç / kapat / değiştir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*8 ve ** + dahili",
+          "desc": "Çalan bir telefonu yakalama: grup içinde *8, belirli dahiliyi ** ve dahili numarası.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*2 ve ##",
+          "desc": "Görüşme sırasında danışarak aktarma (*2) ve doğrudan aktarma (##).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*1",
+          "desc": "Görüşme sırasında kaydı başlat / durdur.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*45 / *46",
+          "desc": "Kuyruğa giriş-çıkış (dinamik temsilci) ve kuyrukta mola (pause).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*97 / *98",
+          "desc": "Kendi sesli mesaj kutunu dinle / başka bir kutuyu ara.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*21",
+          "desc": "Beni takip et (Follow Me) aç / kapat.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*30 / *31 / *32",
+          "desc": "Numarayı kara listeye ekle / listeden çıkar / son arayanı engelle.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*271",
+          "desc": "Mesai kontrolü zaman koşulunu elle aç / kapat (bayram, acil kapanış).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "*43 / *65",
+          "desc": "Yankı testi ve kendi dahili numaranı dinleme; arıza tespitinde kullanılır.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_ozellik_kodlari.jpg",
+      "imageAlt": "Özellik kodları",
+      "bakedPins": true,
+      "imageSize": [
+        1440,
+        640
+      ]
+    },
+    {
+      "id": "pbx-cdr",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Çağrı kayıtları (CDR Reports)",
+      "intro": "Reports › CDR Reports tüm gelen, giden ve dahili aramaların kaydını gösterir. Bir çağrının nereye gittiğini ya da neden cevapsız kaldığını bulmak için kullanılır.",
+      "items": [
+        {
+          "name": "Tarih aralığı",
+          "desc": "Aranacak tarih ve saat aralığı.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Arama alanları",
+          "desc": "Arayan numara (CallerID Number), aranan numara (DID), hedef (Destination) gibi alanlarda arama yapın. Yanındaki seçeneklerle başlar, içerir, biter ya da tam eşleşir.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Disposition",
+          "desc": "Sonuca göre süzer: ANSWERED (cevaplandı), NO ANSWER (cevapsız), BUSY (meşgul), FAILED (başarısız).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Rapor türü",
+          "desc": "CDR search ekranda listeler, CSV File Excel'e indirir, Call Graph grafik çizer. Result Limit en fazla satır sayısıdır.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Search",
+          "desc": "Aramayı çalıştırır.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_cdr.jpg",
+      "imageAlt": "CDR arama ekranı",
+      "bakedPins": true,
+      "imageSize": [
+        1375,
+        510
+      ]
+    },
+    {
+      "id": "pbx-yedekleme",
+      "group": "santral",
+      "updated": "2026-10-15",
+      "title": "Yedekleme ve geri yükleme",
+      "intro": "Admin › Backup & Restore santral yapılandırmasının (dahililer, rotalar, IVR, kayıtlar) yedeğini alır. Büyük değişikliklerden önce mutlaka elle yedek alın.",
+      "steps": [
+        {
+          "title": "Yedek alın",
+          "text": "Değişiklikten önce mevcut yedek tanımının yanındaki oynat simgesine basın ve işlemin bitmesini bekleyin."
+        },
+        {
+          "title": "Değişikliği yapın",
+          "text": "Formu kaydedip Apply Config'e basın, test araması yapın."
+        },
+        {
+          "title": "Gerekirse geri dönün",
+          "text": "Sorun olursa Restore sekmesinden son yedeği seçip geri yükleyin. Geri yükleme tüm yapılandırmayı yedek anına döndürür."
+        }
+      ],
+      "items": [
+        {
+          "name": "Backup Wizard",
+          "desc": "Adım adım zamanlanmış yedek oluşturur.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "New Backup",
+          "desc": "Elle yedek tanımı oluşturur: hangi modüllerin yedekleneceği, nereye kaydedileceği ve ne sıklıkla.",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Yedek tanımı",
+          "desc": "Mevcut yedek planı (örnekte haftalık).",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "name": "Çalıştır",
+          "desc": "Oynat simgesi yedeği hemen alır. Değişiklik öncesi bunu kullanın.",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "image": "img/pbx_yedekleme.jpg",
+      "imageAlt": "Yedekleme",
+      "bakedPins": true,
+      "imageSize": [
+        1490,
+        240
+      ]
+    }
+  ],
+  "changelog": []
+}
