@@ -2,7 +2,7 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-10-15",
+    "updated": "2026-10-27",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
   },
   "groups": [
@@ -504,6 +504,107 @@
         800,
         512
       ]
+    },
+    {
+      "id": "kullanici-ayrilan",
+      "group": "baslangic",
+      "updated": "2026-10-27",
+      "title": "İşten ayrılan kullanıcıyı kapatma",
+      "intro": "Personel ayrıldığında kullanıcıyı silmeyin, pasif yapın: giriş yapamaz, ama açtığı ve sonuçlandırdığı görevler, notları, çağrı ve ses kayıtları raporlarda adıyla kalır. Önce üzerindeki işleri devredin, sonra hesabı kapatın. Örnek: Çağrı Merkezi Temsilcisi Ayşe Yılmaz ayrıldı.",
+      "steps": [
+        {
+          "title": "Bekleyen görevlerini devredin",
+          "text": "Görevlerim tablosunda Tüm Başvurular (ya da Birimimde Bekleyen Başvurular) listesini seçin, Sorumlu sütununda kişinin adıyla filtreleyin. Satırları kutucuklarla seçip Toplu İşlem › Aktar ile görevleri birim arkadaşına ya da birime aktarın."
+        },
+        {
+          "title": "Çağrı merkezindeyse durumunu kapatın",
+          "text": "Kişi telefon panelinde açık kaldıysa ≡ › Çağrı Merkezi › Operatör Durumları'nda kartındaki dişliden Kapalı'yı seçin; böylece kuyruktaki çağrılar ona yönlenmez."
+        },
+        {
+          "title": "≡ › Ayarlar › Kullanıcı",
+          "text": "Arama kutusuna kişinin adını, cep telefonunu ya da dahilisini yazın ve kullanıcıyı açın."
+        },
+        {
+          "title": "Diğer Alanlar'da hesabı kapatın",
+          "text": "Aktif'i Hayır yapın. Dahili yerine gelecek kişiye verilecekse Teleweb Dahili Telefon alanını boşaltın; dolu kaldıkça bu numara başka kullanıcıya verilemez. Rehbere eklensin mi'yi kapatın ki telefon panelinin rehberinde görünmesin."
+        },
+        {
+          "title": "Kaydet'e basın",
+          "text": "Kullanıcı anında oturumdan düşer; ulakBELL'e, mobil uygulamaya ve bu yardım sitesine giriş yapamaz."
+        }
+      ],
+      "items": [
+        {
+          "name": "Diğer Alanlar",
+          "desc": "Aktif, Teleweb Dahili Telefon ve Rehbere eklensin mi seçenekleri bu bölümdedir.",
+          "x": 52,
+          "y": 64.5
+        },
+        {
+          "name": "Kaydet",
+          "desc": "Değişiklikleri uygular.",
+          "x": 94,
+          "y": 92
+        },
+        {
+          "name": "Neden silmiyoruz?",
+          "desc": "Sil, kullanıcıyı listeden kaldırır ve dahilisini, kimlik numarasını boşaltır; geri getirmek için destek gerekir. Pasif kullanıcıyı ise istediğiniz zaman Aktif'i Evet yaparak geri açabilirsiniz."
+        },
+        {
+          "name": "Pasif kullanıcıları görmek",
+          "desc": "Ayarlar › Kullanıcı listesinde Aktif sütununa göre filtreleyerek pasif kullanıcıları bulabilirsiniz."
+        },
+        {
+          "name": "Kullanıcı grupları",
+          "desc": "Kişi bir kullanıcı grubundaysa (ör. Randevu Ekibi) Ayarlar › Kullanıcı Grupları'ndan çıkarın; gruba gelen görevlerde üye olarak görünmesin."
+        },
+        {
+          "name": "Yerine gelen personel",
+          "desc": "Yeni kişiyi Kullanıcı ekleme adımlarıyla açın ve boşalttığınız dahiliyi Teleweb Dahili Telefon alanına yazın."
+        }
+      ],
+      "example": {
+        "title": "Örnek: ayrılan temsilci için kontrol listesi",
+        "head": [
+          "Ne?",
+          "Nerede?",
+          "Durum"
+        ],
+        "rows": [
+          [
+            "Bekleyen 12 görev Can Şahin'e aktarıldı",
+            "Görevlerim › Toplu İşlem › Aktar",
+            "Tamam"
+          ],
+          [
+            "Operatör durumu Kapalı",
+            "Çağrı Merkezi › Operatör Durumları",
+            "Tamam"
+          ],
+          [
+            "Aktif: Hayır",
+            "Ayarlar › Kullanıcı",
+            "Tamam"
+          ],
+          [
+            "7012 dahilisi boşaltıldı",
+            "Ayarlar › Kullanıcı › Diğer Alanlar",
+            "Yeni temsilciye verilecek"
+          ],
+          [
+            "Randevu Ekibi grubundan çıkarıldı",
+            "Ayarlar › Kullanıcı Grupları",
+            "Tamam"
+          ]
+        ]
+      },
+      "image": "img/kullanici_ekle.jpg",
+      "imageAlt": "Kullanıcı Yönetimi penceresi",
+      "imageSize": [
+        800,
+        512
+      ],
+      "imageNote": "Aktif ve Teleweb Dahili Telefon, Diğer Alanlar açılınca görünür."
     },
     {
       "id": "kullanici-gruplari",
@@ -5752,6 +5853,12 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-10-27",
+      "title": "İşten ayrılan kullanıcıyı kapatma",
+      "text": "Ayrılan personelin görevlerini devretme ve hesabını pasif yapma adımları eklendi.",
+      "section": "kullanici-ayrilan"
+    },
     {
       "date": "2026-10-01",
       "title": "Sorumluda Geçen Süre sütununa sıralama",
