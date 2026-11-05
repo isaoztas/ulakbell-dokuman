@@ -2,7 +2,7 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-10-27",
+    "updated": "2026-11-05",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
   },
   "groups": [
@@ -33,6 +33,13 @@
       "audience": "CRM kullanıcısı",
       "card": "Kişi, fırsat ve etkinlikleri nasıl kullanırım?",
       "target": "crm-genel"
+    },
+    {
+      "id": "ai",
+      "title": "AI Agent ve Araçlar",
+      "audience": "Kurum yöneticisi",
+      "card": "Telefonda ve sohbette cevap veren yapay zeka asistanını nasıl kurarım?",
+      "target": "ai-genel"
     },
     {
       "id": "teleweb",
@@ -1720,6 +1727,248 @@
         }
       ],
       "example": "Örnek videoda 9 kişilik bir fuar listesi yüklendi; fırsatlar üç temsilciye üçer tane düştü. Temsilci Deniz Arslan'ı aradı, 45.000 TL'lik fırsatı Görüşme Sağlandı aşamasına aldı ve Kazanılan olarak kapattı."
+    },
+    {
+      "id": "lead-otomasyon",
+      "group": "crm",
+      "updated": "2026-11-05",
+      "title": "Lead otomasyonu: genel bakış",
+      "intro": "Lead otomasyonu, reklamdan, formdan ya da dış sistemden gelen her yeni müşteriyi kendiliğinden kişi olarak kaydeder; isterseniz fırsat, arama ve görev de açar, işi doğru temsilciye verir. Ekran ≡ › Akış Otomasyonları › Lead Otomasyonları'ndadır.",
+      "items": [
+        {
+          "name": "Özet",
+          "desc": "Otomasyonların ve kaynakların genel durumu."
+        },
+        {
+          "name": "Lead Otomasyonları",
+          "desc": "Kurulu otomasyonların listesi. Ekle ile yeni otomasyon açılır; satıra tıklayarak düzenlersiniz. Doğrudan atanan kişileri satırın içinden değiştirebilirsiniz."
+        },
+        {
+          "name": "Meta Lead Formları",
+          "desc": "Facebook ve Instagram reklam formları ve bu formlardan gelen leadler."
+        },
+        {
+          "name": "Lead Senaryoları",
+          "desc": "Leadlerin kimler arasında ve nasıl dağıtılacağını belirleyen kurallar. Bkz. Lead dağıtım senaryoları."
+        }
+      ],
+      "example": {
+        "title": "Kaynaklar",
+        "head": [
+          "Kaynak",
+          "Ne zaman kullanılır?"
+        ],
+        "rows": [
+          [
+            "Meta",
+            "Facebook ve Instagram reklam formları"
+          ],
+          [
+            "Google Lead",
+            "Google Ads lead formları"
+          ],
+          [
+            "LinkedIn",
+            "LinkedIn lead formları"
+          ],
+          [
+            "CTWA",
+            "WhatsApp'a tıklatan reklamlardan gelen sohbetler"
+          ],
+          [
+            "WebHook",
+            "Lead'i kendi sistemiyle gönderen dış yazılımlar"
+          ],
+          [
+            "Dosya",
+            "Excel listesi (bkz. Excel'den lead yükleme)"
+          ],
+          [
+            "Gelen Kutusu",
+            "Mesaj kutusuna düşen yazışmalar"
+          ],
+          [
+            "Web Formu",
+            "Sitenizdeki başvuru formu"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lead-otomasyon-kur",
+      "group": "crm",
+      "updated": "2026-11-05",
+      "title": "Lead otomasyonu kurma",
+      "intro": "Otomasyon bir sihirbazla adım adım kurulur. Sağdaki özet her adımda neyi seçtiğinizi gösterir. Sonraki adımlar seçtiğiniz kaynağa göre değişir.",
+      "steps": [
+        {
+          "title": "Lead Otomasyonları › Ekle",
+          "text": "Bu otomasyon nereden gelsin? sorusunda kaynağı seçin (ör. Meta)."
+        },
+        {
+          "title": "Eşleştirmeyi yapın",
+          "text": "Meta'da formları (birden çok seçebilirsiniz) ve Şu tarihten itibaren aktar tarihini seçin. LinkedIn'de formu seçin ya da form adında geçen bir metin yazın. CTWA'da kampanya, reklam seti ya da reklamı seçin. Gelen Kutusu'nda hesapları seçin; isterseniz numara ve metin filtresi ekleyin. Web Formu'nda formu seçin."
+        },
+        {
+          "title": "Dış sistemler için adresi kopyalayın",
+          "text": "WebHook ve Google Lead'de ekranda bir WebHook URL çıkar. Bu adresi lead gönderen sisteme ya da Google Ads lead form ayarına yapıştırın. Google Ads doğrulama anahtarı otomasyon kaydedildikten sonra görünür."
+        },
+        {
+          "title": "Dağıtımı seçin",
+          "text": "Gelen müşterilerle kim ilgilensin? adımında Doğrudan seç ile kişi, birim ve rol seçin (sırayla dağıtılır) ya da Senaryo kullan ile hazır bir dağıtım senaryosu seçin."
+        },
+        {
+          "title": "Lead geldiğinde ne yapılsın?",
+          "text": "Satış fırsatı oluştur, Arama veya etkinlik planla ve İlgili birime görev aç seçeneklerinden istediklerinizi işaretleyin. Hiçbirini seçmezseniz kişi yine kaydolur. Yeni kişiye uygulanacak etiket, kaynak ve tipi de burada seçin."
+        },
+        {
+          "title": "Fırsat, etkinlik ve görev ayrıntıları",
+          "text": "Fırsat adını ve pipeline'ını; etkinliğin adını, türünü ve lead geldikten kaç saat sonra olacağını; görevin birimini ve konusunu yazın."
+        },
+        {
+          "title": "Kaydedin",
+          "text": "Özeti kontrol edip kaydedin. Bundan sonra gelen her lead kurala göre işlenir."
+        }
+      ],
+      "items": [
+        {
+          "name": "Kayıtlı kişiyi mevcut sorumlusuna ata",
+          "desc": "Lead daha önce kayıtlı bir kişiden geldiyse ve kişinin sorumlusu varsa dağıtıma girmeden ona gider."
+        },
+        {
+          "name": "Yalnızca aktif kullanıcılara dağıt",
+          "desc": "Lead yalnızca son birkaç saat içinde sistemde işlem yapmış kişilere düşer. Saati siz belirlersiniz."
+        },
+        {
+          "name": "Çoklu fırsat engellemesi",
+          "desc": "Açıksa aynı kişi için belirlediğiniz gün sayısı içinde fırsat açılmışsa yenisi açılmaz. Excel dahil tüm kaynaklarda geçerlidir."
+        },
+        {
+          "name": "Varsayılan yap",
+          "desc": "Kaydettikten sonra otomasyonu o kaynağın varsayılanı yapabilirsiniz."
+        }
+      ]
+    },
+    {
+      "id": "lead-senaryolari",
+      "group": "crm",
+      "updated": "2026-11-05",
+      "title": "Lead dağıtım senaryoları",
+      "intro": "Senaryo, leadlerin kimler arasında, hangi yöntemle ve kimlere verileceğini bir kez tanımlamanızı sağlar; aynı senaryoyu birden çok lead otomasyonunda kullanabilirsiniz. Lead Otomasyonları › Lead Senaryoları sekmesindedir.",
+      "steps": [
+        {
+          "title": "Senaryoya ad verin",
+          "text": "Otomasyonun Dağıtım adımında senaryo bu adla seçilir (ör. Almanya implant kampanyası)."
+        },
+        {
+          "title": "Havuzu seçin",
+          "text": "Leadler kimler arasında dağıtılsın? Kişi, birim ve rol seçin. Havuz hepsinin birleşimidir; aynı kişi bir kez sayılır. Birim seçerseniz alt birimlerdeki kişiler de girer."
+        },
+        {
+          "title": "Yöntemi seçin",
+          "text": "Sıralı: herkes sırayla eşit lead alır. Ağırlıklı: kişilere yüzde (toplam %100) ya da katsayı (2 verilen kişi iki kat alır) verirsiniz. En az yüklü: lead bugün en az lead alan kişiye gider. İsterseniz kişi başına günlük üst sınır koyun."
+        },
+        {
+          "title": "Kim uygun sayılsın?",
+          "text": "Yalnızca aktif kullanıcılara dağıt, çalışma takvimi, en fazla bekleme süresi, İzinde olanlara verilmesin ve Kimse uygun değilse varsayılan kişi ayarlarını yapın."
+        },
+        {
+          "title": "Kaydedin",
+          "text": "Özette bir lead geldiğinde ne olacağı cümle cümle yazar. Senaryoyu otomasyonun Dağıtım adımında Senaryo kullan ile seçin."
+        }
+      ],
+      "items": [
+        {
+          "name": "Mesai dışında gelen lead",
+          "desc": "Mesai dışında ya da aktif kimse yokken gelen lead sorumlu atanmasını bekler. Mesai başlayınca ya da biri işlem yapınca en geç bir dakika içinde dağıtılır. En fazla bekleme süresi dolarsa varsayılan kişiye gider."
+        },
+        {
+          "name": "Kişi başına dakikada en fazla lead",
+          "desc": "Geceden biriken leadler sabah ilk giren kişiye yığılmasın diye dağıtım dakikalara yayılır."
+        },
+        {
+          "name": "Sıra kapsamı",
+          "desc": "Senaryo geneli seçilirse senaryoyu kullanan tüm otomasyonlar tek sırayı ve günlük sınırı paylaşır. Her lead otomasyonu ayrı seçilirse her biri kendi içinde döner (ör. Meta ve WhatsApp ayrı)."
+        },
+        {
+          "name": "Excel aktarımında günlük sınır",
+          "desc": "Kapalıyken dosyadan gelen satırlar günlük sınıra takılmaz. Açarsanız sınırı dolan kişiler atlanır."
+        },
+        {
+          "name": "Müşterinin sorumlusu varsa lead ona gitsin",
+          "desc": "Kayıtlı müşterinin kartında aktif bir sorumlu varsa lead dağıtıma girmeden ona atanır."
+        },
+        {
+          "name": "Pasife alma",
+          "desc": "Bir otomasyonda seçili senaryo pasife alınamaz; önce o otomasyonlarda başka bir senaryo ya da doğrudan seçim yapın."
+        }
+      ],
+      "example": {
+        "title": "Örnek: ağırlıklı dağıtım",
+        "head": [
+          "Kişi",
+          "Pay",
+          "Günlük sınır"
+        ],
+        "rows": [
+          [
+            "Can Şahin",
+            "%50",
+            "20"
+          ],
+          [
+            "Elif Demir",
+            "%30",
+            "15"
+          ],
+          [
+            "Burak Koç",
+            "%20",
+            "sınırsız"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "lead-atama-kayitlari",
+      "group": "crm",
+      "updated": "2026-11-05",
+      "title": "Atama kayıtları: lead kime, neden gitti?",
+      "intro": "Hem lead otomasyonunun hem senaryonun son adımı Atama kayıtları'dır. Her lead için kime verildiği ve gerekçesi listelenir. Satıra tıklayınca uygun adaylar ve elenenler açılır.",
+      "items": [
+        {
+          "name": "Havuzdan dağıtıldı",
+          "desc": "Lead senaryonun yöntemine göre havuzdaki sıradaki kişiye verildi."
+        },
+        {
+          "name": "Müşterinin sorumlusu",
+          "desc": "Kayıtlı müşterinin sorumlusu olduğu için dağıtıma girmeden ona gitti."
+        },
+        {
+          "name": "Konuşmayı üstlenen temsilci",
+          "desc": "Gelen kutusunda konuşmayı üstlenen kişiye verildi."
+        },
+        {
+          "name": "Bekliyor",
+          "desc": "Mesai dışı ya da aktif kimse olmadığı için atanmayı bekliyor. Beklerken etkinlik açılmaz; kişiye verilince açılır."
+        },
+        {
+          "name": "Bekleme süresi doldu, varsayılan kişi",
+          "desc": "En fazla bekleme süresi dolduğu için varsayılan kişiye gitti."
+        },
+        {
+          "name": "Havuzda uygun kimse yok, varsayılan kişi",
+          "desc": "Havuzdaki herkes izinde, pasif ya da sınırı dolu olduğu için varsayılan kişiye gitti."
+        },
+        {
+          "name": "Açılmadı (mükerrer)",
+          "desc": "Çoklu fırsat engeli açık ve kişinin yakın tarihli fırsatı olduğu için yeni fırsat açılmadı."
+        },
+        {
+          "name": "Atanamadı",
+          "desc": "Lead kimseye verilemedi; satırı açıp nedenine bakın."
+        }
+      ]
     },
     {
       "id": "crm-kisiler",
@@ -5850,9 +6099,201 @@
         722,
         500
       ]
+    },
+    {
+      "id": "ai-genel",
+      "group": "ai",
+      "updated": "2026-11-05",
+      "title": "AI Agent ve Araçlar: genel bakış",
+      "intro": "AI agent, telefonda ya da web sohbette sizin yerinize konuşan yapay zeka asistanıdır. Soruları yanıtlar, başvuru ya da fırsat açar, randevu verir, gerekirse çağrıyı operatöre aktarır. Ekran ≡ › Ai Agent ve Araçlar'dadır; kurumunuzda AI agent açık ve size yetki verilmişse görünür.",
+      "items": [
+        {
+          "name": "Agentlar",
+          "desc": "Kurulu agentların listesi. + Yeni Agent Oluştur ile yeni agent, yanındaki ok ile Harici Agent (başka bir sağlayıcıda hazırlanmış agent) bağlanır."
+        },
+        {
+          "name": "Toollar",
+          "desc": "Agentın kullanabileceği araçlar: dış sisteme istek atan API entegrasyonları ve ulakBELL'in hazır araçları."
+        },
+        {
+          "name": "Değerlendirme Formları",
+          "desc": "Görüşme bitince agentın görüşmeyi puanladığı sorular (ör. Görüşme Kalite Formu)."
+        },
+        {
+          "name": "AI Randevu",
+          "desc": "Kurumunuzda yapay zeka ile randevu açıksa randevu ayarları."
+        },
+        {
+          "name": "Test Araması",
+          "desc": "Agentı canlıya almadan kendi telefonunuzu aratarak deneyin."
+        }
+      ]
+    },
+    {
+      "id": "ai-agent-olustur",
+      "group": "ai",
+      "updated": "2026-11-05",
+      "title": "Agent oluşturma",
+      "intro": "Agent'ın ne söyleyeceğini ve nasıl davranacağını sekmelerden ayarlarsınız: Agent, Araçlar, Gelişmiş, Görüşmeler ve Bilgi Kütüphanesi.",
+      "steps": [
+        {
+          "title": "+ Yeni Agent Oluştur",
+          "text": "Agent Adı ve Açıklama'yı yazın."
+        },
+        {
+          "title": "Çağrı merkezine bağlayın",
+          "text": "Telefon hattında bu agent cevap verecekse Çağrı Merkezi Agent'ı mı? seçeneğini açın ve aramaların geleceği numarayı yazın."
+        },
+        {
+          "title": "Konuşmayı yazın",
+          "text": "Sistem Promptu'na agentın görevini, kurallarını ve üslubunu yazın; uzun metin için Genişlet'e basın. İlk Mesaj, görüşme açılınca agentın söyleyeceği cümledir. Güvenlik promptu küfür, jailbreak ve zararlı talimatı engeller; açık tutun."
+        },
+        {
+          "title": "Modeli seçin",
+          "text": "LLM Sağlayıcı ve LLM Modeli'ni seçin, Test Et ile bağlantıyı deneyin."
+        },
+        {
+          "title": "Araç ekleyin",
+          "text": "Araçlar sekmesinden agentın kullanacağı araçları seçin (ör. Başvuru Oluştur, Operatöre Aktar)."
+        },
+        {
+          "title": "Bilgi verin",
+          "text": "Bilgi Kütüphanesi'nde Mevcut sorulardan seç ile Sık Sorulan Sorular'daki soruları agenta öğretin."
+        },
+        {
+          "title": "Deneyin ve kaydedin",
+          "text": "Kaydedin, sonra Test Araması ile kendi numaranızı aratıp deneyin. Her kayıt Agent Geçmişi'nde sürüm olarak saklanır."
+        }
+      ],
+      "items": [
+        {
+          "name": "Ses ve Dikte",
+          "desc": "Telefonda konuşan ses (Konuşma Sağlayıcı) ve sesi yazıya döken dikte (Dikte Sağlayıcı)."
+        },
+        {
+          "name": "Görüşme Süresi",
+          "desc": "Sessizlik Sonrası Yanıt Süresi, Sessizlik Yanıt Mesajı, Maksimum Görüşme Süresi ve Görüşme Sonlandırma Mesajı."
+        },
+        {
+          "name": "Konuşma Algılama",
+          "desc": "Gürültü giderme ve konuşmanın bittiği anı belirleyen sessizlik süresi ile eşik."
+        },
+        {
+          "name": "Araya Girme",
+          "desc": "Açıksa arayan kişi agent konuşurken sözünü kesebilir; kesme için gereken konuşma süresi ayarlanır."
+        },
+        {
+          "name": "Ses İnce Ayarı",
+          "desc": "Konuşma hızı ve kelimeler arasındaki sessizliği kısaltma."
+        },
+        {
+          "name": "Görüşme Sonrası",
+          "desc": "Görüşme bitince doldurulacak değerlendirme formları."
+        },
+        {
+          "name": "Görüşmeler",
+          "desc": "Bu agentın yaptığı görüşmeler; durumuna göre (Tamamlandı, Devam Ediyor, Başarısız) süzülebilir."
+        }
+      ]
+    },
+    {
+      "id": "ai-araclar",
+      "group": "ai",
+      "updated": "2026-11-05",
+      "title": "Araçlar (Toollar)",
+      "intro": "Araç, agentın konuşma sırasında bir iş yapmasını sağlar: başvuru açmak, randevu vermek, bir dış sistemden bilgi sorgulamak gibi. Toollar sekmesinde yeni araç eklenir, agentın Araçlar sekmesinde seçilir.",
+      "steps": [
+        {
+          "title": "Toollar sekmesinde yeni araç ekleyin",
+          "text": "Araç türünü seçin: API Entegrasyonu (dış sistemlere HTTP isteği) ya da ulakBELL Araçları (sistemdeki hazır işlevler)."
+        },
+        {
+          "title": "Genel Bilgiler",
+          "text": "Araç Adı (ör. basvuru_olustur) ve Açıklama yazın. Açıklama, agentın aracı ne zaman kullanacağını anlamasını sağlar; açık ve kısa yazın."
+        },
+        {
+          "title": "Fonksiyon ayarları",
+          "text": "ulakBELL aracında fonksiyonu seçip ayarlarını yapın (ör. Başvuru Oluştur'da birim ve konu). API aracında adres ve gönderilecek alanları girin."
+        },
+        {
+          "title": "Agenta ekleyin",
+          "text": "Agentın Araçlar sekmesinde aracı seçip agentı kaydedin."
+        }
+      ],
+      "items": [
+        {
+          "name": "Başvuru Oluştur / Başvuruya Not Ekle / Başvuru Geçmişi Sorgula",
+          "desc": "Arayanın talebini görev olarak açar, mevcut göreve not ekler ya da geçmiş başvurularını söyler."
+        },
+        {
+          "name": "Fırsat Oluştur / Fırsat Aşaması Değiştir",
+          "desc": "Görüşmeden satış fırsatı açar ya da fırsatı bir sonraki aşamaya taşır."
+        },
+        {
+          "name": "Randevu Oluştur / Randevu İptal / Müsait Randevu Saatlerini Sorgula",
+          "desc": "Randevu işlemleri; hastanelerde doktor listesi ve telefondan hasta bulma da vardır."
+        },
+        {
+          "name": "Operatöre Aktar",
+          "desc": "Agent çözemediğinde çağrıyı çağrı merkezi operatörüne aktarır."
+        },
+        {
+          "name": "SMS Gönder",
+          "desc": "Görüşme sırasında arayana bilgi SMS'i gönderir."
+        },
+        {
+          "name": "İlçe / Mahalle / Sokak Listesi, Adres Eşleştir, Kesinti Sorgula",
+          "desc": "Belediyeler için adres alma ve kesinti sorgulama araçları."
+        }
+      ]
+    },
+    {
+      "id": "ai-gorusmeler",
+      "group": "ai",
+      "updated": "2026-11-05",
+      "title": "Görüşmeler ve değerlendirme",
+      "intro": "Agentın her görüşmesi kaydedilir. Görüşmeler sekmesinden ya da CRM Pano'daki AI görüşmeleri bölümünden bir görüşmeyi açarak ne konuşulduğunu ve sonucunu görürsünüz.",
+      "items": [
+        {
+          "name": "Özet",
+          "desc": "Görüşmenin kısa özeti ve durumu."
+        },
+        {
+          "name": "Yazılı",
+          "desc": "Görüşmenin metne dökülmüş hali; kim ne söyledi."
+        },
+        {
+          "name": "Kişi Verisi",
+          "desc": "Görüşmeden alınan ad, telefon gibi bilgiler."
+        },
+        {
+          "name": "Oluşturulan Başvurular / Fırsatlar",
+          "desc": "Görüşme sırasında agentın açtığı görevler ve fırsatlar; tıklayarak açabilirsiniz."
+        },
+        {
+          "name": "Değerlendirme Formları",
+          "desc": "Görüşme sonrası formun soruları ve agentın verdiği puanlar."
+        },
+        {
+          "name": "Değerlendirme formu oluşturma",
+          "desc": "Değerlendirme Formları sekmesinde yeni form açın: adını ve açıklamasını yazın, soruları ekleyin, formu Aktif yapın. Sonra agentın Görüşme Sonrası bölümünde seçin. Formdaki Tekrar Puanla ile seçtiğiniz tarihten bu yana yapılan görüşmeler yeniden puanlanır."
+        }
+      ]
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-05",
+      "title": "AI Agent ve Araçlar bölümü",
+      "text": "Agent kurma, araçlar, görüşmeler ve değerlendirme formları anlatıldı.",
+      "section": "ai-genel"
+    },
+    {
+      "date": "2026-11-05",
+      "title": "Lead otomasyonu ve dağıtım senaryoları",
+      "text": "Tüm lead kaynakları, dağıtım senaryoları ve atama kayıtları eklendi.",
+      "section": "lead-otomasyon"
+    },
     {
       "date": "2026-10-27",
       "title": "İşten ayrılan kullanıcıyı kapatma",
