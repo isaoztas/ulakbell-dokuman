@@ -6292,7 +6292,7 @@
       "group": "entegrasyon",
       "updated": "2026-11-06",
       "title": "Google İşletme Profili: yorumları bağlama",
-      "intro": "Google İşletme Profili'ndeki yorumları ulakBELL'e almak için Google'a izin verdirmeniz gerekir. İzin bağlantısı hazır gönderilmez: kurumunuzun CRM ekranında entegrasyonu oluşturduğunuzda ulakBELL size özel bir bağlantı üretir. Bu bağlantı entegrasyona ve kurumunuzun ulakBELL adresine özeldir; başka bir kurumun bağlantısı sizin hesabınızda çalışmaz. Aşağıdaki adımlar CRM ekranı içindir. Eski ekranı kullanıyorsanız önce sol menüden CRM ekranına geçin.",
+      "intro": "Google yorumlarını ulakBELL'e almak için Google'a bir kez izin verirsiniz. İzin bağlantısını ulakBELL üretir. Eski ekrandaysanız önce sol menüden CRM ekranına geçin.",
       "image": "img/entegrasyon_sekmesi.jpg",
       "imageAlt": "Ayarlar ekranında Entegrasyon Ayarları sekmesi",
       "bakedPins": true,
@@ -6302,64 +6302,36 @@
       ],
       "steps": [
         {
-          "title": "Sol menüden CRM ekranına geçin, sonra ≡ › Ayarlar › Entegrasyon Ayarları",
-          "text": "Eski ekranı kullanıyorsanız önce sol menüden CRM ekranına geçin. Bağlı kanallar kart olarak listelenir; arama kutusuna “Google” yazıp Google İşletme Profili kartına tıklayın."
+          "title": "≡ › Ayarlar › Entegrasyon Ayarları",
+          "text": "“Google” yazıp Google İşletme Profili kartına tıklayın."
         },
         {
-          "title": "Hesap Ekle'ye basın",
-          "text": "Hesap Bilgileri adımında Entegrasyon Başlığı'nı yazın (ör. Basın Yayın Müdürlüğü) ve gelen yorumların düşeceği Başvuru Kaynağı'nı seçin. İleri ile devam edin."
+          "title": "Hesap Ekle",
+          "text": "Başlığı yazın, başvuru kaynağını seçin, ilerleyin."
         },
         {
-          "title": "İzin bağlantısını kopyalayın ya da açın",
-          "text": "Neredeyse bitti kutusunda kuruma özel bağlantı görünür. Kopyala ile bağlantıyı alabilir, Yeni sekmede aç ile doğrudan açabilirsiniz."
+          "title": "Bağlantıyı açın",
+          "text": "Kopyala ya da Yeni sekmede aç ile açın. İşletmelerin sahibi Google hesabıyla izin verin."
         },
         {
-          "title": "İşletmelerin sahibi Google hesabıyla izin verin",
-          "text": "Bağlantıyı, işletme profillerinin sahibi ya da yöneticisi olan Google hesabıyla açın ve istenen işletme yönetimi iznini verin. Aynı hesapta birden fazla işletme varsa hepsi tek izinle bağlanır."
-        },
-        {
-          "title": "Bağlantıyı Kontrol Et'e basın",
-          "text": "ulakBELL Google'a erişebildiğini doğrularsa kutu yeşile döner ve Bağlandı yazar. Hata alırsanız izni işletmelerin sahibi olmayan bir hesapla vermişsinizdir; bağlantıyı doğru hesapla yeniden açın."
-        },
-        {
-          "title": "Takip Edilecek Konumlar'dan işletmeleri seçin",
-          "text": "Yorumları ulakBELL'e düşecek işletmeleri işaretleyin (Konum ara ile listede arayabilirsiniz) ve kaydedin."
-        },
-        {
-          "title": "Gelen kutusunda görünmesi için rolü ayarlayın",
-          "text": "Yorumlar, yalnızca bu hesabı görme yetkisi olan kullanıcıların Gelen Kutusu'nda görünür. Bir sonraki bölümde yetkinin nasıl verileceği anlatılıyor."
+          "title": "Bağlantıyı Kontrol Et",
+          "text": "Bağlandı yazısını görünce konumları seçip kaydedin."
         }
       ],
       "items": [
         {
           "name": "Entegrasyon Ayarları",
-          "desc": "Ayarlar ekranındaki bu sekme tüm entegrasyon kartlarını toplar.",
+          "desc": "Tüm entegrasyon kartları bu sekmededir.",
           "x": 0,
           "y": 0
         },
         {
-          "name": "Bağlantı (link)",
-          "desc": "Kuruma özel izin bağlantısıdır. Yalnızca yetkili kişilerle paylaşın; bağlantıyı hangi Google hesabıyla açtığınız, hangi işletmelerin bağlanacağını belirler."
+          "name": "İzin bağlantısı",
+          "desc": "Kuruma özeldir. Yalnızca yetkili kişiyle paylaşın."
         },
         {
-          "name": "Bağlantıyı Kontrol Et",
-          "desc": "İzin verildikten sonra bağlantının çalıştığını doğrular ve konum listesini getirir."
-        },
-        {
-          "name": "Takip Edilecek Konumlar",
-          "desc": "İzin verilen Google hesabındaki işletmeler burada listelenir. Seçilen işletmelere gelen yorumlar kontrol edilir ve ulakBELL'e düşer."
-        },
-        {
-          "name": "Eski ekranı kullanıyorsanız",
-          "desc": "Eski ekranda Ayarlar menüsünde Entegrasyon Ayarları sekmesi yoktur. Sol menüden CRM ekranına geçtikten sonra yukarıdaki adımları izleyin."
-        },
-        {
-          "name": "Birden fazla entegrasyon",
-          "desc": "Yönetici olmayan kullanıcılar bir kaynak için yalnızca bir entegrasyon ekleyebilir. Farklı Google hesaplarındaki işletmeleri ayrı ayrı bağlamak için destek ekibiyle iletişime geçin."
-        },
-        {
-          "name": "İzni geri almak",
-          "desc": "Google hesabınızın Güvenlik sayfasındaki üçüncü taraf erişimlerinden ulakBELL iznini kaldırabilirsiniz. Bundan sonra yorumlar alınmaz; yeniden bağlamak için izin bağlantısını tekrar açın."
+          "name": "Birden fazla hesap",
+          "desc": "Yönetici olmayanlar kaynak başına tek entegrasyon ekleyebilir. Fazlası için destekle görüşün."
         }
       ]
     },
@@ -6368,7 +6340,7 @@
       "group": "entegrasyon",
       "updated": "2026-11-06",
       "title": "Bağlanan hesabı gelen kutusunda görme yetkisi",
-      "intro": "Google İşletme Profili'ni bağladıktan sonra yorumların gelen kutusunda görünmesi için kullanıcının rolünde bu hesabın seçilmiş olması gerekir. Yetki rolden verilir; hesabı seçilmemiş rollerdeki kullanıcılar yorumları göremez. Örnek: yorumları Basın Yayın Müdürlüğü ekibi yanıtlayacak.",
+      "intro": "Yorumlar yalnızca hesabı rolünde seçili kullanıcıların gelen kutusunda görünür.",
       "image": "img/rol_yetkileri.jpg",
       "imageAlt": "Rol Düzenle penceresi ve yetki grupları",
       "imageNote": "Örnek görüntüde Çağrı Merkezi Yetkileri açık; sizde Gelen Kutusu Yetkileri'ne tıklayın.",
@@ -6379,39 +6351,27 @@
       "steps": [
         {
           "title": "≡ › Ayarlar › Roller",
-          "text": "Yorumları görecek ekibin rolünü açın (ör. Basın Yayın Ekibi). Rol yoksa Yeni ile oluşturun."
+          "text": "Yorumları görecek rolü açın."
         },
         {
-          "title": "Gelen Kutusu Yetkileri'ni seçin",
-          "text": "Rol Düzenle penceresinin solundaki gruplardan Gelen Kutusu Yetkileri'ne tıklayın."
+          "title": "Gelen Kutusu Yetkileri",
+          "text": "“Dış kaynaklar geliş ekranındaki kaynaklar” listesinde yeni hesabı işaretleyin."
         },
         {
-          "title": "Dış kaynaklar geliş ekranındaki kaynaklar",
-          "text": "Listeden az önce bağladığınız Google İşletme Profili hesabını (entegrasyon başlığını) işaretleyin. Tüm hesapları görecek roller için Hepsi seçilebilir."
-        },
-        {
-          "title": "Kaydet'e basın",
-          "text": "Değişiklik rolün tüm kullanıcılarına geçer. Kullanıcılar sayfayı yenilediklerinde ya da yeniden girdiklerinde yorumları Gelen Kutusu'nda görür."
+          "title": "Kaydet",
+          "text": "Kullanıcılar yeniden girince yorumları görür."
         }
       ],
       "items": [
         {
           "name": "Gelen Kutusu Yetkileri",
-          "desc": "Gelen kutusuna ilişkin yetkilerin toplandığı grup.",
+          "desc": "Gelen kutusu yetkilerinin grubu.",
           "x": 22.5,
           "y": 40.8
         },
         {
-          "name": "Dış kaynaklar geliş ekranındaki kaynaklar",
-          "desc": "Kullanıcının gelen kutusunda görebileceği hesaplar. Yeni bağladığınız hesap burada seçilmezse yorumlar kullanıcıya görünmez."
-        },
-        {
           "name": "Sınırlı dış kaynak hesapları",
-          "desc": "Bu alanda seçilen hesaplarda kullanıcı yalnızca kendi sorumlu olduğu yazışmaları görür. Hesabı burada seçerseniz yukarıdaki listede de seçmeniz gerekir. Tüm ekibin yorumları görmesini istiyorsanız burayı boş bırakın."
-        },
-        {
-          "name": "Yeni Dış Kaynaklar Ekranı Tasarımı",
-          "desc": "Gelen kutusunun yeni tasarımla açılmasını sağlayan anahtar. Eski ekranda kalmak isteyen roller için kapalı bırakılır."
+          "desc": "Burada seçilen hesapta kullanıcı yalnızca kendi sorumlu olduğu yazışmaları görür. Tüm ekip görecekse boş bırakın."
         },
         {
           "name": "Kaydet",
@@ -6419,32 +6379,7 @@
           "x": 86.3,
           "y": 94.8
         }
-      ],
-      "example": {
-        "title": "Örnek: Basın Yayın ekibi rolü",
-        "head": [
-          "Alan",
-          "Seçim"
-        ],
-        "rows": [
-          [
-            "Rol",
-            "Basın Yayın Ekibi"
-          ],
-          [
-            "Yetki grubu",
-            "Gelen Kutusu Yetkileri"
-          ],
-          [
-            "Dış kaynaklar geliş ekranındaki kaynaklar",
-            "Basın Yayın Müdürlüğü (Google İşletme Profili)"
-          ],
-          [
-            "Sınırlı dış kaynak hesapları",
-            "Boş (ekip tüm yorumları görür)"
-          ]
-        ]
-      }
+      ]
     }
   ],
   "changelog": [
