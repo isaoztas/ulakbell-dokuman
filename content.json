@@ -6292,7 +6292,7 @@
       "group": "entegrasyon",
       "updated": "2026-11-06",
       "title": "Google İşletme Profili: yorumları bağlama",
-      "intro": "Google İşletme Profili'ndeki yorumları ulakBELL'e almak için Google'a izin verdirmeniz gerekir. İzin bağlantısı hazır gönderilmez: kurumunuzun CRM ekranında entegrasyonu oluşturduğunuzda ulakBELL size özel bir bağlantı üretir. Bu bağlantı entegrasyona ve kurumunuzun ulakBELL adresine özeldir; başka bir kurumun bağlantısı sizin hesabınızda çalışmaz. Aşağıdaki adımlar CRM ekranı içindir; eski ekranı kullanıyorsanız önce CRM ekranına geçin (ayrıntı aşağıda).",
+      "intro": "Google İşletme Profili'ndeki yorumları ulakBELL'e almak için Google'a izin verdirmeniz gerekir. İzin bağlantısı hazır gönderilmez: kurumunuzun CRM ekranında entegrasyonu oluşturduğunuzda ulakBELL size özel bir bağlantı üretir. Bu bağlantı entegrasyona ve kurumunuzun ulakBELL adresine özeldir; başka bir kurumun bağlantısı sizin hesabınızda çalışmaz. Aşağıdaki adımlar CRM ekranı içindir. Eski ekranı kullanıyorsanız önce sol menüden CRM ekranına geçin.",
       "image": "img/entegrasyon_sekmesi.jpg",
       "imageAlt": "Ayarlar ekranında Entegrasyon Ayarları sekmesi",
       "bakedPins": true,
@@ -6302,8 +6302,8 @@
       ],
       "steps": [
         {
-          "title": "CRM ekranında ≡ › Ayarlar › Entegrasyon Ayarları",
-          "text": "Bağlı kanallar kart olarak listelenir. Arama kutusuna “Google” yazıp Google İşletme Profili kartına tıklayın."
+          "title": "Sol menüden CRM ekranına geçin, sonra ≡ › Ayarlar › Entegrasyon Ayarları",
+          "text": "Eski ekranı kullanıyorsanız önce sol menüden CRM ekranına geçin. Bağlı kanallar kart olarak listelenir; arama kutusuna “Google” yazıp Google İşletme Profili kartına tıklayın."
         },
         {
           "title": "Hesap Ekle'ye basın",
@@ -6351,7 +6351,7 @@
         },
         {
           "name": "Eski ekranı kullanıyorsanız",
-          "desc": "Eski ekranda Ayarlar menüsünde Entegrasyon Ayarları sekmesi yoktur; entegrasyon ayrı bir Entegrasyonlar sayfasından eklenir. Adımların ekranla birebir uyması için kurumunuzun CRM ekranına geçirilmesini destek ekibinden isteyin."
+          "desc": "Eski ekranda Ayarlar menüsünde Entegrasyon Ayarları sekmesi yoktur. Sol menüden CRM ekranına geçtikten sonra yukarıdaki adımları izleyin."
         },
         {
           "name": "Birden fazla entegrasyon",
