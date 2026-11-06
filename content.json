@@ -2,7 +2,7 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-11-05",
+    "updated": "2026-11-06",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
   },
   "groups": [
@@ -40,6 +40,13 @@
       "audience": "Kurum yöneticisi",
       "card": "Telefonda ve sohbette cevap veren yapay zeka asistanını nasıl kurarım?",
       "target": "ai-genel"
+    },
+    {
+      "id": "entegrasyon",
+      "title": "Entegrasyonlar",
+      "audience": "Kurum yöneticisi",
+      "card": "Google yorumlarını ve sosyal medya hesaplarımızı ulakBELL'e nasıl bağlarım?",
+      "target": "gmb-baglama"
     },
     {
       "id": "teleweb",
@@ -6279,9 +6286,70 @@
           "desc": "Değerlendirme Formları sekmesinde yeni form açın: adını ve açıklamasını yazın, soruları ekleyin, formu Aktif yapın. Sonra agentın Görüşme Sonrası bölümünde seçin. Formdaki Tekrar Puanla ile seçtiğiniz tarihten bu yana yapılan görüşmeler yeniden puanlanır."
         }
       ]
+    },
+    {
+      "id": "gmb-baglama",
+      "group": "entegrasyon",
+      "updated": "2026-11-06",
+      "title": "Google İşletme Profili: yorumları bağlama",
+      "intro": "Google İşletme Profili'ndeki yorumları ulakBELL'e almak için Google'a izin verdirmeniz gerekir. Bu izin bağlantısı hazır gönderilmez: kurumunuzun panelinde entegrasyonu oluşturduğunuzda ulakBELL size özel bir bağlantı üretir. Bağlantı, entegrasyona ve kurumunuzun ulakBELL adresine özeldir; başka bir kurumun bağlantısı sizin hesabınızda çalışmaz.",
+      "steps": [
+        {
+          "title": "≡ › Ayarlar › Entegrasyonlar",
+          "text": "Sağ üstteki + Entegrasyon ekle düğmesine basın."
+        },
+        {
+          "title": "Kaynak olarak Google My Business'ı seçin",
+          "text": "Entegrasyon başlığını yazın (ör. Basın Yayın Müdürlüğü işletmeleri), başvuruların düşeceği başvuru kaynağını seçin ve kaydedin."
+        },
+        {
+          "title": "İzin bağlantısını kopyalayın",
+          "text": "Kayıttan sonra entegrasyonun düzenleme sayfasında mavi kutuda Link görünür. Kopyala düğmesiyle bağlantıyı alın."
+        },
+        {
+          "title": "Bağlantıyı işletmelerin sahibi Google hesabıyla açın",
+          "text": "Bağlantıyı, işletme profillerinin sahibi ya da yöneticisi olan Google hesabıyla açın ve istenen işletme yönetimi iznini verin. Birden fazla işletme aynı hesapta yönetiliyorsa hepsi tek izinle bağlanır."
+        },
+        {
+          "title": "Bağlantıyı Kontrol Et'e basın",
+          "text": "ulakBELL, Google'a erişebildiğini doğrular. Hata alırsanız izni sahibi olmayan bir hesapla verdiyseniz bağlantıyı yeniden açın."
+        },
+        {
+          "title": "Hesap listesinden işletmeleri seçin",
+          "text": "Hesap listesi alanında yorumları ulakBELL'e düşecek işletmeleri seçin ve Kaydet'e basın. Seçilen işletmelere gelen yorumlar kontrol edilir ve başvuru olarak açılır."
+        }
+      ],
+      "items": [
+        {
+          "name": "Link",
+          "desc": "Kuruma özel izin bağlantısıdır. Yalnızca yetkili kişilerle paylaşın; bağlantıyı kimin açtığı, hangi Google hesabının bağlanacağını belirler."
+        },
+        {
+          "name": "Bağlantıyı Kontrol Et",
+          "desc": "İzin verildikten sonra bağlantının çalıştığını doğrular ve işletme listesini getirir."
+        },
+        {
+          "name": "Hesap listesi",
+          "desc": "İzin verilen Google hesabındaki işletmeler burada listelenir. Yorumları alınmasını istemediğiniz işletmeleri seçmeyin."
+        },
+        {
+          "name": "Birden fazla entegrasyon",
+          "desc": "Yönetici olmayan kullanıcılar bir kaynak için yalnızca bir entegrasyon ekleyebilir. Farklı Google hesaplarındaki işletmeleri ayrı ayrı bağlamak için destek ekibiyle iletişime geçin."
+        },
+        {
+          "name": "İzni geri almak",
+          "desc": "Google hesabınızın Güvenlik sayfasındaki üçüncü taraf erişimlerinden ulakBELL iznini kaldırabilirsiniz. Bundan sonra yorumlar alınmaz; yeniden bağlamak için izin bağlantısını tekrar açın."
+        }
+      ]
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-06",
+      "title": "Google İşletme Profili bağlama",
+      "text": "Google yorumlarını ulakBELL'e bağlamak için izin bağlantısının nasıl alınacağı anlatıldı.",
+      "section": "gmb-baglama"
+    },
     {
       "date": "2026-11-05",
       "title": "AI Agent ve Araçlar bölümü",
