@@ -6292,7 +6292,7 @@
       "group": "entegrasyon",
       "updated": "2026-11-06",
       "title": "Google İşletme Profili: yorumları bağlama",
-      "intro": "Google yorumlarını ulakBELL'e almak için Google'a bir kez izin verirsiniz. İzin bağlantısını ulakBELL üretir. Eski ekrandaysanız önce sol menüden CRM ekranına geçin.",
+      "intro": "Google yorumlarını ulakBELL'e almak için Google'a bir kez izin verirsiniz. İzin bağlantısını ulakBELL üretir. Eski ekrandaysanız önce sağ menüden CRM ekranına geçin.",
       "image": "img/entegrasyon_sekmesi.jpg",
       "imageAlt": "Ayarlar ekranında Entegrasyon Ayarları sekmesi",
       "bakedPins": true,
@@ -6301,6 +6301,10 @@
         124
       ],
       "steps": [
+        {
+          "title": "Sağ menüden CRM'e geçin",
+          "text": "Sağ menüde CRM yoksa aşağıdaki “Menüde CRM yoksa” notuna bakın."
+        },
         {
           "title": "≡ › Ayarlar › Entegrasyon Ayarları",
           "text": "“Google” yazıp Google İşletme Profili kartına tıklayın."
@@ -6332,6 +6336,10 @@
         {
           "name": "Birden fazla hesap",
           "desc": "Yönetici olmayanlar kaynak başına tek entegrasyon ekleyebilir. Fazlası için destekle görüşün."
+        },
+        {
+          "name": "Menüde CRM yoksa",
+          "desc": "Ayarlar › Roller'de rolü açın, CRM Yetkileri'nde CRM Aktif anahtarını açıp Kaydet'e basın. Sonra sayfayı yenileyin."
         }
       ]
     },
