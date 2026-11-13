@@ -2,7 +2,7 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-11-06",
+    "updated": "2026-11-13",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
   },
   "groups": [
@@ -88,6 +88,13 @@
       "title": "Hastane Süreçleri",
       "audience": "Hastane kullanıcısı",
       "target": "hst-genel"
+    },
+    {
+      "id": "ileri",
+      "title": "İleri düzey ulakBELL",
+      "audience": "Kurum yöneticisi",
+      "card": "ulakBELL'in ileri düzey özelliklerini nasıl kullanırım?",
+      "target": "vs-genel"
     }
   ],
   "sections": [
@@ -6388,9 +6395,263 @@
           "y": 94.8
         }
       ]
+    },
+    {
+      "id": "vs-genel",
+      "group": "ileri",
+      "updated": "2026-11-13",
+      "title": "Veri Setleri: kendi listeniz",
+      "intro": "Veri seti, ulakBELL'de tuttuğunuz bir listedir (ör. araç listesi). Formdaki açılır menü seçeneklerini bu listeden alır. Liste değişince formu değil, veri setini güncellersiniz.",
+      "steps": [
+        {
+          "title": "Yetki verin",
+          "text": "Rolde Veri Seti Yetkileri'ni açın."
+        },
+        {
+          "title": "Listeyi oluşturun",
+          "text": "≡ › Veri Setleri › + Yeni Veri Seti."
+        },
+        {
+          "title": "Forma bağlayın",
+          "text": "Açılır Menü alanında Seçenek Kaynağı'nı Dataset yapın."
+        }
+      ],
+      "items": [
+        {
+          "name": "+ Yeni Veri Seti",
+          "desc": "Yeni liste açar.",
+          "x": 85,
+          "y": 13.5
+        },
+        {
+          "name": "Veri seti kartı",
+          "desc": "Tıklayınca liste açılır. Altında satır ve sütun sayısı yazar.",
+          "x": 40.5,
+          "y": 30
+        }
+      ],
+      "image": "img/vs_liste.jpg",
+      "imageAlt": "Veri Setleri ekranı",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
+      "id": "vs-yetki",
+      "group": "ileri",
+      "updated": "2026-11-13",
+      "title": "1. Yetki verme",
+      "intro": "Veri Setleri menüsü yalnızca yetkisi olan role görünür. ≡ › Ayarlar › Roller'den rolü açın.",
+      "items": [
+        {
+          "name": "\"veri seti\" yazın",
+          "desc": "Arama kutusu ilgili yetkileri getirir.",
+          "x": 58.5,
+          "y": 17
+        },
+        {
+          "name": "Veri Seti Yetkileri",
+          "desc": "Görme, oluşturma, düzenleme ve silme kutularını işaretleyin.",
+          "x": 55,
+          "y": 39
+        },
+        {
+          "name": "Görebileceği Veri Setleri",
+          "desc": "Kullanıcının göreceği listeleri seçin. Altında Düzenleyebileceği Veri Setleri de vardır.",
+          "x": 55,
+          "y": 78.5
+        },
+        {
+          "name": "Kaydet",
+          "desc": "Kullanıcı sayfayı yenileyince menüde Veri Setleri çıkar.",
+          "x": 94,
+          "y": 88.5
+        }
+      ],
+      "image": "img/vs_yetki.jpg",
+      "imageAlt": "Rol Düzenle penceresinde Veri Seti Yetkileri",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
+      "id": "vs-olustur",
+      "group": "ileri",
+      "updated": "2026-11-13",
+      "title": "2. Liste oluşturma",
+      "intro": "+ Yeni Veri Seti'ne basıp ad verin (ör. Araç Listesi). Açılan tabloyu doldurun.",
+      "items": [
+        {
+          "name": "Sütun Ekle",
+          "desc": "Başlık ekler (ör. Plaka, Marka). Adını değiştirmek için başlığa tıklayın.",
+          "x": 60,
+          "y": 30
+        },
+        {
+          "name": "Satır Ekle",
+          "desc": "Yeni kayıt ekler. Hücreye tıklayıp yazın.",
+          "x": 70.5,
+          "y": 30
+        },
+        {
+          "name": "Excel'den yapıştırma",
+          "desc": "Excel'de kopyalayıp bir hücreye yapıştırın; satırlar kendiliğinden eklenir. Tek seferde en çok 2000 satır.",
+          "x": 32,
+          "y": 57
+        },
+        {
+          "name": "Kaydet",
+          "desc": "Değişiklikleri kaydeder.",
+          "x": 9,
+          "y": 26
+        },
+        {
+          "name": "API Ayarları",
+          "desc": "Liste başka bir sistemdeyse oradan çekilir ve belirli aralıkla yenilenir. Teknik ekibinizle yapın.",
+          "x": 33.5,
+          "y": 26
+        }
+      ],
+      "image": "img/vs_tablo.jpg",
+      "imageAlt": "Araç Listesi veri seti tablosu",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
+      "id": "vs-form",
+      "group": "ileri",
+      "updated": "2026-11-13",
+      "title": "3. Formda kullanma",
+      "intro": "Form düzenleyicide alanın seçeneklerini veri setinden getirin. Açılır Menü ve Tek Seçim alanlarında çalışır.",
+      "items": [
+        {
+          "name": "Açılır Menü ekleyin",
+          "desc": "Soldan tıklayıp forma ekleyin, sonra alana tıklayın.",
+          "x": 3.5,
+          "y": 52
+        },
+        {
+          "name": "Seçenek Kaynağı: Dataset",
+          "desc": "Sağdaki Temel sekmesinde Manuel yerine Dataset seçin.",
+          "x": 71.5,
+          "y": 34.5
+        },
+        {
+          "name": "Dataset Seçin",
+          "desc": "Listenizi seçin (ör. Araç Listesi).",
+          "x": 71.5,
+          "y": 70.5
+        },
+        {
+          "name": "Sütunları Seçin",
+          "desc": "Seçenekte görünecek sütunu seçin (ör. Plaka). Formu kaydedin.",
+          "x": 71.5,
+          "y": 79
+        }
+      ],
+      "image": "img/vs_form.jpg",
+      "imageAlt": "Form düzenleyicide Dataset Sütun Seçimi",
+      "imageSize": [
+        800,
+        624
+      ]
+    },
+    {
+      "id": "vs-filtre",
+      "group": "ileri",
+      "updated": "2026-11-13",
+      "title": "4. Alanları birbirine bağlama (Filtre Ekle)",
+      "intro": "Bir alandaki seçim, diğer alanın seçeneklerini daraltır. Örnek: önce Birim seçilir, Plaka alanında yalnızca o birimin araçları çıkar. İki alan da veri setine bağlı olmalıdır. Daralacak alanda (Plaka) Filtre Ekle'ye basın.",
+      "items": [
+        {
+          "name": "Kaynak Alan",
+          "desc": "Önce seçilecek alan (Birim).",
+          "x": 15,
+          "y": 38.5
+        },
+        {
+          "name": "Kaynak Filtreleme Sütunu",
+          "desc": "O alanın veri setindeki sütun (Birim).",
+          "x": 85,
+          "y": 38.5
+        },
+        {
+          "name": "Hedef Filtreleme Sütunu",
+          "desc": "Bu alanın veri setinde aynı bilgiyi tutan sütun (Araç Listesi'ndeki Birim).",
+          "x": 85,
+          "y": 47
+        },
+        {
+          "name": "Filtre Ekle",
+          "desc": "Bağlantı alttaki listeye eklenir.",
+          "x": 43,
+          "y": 52.5
+        },
+        {
+          "name": "Kaydet",
+          "desc": "Pencereyi kapatıp formu da kaydedin.",
+          "x": 79,
+          "y": 76
+        }
+      ],
+      "image": "img/vs_filtre.jpg",
+      "imageAlt": "Veri Seti Filtreleme penceresi",
+      "imageSize": [
+        800,
+        624
+      ]
+    },
+    {
+      "id": "vs-esitle",
+      "group": "ileri",
+      "updated": "2026-11-13",
+      "title": "5. Diğer alanları otomatik doldurma (Verileri Eşitle)",
+      "intro": "Listeden bir satır seçilince o satırın diğer bilgileri formdaki alanlara kendiliğinden yazılır. Örnek: plaka seçilince Marka dolar. Veri setine bağlı alanda Verileri Eşitle'ye basın.",
+      "items": [
+        {
+          "name": "Form Alanları",
+          "desc": "Doldurulacak alan (Marka). Kısa Yazı, Uzun Yazı ve Sayı alanları seçilebilir.",
+          "x": 15,
+          "y": 41
+        },
+        {
+          "name": "Dataset Sütunları",
+          "desc": "Bilginin geleceği sütun (Marka).",
+          "x": 85,
+          "y": 41
+        },
+        {
+          "name": "Eşleştirme Ekle",
+          "desc": "Eşleştirme alttaki listeye eklenir.",
+          "x": 43,
+          "y": 46.5
+        },
+        {
+          "name": "Kaydet",
+          "desc": "Pencereyi kapatıp formu da kaydedin.",
+          "x": 79,
+          "y": 70
+        }
+      ],
+      "image": "img/vs_esitle.jpg",
+      "imageAlt": "Veriye Eşitle penceresi",
+      "imageSize": [
+        800,
+        624
+      ]
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-13",
+      "title": "İleri düzey ulakBELL: Veri Setleri",
+      "text": "Kendi listenizi oluşturma, formda kullanma ve alanları birbirine bağlama anlatıldı.",
+      "section": "vs-genel"
+    },
     {
       "date": "2026-11-06",
       "title": "Google İşletme Profili bağlama (CRM ekranı)",
