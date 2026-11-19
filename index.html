@@ -264,6 +264,9 @@ footer.note { padding-top: 8px; }
 }
 a.btn { color: var(--ink); text-decoration: none; }
 a.btn.primary { color: var(--accent-ink); }
+.sec-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 16px; }
+.sec-links .btn { text-decoration: none; color: inherit; }
+.sec-links .btn.primary { color: var(--accent-ink); }
 .btn.lg { height: 46px; padding: 0 20px; font-size: 15px; border-radius: 10px; justify-content: center; }
 
 /* wizard */
@@ -527,6 +530,7 @@ a.btn.primary { color: var(--accent-ink); }
     let h = `<section class="sec" id="${esc(s.id)}" data-sec="${si}">`;
     h += `<h3>${ce(`sections.${si}.title`, "", s.title)}${!editing && secHasNew(s) ? '<span class="chip new">Yeni</span>' : ""}</h3>`;
     h += ce(`sections.${si}.intro`, "intro", s.intro || "", "p");
+    if (!editing && s.links && s.links.length) h += `<p class="sec-links">${s.links.map(l => `<a class="btn${l.primary ? " primary" : ""}" href="${esc(l.href)}"${l.download ? " download" : ""}>${esc(l.text)}</a>`).join("")}</p>`;
 
     if (editing) {
       h += `<div class="sec-tools">

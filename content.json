@@ -15,6 +15,11 @@
         "target": "aktarma"
       },
       {
+        "text": "Chrome eklentisi",
+        "target": "tw-chrome-eklenti",
+        "new": true
+      },
+      {
         "text": "Mola ve durumlar",
         "target": "durumlar"
       },
@@ -3030,6 +3035,108 @@
         }
       ],
       "items": []
+    },
+    {
+      "id": "tw-chrome-eklenti",
+      "group": "teleweb",
+      "updated": "2026-11-19",
+      "title": "Chrome eklentisi: sitelerdeki numarayı tek tıkla arama",
+      "intro": "\"ulakBELL ile Ara\" eklentisiyle internet sitelerinde gördüğünüz telefon numarasına tıklamanız yeter; arama ulakBELL'deki telefon panelinizden başlar. Kopyalamanız, yapıştırmanız ya da tuşlamanız gerekmez.",
+      "links": [
+        {
+          "text": "Eklentiyi indir (ZIP)",
+          "href": "chrome-eklentisi/ulakbell-ile-ara.zip",
+          "download": true,
+          "primary": true
+        },
+        {
+          "text": "Gizlilik",
+          "href": "chrome-eklentisi/gizlilik.html"
+        }
+      ],
+      "steps": [
+        {
+          "title": "İndirin ve açın",
+          "text": "Yukarıdaki düğmeyle ZIP dosyasını indirin, çift tıklayın. \"ulakbell-ile-ara\" klasörü çıkar; bu klasörü silmeyin."
+        },
+        {
+          "title": "Geliştirici modunu açın",
+          "text": "Chrome'un adres çubuğuna chrome://extensions yazın. Sağ üstteki Geliştirici modu anahtarını açın."
+        },
+        {
+          "title": "Klasörü sürükleyin",
+          "text": "Klasörü bu sayfaya sürükleyip bırakın (ya da Paketlenmemiş öğe yükle'ye basıp klasörü seçin). Yapboz simgesinden eklentiyi sabitleyin."
+        },
+        {
+          "title": "ulakBELL açık kalsın",
+          "text": "ulakBELL'i bir sekmede açık tutun, telefon paneliniz bağlı olsun. Artık sitelerdeki numaralara tıklayabilirsiniz."
+        }
+      ],
+      "items": [
+        {
+          "name": "İşaretli numara",
+          "desc": "Eklenti sayfadaki numaraların altını yeşil noktalı çizgiyle işaretler. Üzerine gelince \"ulakBELL ile ara\" yazar; tıklayınca arama başlar.",
+          "x": 17,
+          "y": 40
+        },
+        {
+          "name": "Eklenti simgesi",
+          "desc": "Numarayı elle yazıp aramak ve ayarlar için.",
+          "x": 97.6,
+          "y": 9
+        },
+        {
+          "name": "Başka yollar",
+          "desc": "tel: bağlantıları da ulakBELL'den aranır. Bir metni seçip sağ tıklayarak \"ulakBELL ile ara\" da diyebilirsiniz."
+        },
+        {
+          "name": "Hangi numaralar?",
+          "desc": "Sayfalardan yalnız Türkiye'deki sabit ve cep numaraları, 0800, 0850 ve 444 numaraları aranır. Yurt dışı ve 0900 numaraları güvenlik için aranmaz; bunları eklenti simgesinden elle yazabilirsiniz."
+        }
+      ],
+      "image": "img/chrome_eklenti_ara.jpg",
+      "imageAlt": "Bir sitedeki işaretli telefon numaraları",
+      "imageSize": [
+        1000,
+        539
+      ]
+    },
+    {
+      "id": "tw-chrome-kapat",
+      "group": "teleweb",
+      "updated": "2026-11-19",
+      "title": "Chrome eklentisi: görüşmeyi izleme, kapatma ve ayarlar",
+      "intro": "Aramayı başlattığınız sayfanın sağ altında küçük bir görüşme paneli açılır: numara, durum (Aranıyor, Çalıyor, Görüşmede) ve süre görünür. Kırmızı düğmeyle görüşmeyi ulakBELL sekmesine geçmeden kapatırsınız.",
+      "items": [
+        {
+          "name": "Numara kutusu",
+          "desc": "Numarayı yazıp Ara'ya basın.",
+          "x": 83,
+          "y": 22.6
+        },
+        {
+          "name": "Kapat",
+          "desc": "Süren görüşmeyi buradan da kapatabilirsiniz.",
+          "x": 94,
+          "y": 34.8
+        },
+        {
+          "name": "Ayarlar",
+          "desc": "ulakBELL adresiniz (varsayılan emsal.ulakbel.com), numaraların işaretlenmesi ve arama başlayınca ulakBELL sekmesine geçilmesi.",
+          "x": 78,
+          "y": 51.6
+        },
+        {
+          "name": "Arama başlamıyorsa",
+          "desc": "Sağ altta nedeni yazar: ulakBELL sekmesi kapalıysa \"ulakBELL'i aç\" düğmesi çıkar; telefon paneli bağlı değilse ya da başka bir görüşme sürüyorsa önce onu kontrol edin."
+        }
+      ],
+      "image": "img/chrome_eklenti_pencere.jpg",
+      "imageAlt": "Eklenti penceresi ve ayarlar",
+      "imageSize": [
+        1000,
+        539
+      ]
     },
     {
       "id": "tw-rehber",
