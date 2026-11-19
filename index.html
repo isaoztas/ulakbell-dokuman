@@ -100,6 +100,37 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .news a:hover { text-decoration: underline; }
 .news .date { color: var(--muted); margin-right: 6px; }
 
+/* home: one search box in the middle, a few suggestions under it */
+body.is-home .top { display: none; }
+.home { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 16px 96px; text-align: center; }
+.hm-logo { height: 40px; width: auto; filter: var(--logo-filter); mix-blend-mode: var(--logo-blend); }
+.hm-title { margin: 14px 0 6px; font: 700 clamp(26px, 5vw, 36px)/1.15 var(--f-display); letter-spacing: -.01em; }
+.hm-lead { margin: 0 0 26px; color: var(--muted); font-size: 16px; }
+.hm-search { position: relative; width: min(640px, 100%); text-align: left; }
+.hm-box { display: flex; align-items: center; gap: 12px; height: 56px; padding: 0 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); }
+.hm-box:focus-within { border-color: var(--accent); }
+.hm-search.open .hm-box { border-radius: 28px 28px 0 0; border-bottom-color: transparent; }
+.hm-box svg { flex: none; width: 20px; height: 20px; color: var(--muted); }
+.hm-box input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font: 400 17px var(--f-body); }
+.hm-box input::-webkit-search-cancel-button { cursor: pointer; }
+.hm-list { position: absolute; left: 0; right: 0; top: 100%; z-index: 5; margin: 0; padding: 4px 0 10px; list-style: none; background: var(--surface); border: 1px solid var(--accent); border-top: 1px solid var(--line); border-radius: 0 0 22px 22px; box-shadow: var(--shadow); }
+.hm-list a { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 2px 12px; padding: 9px 20px; color: var(--ink); text-decoration: none; }
+.hm-list a svg { grid-row: span 2; width: 16px; height: 16px; margin-top: 3px; color: var(--muted); }
+.hm-list a[aria-selected="true"], .hm-list a:hover { background: var(--sunken); }
+.hm-list .t { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hm-list .d { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hm-list .all .t { color: var(--accent); font-weight: 500; }
+.hm-list .none { padding: 10px 20px 6px 52px; color: var(--muted); font-size: 14px; }
+.hm-list mark, .hm-pop mark { background: transparent; color: inherit; font-weight: 700; }
+.hm-pop { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; width: min(640px, 100%); margin-top: 22px; }
+.hm-pop a { display: inline-flex; align-items: center; height: 34px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); font-size: 14px; text-decoration: none; }
+.hm-pop a:hover { border-color: var(--accent); color: var(--accent); }
+.hm-pop a.new::after { content: "Yeni"; margin-left: 8px; padding: 1px 7px; border-radius: 999px; background: var(--new-soft); color: var(--new); font-size: 11px; font-weight: 600; }
+.hm-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; margin-top: 34px; font-size: 14px; }
+.hm-links a { color: var(--muted); text-decoration: none; }
+.hm-links a:hover { color: var(--accent); text-decoration: underline; }
+@media (max-width: 520px) { .home { justify-content: flex-start; padding-top: 40px; } .hm-box { height: 50px; } }
+
 /* layout */
 .layout { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 36px; padding-block: 28px 80px; }
 @media (max-width: 860px) { .layout { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
@@ -347,7 +378,7 @@ a.btn.primary { color: var(--accent-ink); }
   <div class="wrap">
     <div class="brand">
       <a href="https://ulakbell.com/" title="ulakbell.com"><img class="logo" id="logo" src="img/ulakbell-logo.svg" alt="ulakBELL" width="134" height="22"></a>
-      <h1 class="brand-t"><a href="#adim" id="site-title">Yardım Merkezi</a></h1>
+      <h1 class="brand-t"><a href="#" id="site-title">Yardım Merkezi</a></h1>
     </div>
     <nav class="modes" id="modebar" aria-label="Görünüm" hidden>
       <a href="#adim" data-mode="wizard">Adım adım</a>
@@ -362,6 +393,7 @@ a.btn.primary { color: var(--accent-ink); }
   </div>
 </header>
 
+<div class="home" id="home" hidden></div>
 <div class="wrap" id="wizard" hidden></div>
 
 <div id="guide">
@@ -400,6 +432,8 @@ a.btn.primary { color: var(--accent-ink); }
   const fmt = iso => { if (!iso) return ""; const [y, m, d] = iso.split("-"); return `${d}.${m}.${y}`; };
   const isNew = iso => { if (!iso) return false; const t = Date.parse(iso + "T00:00:00"); return !isNaN(t) && (Date.now() - t) / 864e5 <= NEW_DAYS; };
   const norm = s => String(s || "").toLocaleLowerCase("tr");
+  // Folds Turkish letters so "kullanici" finds "kullanıcı"; keeps the length, so match positions stay valid.
+  const fold = s => norm(s).replace(/[çğıöşüâîû]/g, c => ({ ç: "c", ğ: "g", ı: "i", ö: "o", ş: "s", ü: "u", â: "a", î: "i", û: "u" }[c]));
   const slug = s => norm(s).replace(/[çğıöşü]/g, c => ({ ç: "c", ğ: "g", ı: "i", ö: "o", ş: "s", ü: "u" }[c])).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "bolum";
   const imgSrc = p => localUrls[p] || p;
   const store = { get(k) { try { return sessionStorage.getItem(k); } catch { return null; } }, set(k, v) { try { sessionStorage.setItem(k, v); } catch {} }, del(k) { try { sessionStorage.removeItem(k); } catch {} } };
@@ -407,7 +441,7 @@ a.btn.primary { color: var(--accent-ink); }
   function hl(text, q) {
     const t = esc(text);
     if (!q) return t;
-    const i = norm(text).indexOf(q);
+    const i = fold(text).indexOf(q);
     if (i < 0) return t;
     return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
   }
@@ -415,7 +449,7 @@ a.btn.primary { color: var(--accent-ink); }
 
   /* ---------- render ---------- */
   function render() {
-    const q = editing ? "" : norm($("#q").value.trim());
+    const q = editing ? "" : fold($("#q").value.trim());
     $("#site-title").textContent = data.meta.title || "Yardım Merkezi";
     $("#logo").alt = data.meta.product || "ulakBELL";
 
@@ -434,7 +468,7 @@ a.btn.primary { color: var(--accent-ink); }
       if (editing) html += `<div><button class="btn" data-act="add-sec" data-group="${esc(g.id)}">+ ${esc(g.title)} için bölüm ekle</button></div>`;
     }
 
-    const logVis = (data.changelog || []).filter(e => !q || norm(e.title + " " + e.text).includes(q));
+    const logVis = (data.changelog || []).filter(e => !q || fold(e.title + " " + e.text).includes(q));
     if (logVis.length || editing) {
       tocHtml += tocGroup("guncel", "Güncel", [`<a href="#yenilikler" data-id="yenilikler"><span>Yenilikler</span></a>`], !!q || editing);
       html += `<div class="group-head"><h2>Yenilikler</h2><span>Yeni geliştirmeler, en yenisi üstte</span></div>` + renderLog(logVis, q);
@@ -450,8 +484,8 @@ a.btn.primary { color: var(--accent-ink); }
 
   function matchSection(s, q) {
     const extra = (s.steps || []).map(x => x.title + " " + (x.text || "")).join(" ") + " " + exampleText(s.example);
-    const head = norm(s.title + " " + s.intro + " " + extra).includes(q);
-    const items = (s.items || []).map(it => norm(it.name + " " + it.desc).includes(q));
+    const head = fold(s.title + " " + s.intro + " " + extra).includes(q);
+    const items = (s.items || []).map(it => fold(it.name + " " + it.desc).includes(q));
     return { any: head || items.some(Boolean), items: head ? null : items };
   }
 
@@ -826,7 +860,7 @@ a.btn.primary { color: var(--accent-ink); }
   function parseRoute() {
     let h = location.hash.slice(1);
     try { h = decodeURIComponent(h); } catch {}
-    if (!h) return { v: "wizard" };
+    if (!h || h === "ara") return { v: "home" };
     const [head, a, b, c] = h.split("/");
     if (head === "adim") return { v: "wizard", ch: a, n: b };
     if (head === "egitim") return { v: "training", mod: a, part: b, n: c };
@@ -837,7 +871,9 @@ a.btn.primary { color: var(--accent-ink); }
   // The wizard and the training portal share the #wizard container; the guide is #guide.
   function setView(v) {
     view = v;
-    $("#wizard").hidden = v === "guide";
+    $("#home").hidden = v !== "home";
+    document.body.classList.toggle("is-home", v === "home");
+    $("#wizard").hidden = v === "guide" || v === "home";
     $("#guide").hidden = v !== "guide";
     $("#modebar").hidden = !data.wizard && !data.training;
     document.querySelectorAll(".modes a").forEach(a => {
@@ -853,6 +889,7 @@ a.btn.primary { color: var(--accent-ink); }
     let v = r.v;
     if (editing || (v === "wizard" && !data.wizard) || (v === "training" && !data.training)) v = "guide";
     setView(v);
+    if (v === "home") return renderHome();
     if (v === "wizard") return renderWizard(r);
     if (v === "training") return renderTraining(r);
     // Always jump straight to the section: with a smooth scroll the images loading on the way push the target down.
@@ -922,6 +959,124 @@ a.btn.primary { color: var(--accent-ink); }
       <div class="wz-actions">${next ? `<a class="btn primary lg" href="#adim/${esc(next.id)}" data-wz-next>${esc(next.title)} →</a>` : `<a class="btn primary lg" href="#rehber">Tüm rehberi açın</a>`}
       <a class="btn lg" href="#adim/${esc(ch.id)}/1" data-wz-prev>Bu bölümü tekrar et</a></div></div>`;
   }
+
+  /* ---------- home: a single search box, suggestions as you type ---------- */
+  const SEARCH_SVG = '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="m14 14 4 4"/></svg>';
+  const DOC_SVG = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 1.8h5.2L12.5 5v9.2H4z"/><path d="M6.5 8.2h3.5M6.5 10.8h3.5"/></svg>';
+  let hmSel = -1;
+
+  // Bold every typed word inside the text, the way a search engine marks its suggestions.
+  function hlWords(text, toks) {
+    const f = fold(text), marks = new Array(text.length).fill(false);
+    for (const t of toks) { let i = f.indexOf(t); while (i >= 0) { for (let k = i; k < i + t.length; k++) marks[k] = true; i = f.indexOf(t, i + t.length); } }
+    let out = "", on = false;
+    for (let i = 0; i < text.length; i++) {
+      if (marks[i] !== on) { out += marks[i] ? "<mark>" : "</mark>"; on = marks[i]; }
+      out += esc(text[i]);
+    }
+    return out + (on ? "</mark>" : "");
+  }
+
+  function homeMatches(q) {
+    const toks = fold(q).split(/\s+/).filter(Boolean);
+    if (!toks.length) return { toks, list: [] };
+    const list = [];
+    for (const s of data.sections) {
+      const g = data.groups.find(x => x.id === s.group);
+      const title = fold(s.title);
+      const body = fold([s.intro, g && g.title, ...(s.steps || []).map(x => x.title + " " + (x.text || "")), ...(s.items || []).map(it => it.name + " " + it.desc), exampleText(s.example)].join(" "));
+      let score = 0;
+      for (const t of toks) {
+        if (title.startsWith(t) || title.includes(" " + t)) score += 8;
+        else if (title.includes(t)) score += 5;
+        else if (body.includes(t)) score += 1;
+        else { score = -1; break; }
+      }
+      if (score > 0) list.push({ s, g, score });
+    }
+    list.sort((a, b) => b.score - a.score);
+    return { toks, list };
+  }
+
+  function renderHome() {
+    if ($("#q").value) { $("#q").value = ""; render(); }   // the guide must be whole again when a suggestion opens a section
+    const H = data.home || {};
+    const pop = (H.popular || []).filter(p => data.sections.some(s => s.id === p.target));
+    const links = [
+      data.wizard ? `<a href="#adim">Adım adım başlayın</a>` : "",
+      data.training ? `<a href="#egitim">Eğitim</a>` : "",
+      `<a href="#rehber">Tüm rehber</a>`,
+      (data.changelog || []).length ? `<a href="#yenilikler">Yenilikler</a>` : "",
+    ].filter(Boolean);
+    $("#home").innerHTML = `
+      <img class="hm-logo" src="img/ulakbell-logo.svg" alt="${esc(data.meta.product || "ulakBELL")}" width="242" height="40">
+      <h2 class="hm-title">${esc(H.title || "Size nasıl yardımcı olabiliriz?")}</h2>
+      <p class="hm-lead">${esc(H.lead || "Ne yapmak istediğinizi birkaç kelimeyle yazın.")}</p>
+      <form class="hm-search" id="hm-form" role="search" autocomplete="off">
+        <div class="hm-box">${SEARCH_SVG}<input id="hq" type="search" placeholder="${esc(H.placeholder || "Örn. çağrı aktarma, mola")}" aria-label="Yardımda ara" role="combobox" aria-expanded="false" aria-controls="hm-list" aria-autocomplete="list"></div>
+        <ul class="hm-list" id="hm-list" role="listbox" hidden></ul>
+      </form>
+      ${pop.length ? `<div class="hm-pop" aria-label="Sık arananlar">${pop.map(p => `<a href="#${esc(p.target)}"${p.new ? ' class="new"' : ""}>${esc(p.text)}</a>`).join("")}</div>` : ""}
+      <nav class="hm-links" aria-label="Diğer yollar">${links.join("")}</nav>`;
+    hmSel = -1;
+    const inp = $("#hq");
+    if (matchMedia("(hover: hover)").matches) inp.focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function homeSuggest() {
+    const inp = $("#hq"), ul = $("#hm-list"), form = $("#hm-form");
+    const q = inp.value.trim();
+    hmSel = -1;
+    if (!q) { ul.hidden = true; form.classList.remove("open"); inp.setAttribute("aria-expanded", "false"); return; }
+    const { toks, list } = homeMatches(q);
+    let h = list.slice(0, 7).map(({ s, g }, i) =>
+      `<li><a href="#${esc(s.id)}" id="hm-o${i}" role="option" aria-selected="false">${DOC_SVG}<span class="t">${hlWords(s.title, toks)}</span><span class="d">${esc(g ? g.title : "")}${s.intro ? " · " + esc(s.intro) : ""}</span></a></li>`).join("");
+    if (list.length > 7) h += `<li><a class="all" href="#rehber" data-all role="option" aria-selected="false">${SEARCH_SVG}<span class="t">“${esc(q)}” için ${list.length} sonucun tümünü göster</span></a></li>`;
+    if (!list.length) h = `<li class="none">“${esc(q)}” için sonuç yok. Daha kısa ya da farklı bir kelime deneyin.</li>`;
+    ul.innerHTML = h;
+    ul.hidden = false; form.classList.add("open"); inp.setAttribute("aria-expanded", "true");
+  }
+
+  function homeGo(href, all) {
+    if (all) { const q = $("#hq").value.trim(); history.pushState(null, "", "#rehber"); route(); $("#q").value = q; render(); return; }
+    history.pushState(null, "", href);
+    route();
+  }
+
+  $("#home").addEventListener("input", e => { if (e.target.id === "hq") homeSuggest(); });
+  $("#home").addEventListener("keydown", e => {
+    if (e.target.id !== "hq") return;
+    const opts = [...document.querySelectorAll("#hm-list a")];
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      if (!opts.length) return;
+      e.preventDefault();
+      hmSel = e.key === "ArrowDown" ? (hmSel + 1) % opts.length : (hmSel <= 0 ? opts.length - 1 : hmSel - 1);
+      opts.forEach((o, i) => o.setAttribute("aria-selected", i === hmSel ? "true" : "false"));
+      e.target.setAttribute("aria-activedescendant", opts[hmSel].id || "");
+    } else if (e.key === "Escape") {
+      e.target.value = ""; homeSuggest();
+    }
+  });
+  $("#home").addEventListener("submit", e => {
+    e.preventDefault();
+    const q = $("#hq").value.trim();
+    if (!q) return;
+    const opts = [...document.querySelectorAll("#hm-list a")];
+    const pick = opts[hmSel];
+    if (pick) return homeGo(pick.getAttribute("href"), pick.hasAttribute("data-all"));
+    const { list } = homeMatches(q);
+    if (list.length === 1) return homeGo("#" + list[0].s.id);
+    homeGo("#rehber", true);
+  });
+  $("#home").addEventListener("click", e => {
+    const a = e.target.closest("#hm-list a[data-all]");
+    if (a) { e.preventDefault(); e.stopPropagation(); homeGo("#rehber", true); }
+  }, true);
+  document.addEventListener("click", e => {
+    if (view === "home" && !e.target.closest("#hm-form")) { const ul = $("#hm-list"); if (ul && !ul.hidden) { ul.hidden = true; $("#hm-form").classList.remove("open"); } }
+  });
+  document.addEventListener("focusin", e => { if (e.target.id === "hq" && e.target.value.trim()) homeSuggest(); });
 
   function showApp(html) {
     const box = $("#wizard");
@@ -1104,7 +1259,7 @@ a.btn.primary { color: var(--accent-ink); }
     slot.querySelector("video").addEventListener("error", () => { slot.innerHTML = `<p class="note">Video şu anda açılamadı. Adımları yukarıdaki Başla ile izleyebilirsiniz.</p>`; });
   });
   document.addEventListener("keydown", e => {
-    if (view === "guide" || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (view === "guide" || view === "home" || e.altKey || e.ctrlKey || e.metaKey) return;
     if (e.target.closest("input, textarea, select, video, [contenteditable=true]")) return;
     const a = e.key === "ArrowRight" ? $("#wizard [data-wz-next]") : e.key === "ArrowLeft" ? $("#wizard [data-wz-prev]") : null;
     if (a) { e.preventDefault(); location.hash = a.getAttribute("href"); }
@@ -1112,7 +1267,7 @@ a.btn.primary { color: var(--accent-ink); }
   // Links from the wizard into the guide: route ourselves, otherwise the browser's own fragment scroll
   // (computed while the guide was still hidden) can leave the page at the top.
   document.addEventListener("click", e => {
-    const a = e.target.closest('#wizard a[href^="#"]');
+    const a = e.target.closest('#wizard a[href^="#"], #home a[href^="#"]');
     if (!a || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     const h = a.getAttribute("href");
     if (isAppHash(h)) return;

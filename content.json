@@ -2,8 +2,48 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-11-18",
+    "updated": "2026-11-19",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
+  },
+  "home": {
+    "title": "Size nasıl yardımcı olabiliriz?",
+    "lead": "Ne yapmak istediğinizi birkaç kelimeyle yazın.",
+    "placeholder": "Örn. çağrı aktarma, duyuru",
+    "popular": [
+      {
+        "text": "Çağrı aktarma",
+        "target": "aktarma"
+      },
+      {
+        "text": "Mola ve durumlar",
+        "target": "durumlar"
+      },
+      {
+        "text": "Kullanıcı ekleme",
+        "target": "kullanicilar"
+      },
+      {
+        "text": "Duyuru gönderme",
+        "target": "duyuru-olustur",
+        "new": true
+      },
+      {
+        "text": "Görev atama",
+        "target": "gorev-ata"
+      },
+      {
+        "text": "Kaçan çağrılar",
+        "target": "kacan-cagrilar"
+      },
+      {
+        "text": "Excel'den lead yükleme",
+        "target": "crm-lead-excel"
+      },
+      {
+        "text": "SSL sertifikası",
+        "target": "ssl-yukle"
+      }
+    ]
   },
   "groups": [
     {
@@ -88,6 +128,13 @@
       "title": "Hastane Süreçleri",
       "audience": "Hastane kullanıcısı",
       "target": "hst-genel"
+    },
+    {
+      "id": "duyuru",
+      "title": "Duyurular",
+      "audience": "Yönetici",
+      "card": "Ekibime nasıl duyuru gönderirim?",
+      "target": "duyuru-genel"
     },
     {
       "id": "ileri",
@@ -6459,6 +6506,296 @@
       "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 39 saniye)."
     },
     {
+      "id": "duyuru-genel",
+      "group": "duyuru",
+      "updated": "2026-11-19",
+      "title": "Duyurular: ekibinize haber verin",
+      "intro": "Duyuru, seçtiğiniz kullanıcılara ulakBELL açılınca ekranın ortasında çıkan kısa bir mesajdır. Kimin okuduğunu buradan izlersiniz.",
+      "steps": [
+        {
+          "title": "Yetki verin",
+          "text": "Ayarlar › Roller'de rolü açın, Duyuru Yetkileri'ni işaretleyin."
+        },
+        {
+          "title": "Açın",
+          "text": "≡ › Duyurular."
+        },
+        {
+          "title": "Gönderin",
+          "text": "+ Yeni Duyuru'ya basın, kişileri seçip yazın."
+        }
+      ],
+      "items": [
+        {
+          "name": "Okunma özeti",
+          "desc": "Toplam duyuru, şu an gösterilen (aktif) duyuru ve okunma oranı.",
+          "x": 68.6,
+          "y": 17
+        },
+        {
+          "name": "+ Yeni Duyuru",
+          "desc": "Yeni duyuru yazar. Düğmeyi görmüyorsanız rolünüzde Duyuru oluşturabilir yetkisi kapalıdır.",
+          "x": 92.5,
+          "y": 33.5
+        },
+        {
+          "name": "Arama",
+          "desc": "Başlık, içerik ya da oluşturan kişiyle arar. Yanındaki Filtre ile daraltabilirsiniz.",
+          "x": 17,
+          "y": 41
+        },
+        {
+          "name": "Durum",
+          "desc": "Kapatırsanız duyuru pasif olur ve artık kimseye gösterilmez.",
+          "x": 13.5,
+          "y": 58
+        },
+        {
+          "name": "Duyuru satırı",
+          "desc": "Başlık ve içeriğin ilk satırları. Tablo sağa kayar; Okunma sütunu sondadır.",
+          "x": 30,
+          "y": 58
+        }
+      ],
+      "image": "img/duyuru_liste.jpg",
+      "imageAlt": "Duyurular ekranı",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
+      "id": "duyuru-olustur",
+      "group": "duyuru",
+      "updated": "2026-11-19",
+      "title": "1. Duyuru yazma",
+      "intro": "+ Yeni Duyuru'ya basınca sağda form açılır. Önce kime gideceğini seçin, sonra başlığı ve metni yazın.",
+      "items": [
+        {
+          "name": "Hedef Grup",
+          "desc": "Kullanıcı: kişileri tek tek seçersiniz. Rol-Birim Bazında: bir birimin ya da rolün herkesine gider.",
+          "x": 59,
+          "y": 28
+        },
+        {
+          "name": "Kullanıcı Seçin",
+          "desc": "İsim yazıp işaretleyin. Tümü kutusu herkesi seçer.",
+          "x": 75,
+          "y": 50
+        },
+        {
+          "name": "Duyuru Başlığı",
+          "desc": "Kısa ve açık olsun; pencerenin en üstünde kalın yazılır.",
+          "x": 75,
+          "y": 64
+        },
+        {
+          "name": "Duyuru İçeriği",
+          "desc": "Metni yazın. Kalın yazı, liste ve bağlantı ekleyebilirsiniz.",
+          "x": 75,
+          "y": 84
+        },
+        {
+          "name": "Şablonlar",
+          "desc": "Sık gönderdiğiniz duyuruyu şablondan getirir. Yanındaki disket düğmesi yazdığınızı şablon olarak saklar.",
+          "x": 77,
+          "y": 7
+        },
+        {
+          "name": "Önizleme",
+          "desc": "Göndermeden önce kullanıcının göreceği pencereyi gösterir.",
+          "x": 91,
+          "y": 8
+        }
+      ],
+      "image": "img/duyuru_form1.jpg",
+      "imageAlt": "Yeni Duyuru Ekle formu",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
+      "id": "duyuru-ayarlar",
+      "group": "duyuru",
+      "updated": "2026-11-19",
+      "title": "2. Tarih, öncelik ve cevap",
+      "intro": "Formun altında ne zaman gösterileceğini ve nasıl okunacağını seçin, sonra Duyuru Gönder'e basın.",
+      "items": [
+        {
+          "name": "Ek Dosyalar",
+          "desc": "PDF, video ya da görsel ekleyin (en çok 50 MB). Kullanıcı duyuruda açar.",
+          "x": 75,
+          "y": 13
+        },
+        {
+          "name": "Başlangıç ve Bitiş Tarihi",
+          "desc": "Duyuru yalnızca bu tarihler arasında gösterilir. Hazır değer bir haftadır.",
+          "x": 63,
+          "y": 36.5
+        },
+        {
+          "name": "SMS",
+          "desc": "Açarsanız seçilen kullanıcılara ayrıca kısa mesaj gider.",
+          "x": 94.5,
+          "y": 51
+        },
+        {
+          "name": "Öncelik Seviyesi",
+          "desc": "Acil konular için Yüksek Öncelik'i seçin; listede ayrı renkte görünür.",
+          "x": 75,
+          "y": 68
+        },
+        {
+          "name": "Cevap Gereksin",
+          "desc": "Açarsanız kullanıcı kısa bir cevap yazmadan duyuruyu okundu yapamaz.",
+          "x": 94.5,
+          "y": 80.5
+        },
+        {
+          "name": "Duyuru Gönder",
+          "desc": "Duyuru kaydedilir ve başlangıç tarihi geldiyse hemen gösterilir.",
+          "x": 91,
+          "y": 94
+        }
+      ],
+      "image": "img/duyuru_form2.jpg",
+      "imageAlt": "Duyuru formunun alt kısmı",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
+      "id": "duyuru-okuyan",
+      "group": "duyuru",
+      "updated": "2026-11-19",
+      "title": "3. Kullanıcı duyuruyu nasıl görür?",
+      "intro": "Seçilen kullanıcı ulakBELL'i açınca duyuru ekranın ortasında çıkar. Birden çok duyuru varsa sırayla gelir.",
+      "items": [
+        {
+          "name": "Duyuru",
+          "desc": "Başlık, metin ve varsa ekler.",
+          "x": 50,
+          "y": 45
+        },
+        {
+          "name": "Öncelik",
+          "desc": "Normal ya da Yüksek.",
+          "x": 70,
+          "y": 40.5
+        },
+        {
+          "name": "Bir Daha Gösterme",
+          "desc": "Duyuru okundu sayılır ve bir daha çıkmaz. Cevap gerekiyorsa önce cevap kutusu açılır; Cevabımı Kaydet ile biter.",
+          "x": 46,
+          "y": 61
+        },
+        {
+          "name": "Kapat",
+          "desc": "Pencereyi kapatır ama okundu saymaz; duyuru daha sonra yeniden çıkar.",
+          "x": 70.5,
+          "y": 61
+        }
+      ],
+      "image": "img/duyuru_okuyan.jpg",
+      "imageAlt": "Kullanıcıya çıkan duyuru penceresi",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
+      "id": "duyuru-yonet",
+      "group": "duyuru",
+      "updated": "2026-11-19",
+      "title": "4. Düzenleme, silme ve okunma",
+      "intro": "Tabloyu sağa kaydırın. Her satırın sonundaki ⋮ düğmesi duyuruyla ilgili işlemleri açar.",
+      "items": [
+        {
+          "name": "Hedef Kitle",
+          "desc": "Duyurunun kime gittiği: Kullanıcılar ya da Rol-Birim.",
+          "x": 66.5,
+          "y": 59
+        },
+        {
+          "name": "Okunma",
+          "desc": "Okuyan / gönderilen kişi sayısı. Örn. 0/1: bir kişiye gitti, henüz okunmadı.",
+          "x": 89,
+          "y": 59
+        },
+        {
+          "name": "Detay Görüntüle",
+          "desc": "Kimin okuduğunu ve cevapları gösterir.",
+          "x": 89,
+          "y": 64.5
+        },
+        {
+          "name": "Düzenle",
+          "desc": "Metni, tarihleri ya da kişileri değiştirir.",
+          "x": 87,
+          "y": 69
+        },
+        {
+          "name": "Sil",
+          "desc": "Duyuruyu kaldırır. Yalnızca silme yetkisi olan görür.",
+          "x": 84,
+          "y": 73.5
+        }
+      ],
+      "image": "img/duyuru_menu.jpg",
+      "imageAlt": "Duyuru satırındaki işlem menüsü",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
+      "id": "duyuru-detay",
+      "group": "duyuru",
+      "updated": "2026-11-19",
+      "title": "5. Kim okudu, kim okumadı?",
+      "intro": "Detay Görüntüle'de duyurunun okunma durumu kişi kişi listelenir.",
+      "items": [
+        {
+          "name": "Sayılar",
+          "desc": "Gönderilen, okuyan, okumayan ve cevap yazan kişi sayısı.",
+          "x": 75,
+          "y": 36
+        },
+        {
+          "name": "Okunma Oranı",
+          "desc": "Okuyanların yüzdesi.",
+          "x": 75,
+          "y": 51
+        },
+        {
+          "name": "Kullanıcı ara",
+          "desc": "Listede bir kişiyi bulur.",
+          "x": 75,
+          "y": 61.5
+        },
+        {
+          "name": "Sekmeler",
+          "desc": "Yalnızca okumayanları görmek için Okumayan'a basın; cevaplar Yanıtlayan sekmesindedir.",
+          "x": 75,
+          "y": 69
+        },
+        {
+          "name": "Durum ve Okunma Tarihi",
+          "desc": "Kişinin ne zaman okuduğu. Okumadıysa Okunmadı yazar.",
+          "x": 76.5,
+          "y": 83
+        }
+      ],
+      "image": "img/duyuru_detay.jpg",
+      "imageAlt": "Duyuru okuma durumu",
+      "imageSize": [
+        800,
+        500
+      ]
+    },
+    {
       "id": "vs-genel",
       "group": "ileri",
       "updated": "2026-11-13",
@@ -6809,6 +7146,12 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-19",
+      "title": "Duyurular: duyuru gönderme ve okunma takibi",
+      "text": "Duyuru yazma, kime gideceğini seçme, kullanıcının gördüğü pencere ve kimin okuduğunu izleme anlatıldı.",
+      "section": "duyuru-genel"
+    },
     {
       "date": "2026-11-18",
       "title": "İleri düzey ulakBELL: SSL sertifikası yükleme",
