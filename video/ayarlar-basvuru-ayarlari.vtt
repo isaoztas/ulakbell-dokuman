@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.693
+Başvuru Ayarları, başvurunun yaşam döngüsündeki listeleri tanımladığınız yerdir.
+
+00:00:05.396 --> 00:00:14.015
+Başvuru tipleri istek, şikâyet gibi sınıflandırmalardır. Durumlar ve işlem tipleri, personelin hangi işlemleri yapabileceğini belirler.
+
+00:00:14.715 --> 00:00:23.590
+Nedenler listeleri ise personelin işlem yaparken seçtiği gerekçelerdir: eskale, erteleme, sonuçlandırma ve iade nedenleri gibi.
+
+00:00:24.292 --> 00:00:30.095
+Örneğin bir sonuçlandırma nedeni eklediğinizde, personel başvuruyu kapatırken bu seçeneği görür.
+
+00:00:30.795 --> 00:00:37.963
+Dikkat: Kullanılan bir nedeni silmek yerine düzenleme penceresinden pasif yapın. Böylece geçmiş kayıtlar bozulmaz.

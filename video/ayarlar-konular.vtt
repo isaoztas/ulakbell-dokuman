@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.035
+Konular, gelen başvuruların ne hakkında olduğunu ve hangi birime gideceğini belirler.
+
+00:00:05.735 --> 00:00:12.732
+Ekle düğmesiyle bir konu başlığı yazın ve sorumlu birimi seçin. Bu konuda açılan başvurular doğrudan o birime düşer.
+
+00:00:13.434 --> 00:00:21.114
+Eskale süresi, başvurunun en geç ne kadar sürede işlem görmesi gerektiğidir. Süre aşılınca başvuru eskaleye düşer.
+
+00:00:21.816 --> 00:00:28.387
+Çok sayıda konunuz varsa, tek tek eklemek yerine Excel işlemleri düğmesiyle bir dosyadan toplu yükleyebilirsiniz.

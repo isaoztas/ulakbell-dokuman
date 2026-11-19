@@ -172,7 +172,7 @@
     {
       "id": "birimler",
       "group": "baslangic",
-      "updated": "2026-10-09",
+      "updated": "2026-11-19",
       "title": "Birim oluşturma",
       "intro": "Birim, görevlerin aktarıldığı bölümdür. Ayarlar › Birim sekmesinde tüm birimler listelenir. Üst Birim seçerek kurum ağacını kurarsınız; Birim Ağacı butonu yapıyı ağaç olarak gösterir.",
       "steps": [
@@ -289,12 +289,15 @@
       "imageSize": [
         800,
         512
-      ]
+      ],
+      "video": "video/ayarlar-birimler.mp4",
+      "videoVtt": "video/ayarlar-birimler.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 36 saniye)."
     },
     {
       "id": "roller",
       "group": "baslangic",
-      "updated": "2026-10-09",
+      "updated": "2026-11-19",
       "title": "Rol ve yetki tanımlama",
       "intro": "Rol, kullanıcının ulakBELL'de neleri görüp yapabileceğini belirler. Ayarlar › Roller sekmesinde roller ve her role sahip kullanıcı sayısı listelenir.",
       "steps": [
@@ -387,12 +390,15 @@
       "imageSize": [
         800,
         466
-      ]
+      ],
+      "video": "video/ayarlar-roller.mp4",
+      "videoVtt": "video/ayarlar-roller.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 43 saniye)."
     },
     {
       "id": "kullanicilar",
       "group": "baslangic",
-      "updated": "2026-10-09",
+      "updated": "2026-11-19",
       "title": "Kullanıcı ekleme",
       "intro": "Kullanıcılar Ayarlar › Kullanıcı sekmesinde listelenir. Listede son giriş ve son etkinlik zamanı da görünür. Kullanıcı eklemeden önce birimlerin ve rollerin hazır olması gerekir.",
       "steps": [
@@ -524,7 +530,10 @@
       "imageSize": [
         800,
         512
-      ]
+      ],
+      "video": "video/ayarlar-kullanicilar.mp4",
+      "videoVtt": "video/ayarlar-kullanicilar.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 35 saniye)."
     },
     {
       "id": "kullanici-ayrilan",
@@ -663,7 +672,7 @@
     {
       "id": "konular",
       "group": "baslangic",
-      "updated": "2026-10-09",
+      "updated": "2026-11-19",
       "title": "Konu tanımlama",
       "intro": "Konu, gelen talebin ne hakkında olduğunu söyler. Konu seçildiğinde görev doğru birime ve kişiye gider, süre takibi başlar. Ayarlar › Konu Yönetimi sekmesinde konular listelenir; Konu Grupları butonuyla konuları gruplarsınız.",
       "steps": [
@@ -781,7 +790,10 @@
       "imageSize": [
         800,
         512
-      ]
+      ],
+      "video": "video/ayarlar-konular.mp4",
+      "videoVtt": "video/ayarlar-konular.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 30 saniye)."
     },
     {
       "id": "kaynaklar",
@@ -901,6 +913,36 @@
           "desc": "Çağrı merkezi kullanıyorsanız kuyrukları, mola türlerini, anonsları ve kalite formlarını ≡ › Çağrı Merkezi › Ayarlar'dan tanımlayın. Ayrıntılar Çağrı merkezi süpervizörü bölümünde."
         }
       ]
+    },
+    {
+      "id": "ayarlar-basvuru",
+      "group": "baslangic",
+      "updated": "2026-11-19",
+      "title": "Başvuru ayarları",
+      "intro": "Başvuru tipleri, durumlar, işlem tipleri ve eskale, erteleme, sonuçlandırma, iade nedenleri Ayarlar › Başvuru Ayarları sekmesinde tanımlanır. Personel işlem yaparken bu listelerden seçer.",
+      "video": "video/ayarlar-basvuru-ayarlari.mp4",
+      "videoVtt": "video/ayarlar-basvuru-ayarlari.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 42 saniye)."
+    },
+    {
+      "id": "ayarlar-web-formlari",
+      "group": "baslangic",
+      "updated": "2026-11-19",
+      "title": "Web formları",
+      "intro": "Web formları vatandaşın veya müşterinin internetten başvuru yapmasını sağlar; doldurulan her form bir başvuru olarak açılır. Ayarlar › Başvuru Ayarları › Web Formları ekranından yönetilir.",
+      "video": "video/ayarlar-web-formlari.mp4",
+      "videoVtt": "video/ayarlar-web-formlari.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 37 saniye)."
+    },
+    {
+      "id": "ayarlar-genel",
+      "group": "baslangic",
+      "updated": "2026-11-19",
+      "title": "Genel ayarlar",
+      "intro": "Kurum bilgileri, giriş sayfası, güvenlik ayarları ve mesai takvimleri Ayarlar › Genel Ayarlar sekmesindedir. Bu ayarlar tüm kullanıcıları etkiler.",
+      "video": "video/ayarlar-genel-ayarlar.mp4",
+      "videoVtt": "video/ayarlar-genel-ayarlar.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 36 saniye)."
     },
     {
       "id": "liste",
@@ -2613,6 +2655,16 @@
         908,
         410
       ]
+    },
+    {
+      "id": "ayarlar-crm",
+      "group": "crm",
+      "updated": "2026-11-19",
+      "title": "CRM ayarları",
+      "intro": "Pipeline (fırsat aşamaları), kaynaklar ve etiketler gibi CRM tanımları Ayarlar › CRM Ayarları sekmesindedir.",
+      "video": "video/ayarlar-crm-ayarlari.mp4",
+      "videoVtt": "video/ayarlar-crm-ayarlari.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 44 saniye)."
     },
     {
       "id": "tw-acma",
@@ -6395,6 +6447,16 @@
           "y": 94.8
         }
       ]
+    },
+    {
+      "id": "ayarlar-entegrasyon",
+      "group": "entegrasyon",
+      "updated": "2026-11-19",
+      "title": "Entegrasyon ayarları",
+      "intro": "WhatsApp, e-posta, sosyal medya ve e-ticaret kanalları Ayarlar › Entegrasyon Ayarları sekmesinden bağlanır; gelen mesajlar tek bir gelen kutusunda toplanır.",
+      "video": "video/ayarlar-entegrasyonlar.mp4",
+      "videoVtt": "video/ayarlar-entegrasyonlar.vtt",
+      "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 39 saniye)."
     },
     {
       "id": "vs-genel",

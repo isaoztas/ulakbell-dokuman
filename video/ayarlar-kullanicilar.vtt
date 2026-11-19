@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.011
+Kullanıcılar sayfasında, ulakBELL'i kullanacak personeli eklersiniz.
+
+00:00:04.712 --> 00:00:11.112
+Kullanıcı ekle düğmesine basın. Ad soyad, e-posta, cep telefonu, rol ve birim yeterlidir.
+
+00:00:11.813 --> 00:00:19.066
+Şifre belirlemeniz gerekmez. Davet seçeneği açıkken kullanıcıya bir bağlantı gider, kullanıcı şifresini kendisi belirler.
+
+00:00:19.768 --> 00:00:27.107
+Listede, daveti henüz kabul edilmemiş kullanıcılar işaretli görünür. Bağlantı ulaşmadıysa yeniden gönderebilirsiniz.
+
+00:00:27.806 --> 00:00:33.609
+Dikkat: Kullanıcının neleri görüp yapabileceğini rolü belirler. Önce doğru rolü seçin.
