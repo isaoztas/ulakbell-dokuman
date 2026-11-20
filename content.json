@@ -3204,8 +3204,8 @@
           "text": "Panelin üstünde sarı uyarı çıkarsa \"İzin ver\"e basın; açılan sekmede Chrome'un sorusuna İzin ver deyin."
         },
         {
-          "title": "Gerekirse giriş yapın",
-          "text": "Panelde ulakBELL giriş ekranı ya da \"Burada Kullan\" uyarısı çıkarsa tamamlayın. Telefon hazır olunca panel sade görünüme geçer."
+          "title": "Telefonu panele alın",
+          "text": "Telefonunuz bir ulakBELL sekmesinde açıksa panelde yeşil \"Telefonu buraya al\" düğmesi çıkar; basın. Telefon sekmeden panele geçer (sekmede görüşme sürüyorsa önce bitirin). Giriş ekranı çıkarsa giriş yapın."
         },
         {
           "title": "Kullanın",
@@ -3232,6 +3232,10 @@
         {
           "name": "Paneli kapatırsanız",
           "desc": "Telefon da kapanır, süren görüşme düşer. Panel kapalıyken numaraya tıklayınca eklenti açık ulakBELL sekmenizdeki telefonu kullanır."
+        },
+        {
+          "name": "Telefonu sekmeye geri almak",
+          "desc": "Yan paneli kapatın, ulakBELL sekmesini yenileyin. Sunucu bir dahiliyi aynı anda tek yerde bağlar."
         }
       ]
     },
