@@ -3147,7 +3147,7 @@
       "steps": [
         {
           "title": "ulakBELL ekranlarında",
-          "text": "Numaranın üzerine gelin, üstünde çıkan yeşil \"Ara\" düğmesine basın. Numaranın kendisine tıklamak ulakBELL'de her zamanki işi yapar (örneğin kaydı açar)."
+          "text": "Numaraya tıklayın, Google'daki gibi arar. Numara tıklanınca kayıt açan bir satırda ya da bağlantıdaysa tıklama ulakBELL'deki işini yapar; aramak için numaranın üstünde çıkan yeşil \"Ara\" düğmesine basın."
         },
         {
           "title": "Google E-Tablolar'da",
@@ -3178,6 +3178,10 @@
         {
           "name": "Bildirim çıkmıyorsa",
           "desc": "Bilgisayarınızın bildirim ayarlarında Google Chrome'un bildirimlerine izin verin."
+        },
+        {
+          "name": "Bir sayfada çalışmıyorsa",
+          "desc": "Eklenti güncellendikten sonra önceden açık sekmeler yenilenene kadar çalışmaz; sayfayı yenileyin (F5)."
         }
       ]
     },
