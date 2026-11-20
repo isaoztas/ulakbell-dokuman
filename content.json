@@ -3189,6 +3189,53 @@
       ]
     },
     {
+      "id": "tw-chrome-panel",
+      "group": "teleweb",
+      "updated": "2026-11-20",
+      "title": "Chrome eklentisi: telefonu yan panelde kullanma",
+      "intro": "Telefonunuzu Chrome'un sağındaki yan panele alabilirsiniz. Hangi sitede ya da sekmede olursanız olun telefon sağda açık kalır: durumunuzu değiştirir, arar, gelen çağrıyı cevaplar, görüşmeyi buradan yönetirsiniz.",
+      "steps": [
+        {
+          "title": "Yan paneli açın",
+          "text": "Araç çubuğundaki eklenti simgesine tıklayın, \"Telefonu yan panelde aç\"a basın."
+        },
+        {
+          "title": "Mikrofon iznini verin (bir kez)",
+          "text": "Panelin üstünde sarı uyarı çıkarsa \"İzin ver\"e basın; açılan sekmede Chrome'un sorusuna İzin ver deyin."
+        },
+        {
+          "title": "Gerekirse giriş yapın",
+          "text": "Panelde ulakBELL giriş ekranı ya da \"Burada Kullan\" uyarısı çıkarsa tamamlayın. Telefon hazır olunca panel sade görünüme geçer."
+        },
+        {
+          "title": "Kullanın",
+          "text": "Üstten durumunuzu (Müsait, Meşgul, mola) seçin, numara yazıp Ara'ya basın ya da herhangi bir sitede numaraya tıklayın."
+        }
+      ],
+      "items": [
+        {
+          "name": "Görüşme sırasında",
+          "desc": "Numara, kişi ve süre görünür. Sustur, Beklet, Tuşlar (sesli menü tuşlaması) ve Kapat düğmeleri vardır. Gelen çağrıda Cevapla ve Reddet çıkar."
+        },
+        {
+          "name": "Aktarma ve konferans",
+          "desc": "\"Aktar\"a ya da paneldeki ▦ simgesine basınca ulakBELL'in klasik telefon görünümü açılır; aynı simgeyle sade görünüme dönersiniz."
+        },
+        {
+          "name": "Onay ve sonuç kodu pencereleri",
+          "desc": "Mola onayı, görüşme sonrası sonuç kodu gibi bir pencere açılınca panel kendiliğinden ulakBELL ekranını gösterir. İşlemi bitirince sade görünüme döner."
+        },
+        {
+          "name": "Son aramalar",
+          "desc": "Panelin altında son 15 arama listelenir; 📞 ile yeniden arayabilirsiniz. Liste yalnız sizin bilgisayarınızda tutulur."
+        },
+        {
+          "name": "Paneli kapatırsanız",
+          "desc": "Telefon da kapanır, süren görüşme düşer. Panel kapalıyken numaraya tıklayınca eklenti açık ulakBELL sekmenizdeki telefonu kullanır."
+        }
+      ]
+    },
+    {
       "id": "tw-rehber",
       "group": "teleweb",
       "updated": "2026-10-09",
@@ -7303,6 +7350,12 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-20",
+      "title": "Chrome eklentisi: telefonu yan panelde kullanma",
+      "text": "Telefonu Chrome'un yan paneline alıp durum değiştirme, arama, cevaplama, susturma, bekletme ve son aramalar anlatıldı.",
+      "section": "tw-chrome-panel"
+    },
     {
       "date": "2026-11-20",
       "title": "Chrome eklentisi: numaraya tıklayınca ulakBELL'den arama",
