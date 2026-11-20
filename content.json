@@ -3039,9 +3039,9 @@
     {
       "id": "tw-chrome-eklenti",
       "group": "teleweb",
-      "updated": "2026-11-19",
+      "updated": "2026-11-20",
       "title": "Chrome eklentisi: sitelerdeki numarayı tek tıkla arama",
-      "intro": "\"ulakBELL ile Ara\" eklentisiyle internet sitelerinde gördüğünüz telefon numarasına tıklamanız yeter; arama ulakBELL'deki telefon panelinizden başlar. Kopyalamanız, yapıştırmanız ya da tuşlamanız gerekmez.",
+      "intro": "\"ulakBELL ile Ara\" eklentisiyle internet sitelerinde, ulakBELL ekranlarında, Google E-Tablolar'da ve kısayolla her programda gördüğünüz telefon numarasını ulakBELL'deki telefon panelinizden ararsınız. Kopyalamanız, yapıştırmanız ya da tuşlamanız gerekmez.",
       "links": [
         {
           "text": "Eklentiyi indir (ZIP)",
@@ -3136,6 +3136,49 @@
       "imageSize": [
         1000,
         539
+      ]
+    },
+    {
+      "id": "tw-chrome-heryer",
+      "group": "teleweb",
+      "updated": "2026-11-20",
+      "title": "Chrome eklentisi: ulakBELL'de, E-Tablolar'da ve diğer programlarda arama",
+      "intro": "Eklenti yalnız internet sitelerinde değil, ulakBELL'in kendi ekranlarında, Google E-Tablolar'da ve bilgisayarınızdaki diğer programlarda da çalışır.",
+      "steps": [
+        {
+          "title": "ulakBELL ekranlarında",
+          "text": "Numaranın üzerine gelin, üstünde çıkan yeşil \"Ara\" düğmesine basın. Numaranın kendisine tıklamak ulakBELL'de her zamanki işi yapar (örneğin kaydı açar)."
+        },
+        {
+          "title": "Google E-Tablolar'da",
+          "text": "Numara yazan hücreyi seçin. Hücrenin yanında \"📞 … ara\" düğmesi çıkar; basın."
+        },
+        {
+          "title": "Diğer programlarda",
+          "text": "Excel, Outlook, WhatsApp, PDF… Numarayı seçip kopyalayın (Ctrl+C, Mac'te ⌘C), ardından Ctrl+Shift+1 (Mac'te ⌘⇧1) tuşlarına basın. ulakBELL arar, ekranın köşesinde bildirim çıkar."
+        },
+        {
+          "title": "Görüşmeyi kapatın",
+          "text": "Hangi programda olursanız olun Ctrl+Shift+2 (Mac'te ⌘⇧2) görüşmeyi kapatır."
+        }
+      ],
+      "items": [
+        {
+          "name": "Chrome açık olmalı",
+          "desc": "Kısayollar Chrome arka planda açıkken çalışır; ulakBELL de bir sekmede açık ve telefon paneli bağlı olmalıdır."
+        },
+        {
+          "name": "Chrome öndeyken",
+          "desc": "Kısayol önce sayfada seçtiğiniz metne, E-Tablolar'da seçili hücreye ya da farenin üzerindeki numaraya bakar; yoksa kopyaladığınız metni kullanır."
+        },
+        {
+          "name": "Kısayolu değiştirmek",
+          "desc": "Eklenti simgesine tıklayıp \"Kısayolları değiştir\"e basın. Kısayol başka bir programla çakışıyorsa burada değiştirin ve kapsamını \"Genel\" bırakın."
+        },
+        {
+          "name": "Bildirim çıkmıyorsa",
+          "desc": "Bilgisayarınızın bildirim ayarlarında Google Chrome'un bildirimlerine izin verin."
+        }
       ]
     },
     {
