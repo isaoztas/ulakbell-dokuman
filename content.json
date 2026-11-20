@@ -2,7 +2,7 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-11-19",
+    "updated": "2026-11-20",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
   },
   "home": {
@@ -3099,7 +3099,10 @@
       "imageSize": [
         1000,
         539
-      ]
+      ],
+      "video": "video/chrome-eklentisi-tanitim.mp4",
+      "videoVertical": true,
+      "videoNote": "10 saniyede eklenti: numaraya tıkla, ulakBELL arasın, görüşmeyi aynı sayfadan kapat."
     },
     {
       "id": "tw-chrome-kapat",
@@ -7300,6 +7303,12 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-20",
+      "title": "Chrome eklentisi: numaraya tıklayınca ulakBELL'den arama",
+      "text": "İnternet sitelerinde, ulakBELL ekranlarında, Google E-Tablolar'da ve kısayolla her programda numarayı tek tıkla arama; görüşmeyi aynı sayfadan kapatma. Eklentiyi indirme ve kurma anlatıldı.",
+      "section": "tw-chrome-eklenti"
+    },
     {
       "date": "2026-11-19",
       "title": "Duyurular: duyuru gönderme ve okunma takibi",
