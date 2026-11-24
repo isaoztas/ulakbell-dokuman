@@ -28,6 +28,8 @@
   .meta{padding:14px 16px;font-size:14px}
   .meta strong{display:block;font-size:15px;margin-bottom:4px}
   .meta a{margin-right:14px}
+  .swatches{display:grid;grid-template-columns:repeat(2,minmax(0,300px));gap:12px}
+  @media (max-width:720px){.swatches{grid-template-columns:1fr}}
   .swatch{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px;max-width:360px;cursor:pointer;font:inherit;color:inherit;text-align:left;width:100%}
   .chip{width:52px;height:52px;border-radius:10px;background:var(--brand);flex:none}
   .swatch code{font-size:15px}
@@ -46,6 +48,26 @@
   <a class="btn" href="ulakbell-kurumsal-kimlik.zip" download>Tümünü indir (ZIP)</a>
 </header>
 
+<h2>Logo</h2>
+<div class="grid">
+  <div class="card">
+    <div class="preview p-dark"><img src="ulakbell-logo-tam-seffaf.png" alt="ulakBELL logosu, simgeli" style="max-height:56px"></div>
+    <div class="meta"><strong>Logo, şeffaf zemin</strong>Koyu zeminler için<br>
+      <a href="ulakbell-logo-tam-seffaf.png" download>PNG indir</a></div>
+  </div>
+  <div class="card">
+    <div class="preview p-dark"><img src="ulakbell-logo-tam-lacivert-zemin.png" alt="ulakBELL logosu, lacivert zeminli" style="max-height:64px"></div>
+    <div class="meta"><strong>Logo, lacivert zemin</strong>Hazır zeminli, her yerde<br>
+      <a href="ulakbell-logo-tam-lacivert-zemin.png" download>PNG indir</a></div>
+  </div>
+  <div class="card">
+    <div class="preview p-dark"><img src="ulakbell-simge-beyaz-seffaf.png" alt="ulakBELL simgesi" style="max-height:64px"></div>
+    <div class="meta"><strong>Simge</strong>Profil resmi, uygulama simgesi<br>
+      <a href="ulakbell-simge-beyaz-seffaf.png" download>PNG indir</a><a href="ulakbell-simge-kare.png" download>Kare PNG</a><a href="ulakbell-simge.svg" download>SVG</a></div>
+  </div>
+</div>
+
+<h2>Yalnız yazı</h2>
 <div class="grid">
   <div class="card">
     <div class="preview p-light"><img src="ulakbell-logo-lacivert-seffaf.png" alt="ulakBELL logosu, lacivert"></div>
@@ -64,11 +86,17 @@
   </div>
 </div>
 
-<h2>Renk</h2>
-<button class="swatch" type="button" id="renk" title="Kopyala">
+<h2>Renkler</h2>
+<div class="swatches">
+<button class="swatch" type="button" data-renk="#031A3A" title="Kopyala">
   <span class="chip"></span>
-  <span><strong>ulakBELL Lacivert</strong><br><code>#031A3A</code> <span class="muted" id="kopya"></span></span>
+  <span><strong>ulakBELL Lacivert</strong><br><code>#031A3A</code> <span class="muted kopya"></span></span>
 </button>
+<button class="swatch" type="button" data-renk="#B7DB66" title="Kopyala">
+  <span class="chip" style="background:#B7DB66"></span>
+  <span><strong>ulakBELL Yeşil</strong><br><code>#B7DB66</code> <span class="muted kopya"></span></span>
+</button>
+</div>
 
 <h2>Kullanım</h2>
 <ul>
@@ -80,11 +108,13 @@
 <footer>Başka bir biçim mi gerekiyor? <a href="mailto:bilgi@ulakbell.com">bilgi@ulakbell.com</a></footer>
 </main>
 <script>
-document.getElementById('renk').addEventListener('click', function () {
-  var k = document.getElementById('kopya');
-  try {
-    navigator.clipboard.writeText('#031A3A').then(function () { k.textContent = 'kopyalandı'; setTimeout(function () { k.textContent = ''; }, 1500); });
-  } catch (e) {}
+document.querySelectorAll('.swatch').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var k = b.querySelector('.kopya');
+    try {
+      navigator.clipboard.writeText(b.dataset.renk).then(function () { k.textContent = 'kopyalandı'; setTimeout(function () { k.textContent = ''; }, 1500); });
+    } catch (e) {}
+  });
 });
 </script>
 </body>
