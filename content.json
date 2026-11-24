@@ -2,7 +2,7 @@
   "meta": {
     "title": "Yardım Merkezi",
     "product": "ulakBELL",
-    "updated": "2026-11-20",
+    "updated": "2026-11-24",
     "note": "Ekran görüntülerindeki ve örneklerdeki kişi, kurum, telefon ve sayılar örnek amaçlıdır. Kurumunuzun ayarlarına ve yetkinize göre bazı menü, sütun ve butonlar farklı görünebilir."
   },
   "home": {
@@ -6714,6 +6714,38 @@
       "videoNote": "Sesli anlatım: ekranın kısa tanıtımı (yaklaşık 39 saniye)."
     },
     {
+      "id": "cimer-api",
+      "group": "entegrasyon",
+      "updated": "2026-11-24",
+      "title": "CİMER API entegrasyonu",
+      "intro": "CİMER başvuruları ulakBELL'e kendiliğinden gelir, verdiğiniz cevap CİMER'e geri gider. Kurulum iki kısımdır: önce CİMER tarafı, sonra ulakBELL tarafı.",
+      "steps": [
+        {
+          "title": "CİMER: IP izni isteyin",
+          "text": "Kurum adını ve çıkış IP adresini cimeryazilim@iletisim.gov.tr adresine yazın, cimerteknik@iletisim.gov.tr adresini bilgiye ekleyin. İzin verilince e-postayla dönüş yapılır."
+        },
+        {
+          "title": "CİMER: Kurum Anahtarı alın",
+          "text": "Kurum yetkilisi İşlemler › Entegrasyon İşlemleri'nde kurumu seçer, Kurum Anahtarı Oluştur'a basar ve anahtarı kopyalar. Bu ekranı yalnızca kurum/birim yetkisi olan kullanıcı görür."
+        },
+        {
+          "title": "ulakBELL: Entegrasyon Ekle",
+          "text": "Entegrasyonlar ekranında kaynak olarak Cimer Servis'i, başvuru kaynağı olarak CİMER'i seçip kaydedin."
+        },
+        {
+          "title": "ulakBELL: Bağlantı bilgileri",
+          "text": "Kullanıcı adını yazın, Şifre alanına Kurum Anahtarı'nı yapıştırın, Kurum Bimer Koordinatör Kimlik No'yu girin. Kaydet'e, sonra Entegrasyon Aktifliğini Kontrol Et'e basın."
+        },
+        {
+          "title": "ulakBELL: Görevin kime düşeceği",
+          "text": "Akış Otomasyonları'nda tetikleyici Başvuru oluşturuldu, koşul Başvuru Kaynağı = CİMER, eylem Aktar. Hedef olarak birimi ya da kişiyi seçip kaydedin."
+        }
+      ],
+      "video": "video/cimer-api-entegrasyonu.mp4",
+      "videoVtt": "video/cimer-api-entegrasyonu.vtt",
+      "videoNote": "Sesli anlatım: CİMER tarafı ve ulakBELL tarafı (yaklaşık 74 saniye)."
+    },
+    {
       "id": "duyuru-genel",
       "group": "duyuru",
       "updated": "2026-11-19",
@@ -7354,6 +7386,12 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-11-24",
+      "title": "CİMER API entegrasyonu",
+      "text": "CİMER tarafında IP izni ve Kurum Anahtarı, ulakBELL tarafında Cimer Servis entegrasyonu ve Akış Otomasyonu ile görev ataması sesli videoyla anlatıldı.",
+      "section": "cimer-api"
+    },
     {
       "date": "2026-11-20",
       "title": "Chrome eklentisi: telefonu yan panelde kullanma",

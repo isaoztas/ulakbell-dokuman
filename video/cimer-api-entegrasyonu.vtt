@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.500 --> 00:00:05.705
+ulakBELL ile CİMER API entegrasyonu iki kısımda kurulur. Önce CİMER tarafı.
+
+00:00:06.500 --> 00:00:17.593
+Kurum adınızı ve çıkış IP adresinizi cimeryazilim adresine e-postayla gönderin, cimerteknik adresini bilgiye ekleyin. IP izni verilince size dönüş yapılır.
+
+00:00:18.500 --> 00:00:28.996
+İzin gelince kurum yetkilisi CİMER'de İşlemler, Entegrasyon İşlemleri ekranını açar. Kurumu seçip Kurum Anahtarı Oluştur'a basar ve anahtarı kopyalar.
+
+00:00:29.900 --> 00:00:39.372
+Şimdi ulakBELL tarafı. Entegrasyonlar'da Entegrasyon Ekle'ye basın. Kaynak olarak Cimer Servis'i, başvuru kaynağı olarak CİMER'i seçip kaydedin.
+
+00:00:40.500 --> 00:00:51.423
+Kullanıcı adını yazın, şifre alanına CİMER'den kopyaladığınız kurum anahtarını yapıştırın, koordinatörün kimlik numarasını girip kaydedin. Ardından Entegrasyon Aktifliğini Kontrol Et'e basın.
+
+00:00:52.100 --> 00:01:04.217
+Başvuruların kime düşeceğini Akış Otomasyonları ekranında kurun. Tetikleyici Başvuru oluşturuldu, koşul Başvuru kaynağı CİMER, eylem Aktar. Hedef olarak birimi ya da kişiyi seçip kaydedin.
+
+00:01:06.700 --> 00:01:12.673
+Hepsi bu. Başvurular beş dakikada bir otomatik gelir, verdiğiniz cevap CİMER'e geri gönderilir.
